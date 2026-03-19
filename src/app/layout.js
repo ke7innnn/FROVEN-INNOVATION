@@ -1,0 +1,43 @@
+import { Inter, Outfit } from 'next/font/google';
+import './globals.css';
+import './App.css';
+import './components.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+  weight: ['400', '500', '600', '700', '800', '900'],
+});
+
+export const metadata = {
+  title: 'FROVEN INNOVATIONS',
+  description: 'End-to-end refrigeration solutions for hospitality, retail, healthcare, and food & beverage industries.',
+  icons: {
+    icon: '/logo design/Gemini_Generated_Image_gqcanogqcanogqca-Photoroom.png',
+  },
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+      </head>
+      <body>
+        {children}
+      </body>
+    </html>
+  );
+}
