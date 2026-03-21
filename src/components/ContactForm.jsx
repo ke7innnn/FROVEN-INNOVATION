@@ -26,25 +26,43 @@ const ContactForm = () => {
                   <p>219, Golden Park Commercial Complex, Behind Parvati Cinema, Navghar Manickpur, SAI Nagar, Vasai West, Palghar-401201, Maharashtra</p>
                 </div>
               </div>
-              <div className="info-item">
+              
+              <a href="tel:+919702273180" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <i className="fas fa-phone-alt"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+91 9702273180</p>
+                  <p>+91 97022 73180</p>
                 </div>
-              </div>
-              <div className="info-item">
+              </a>
+
+              <a href="https://wa.me/919702273180" target="_blank" rel="noopener noreferrer" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <i className="fa-brands fa-whatsapp" style={{ color: '#25D366' }}></i>
+                <div>
+                  <h3>WhatsApp</h3>
+                  <p>+91 97022 73180</p>
+                </div>
+              </a>
+
+              <a href="mailto:froveninnovations@outlook.com" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <i className="fas fa-envelope"></i>
                 <div>
                   <h3>Email Us</h3>
                   <p>froveninnovations@outlook.com</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           
           <div className="contact-form-container">
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={(e) => {
+              e.preventDefault();
+              const name = e.target.elements[0].value;
+              const email = e.target.elements[1].value;
+              const subject = e.target.elements[2].value;
+              const msg = e.target.elements[3].value;
+              const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`;
+              window.location.href = `mailto:froveninnovations@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            }}>
               <div className="form-group">
                 <input type="text" placeholder="Your Name" required />
               </div>

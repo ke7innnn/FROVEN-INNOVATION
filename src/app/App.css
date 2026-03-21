@@ -434,3 +434,605 @@
    color: rgba(255, 255, 255, 0.9);
    max-width: 900px;
  }
+
+/* Products Page */
+.products-main {
+  min-height: 100vh;
+}
+
+.products-hero {
+  position: relative;
+  background-color: var(--froven-dark-blue);
+  background-image: 
+    linear-gradient(135deg, rgba(8, 28, 51, 0.85) 0%, rgba(13, 44, 82, 0.95) 100%),
+    url('/3 slides/slide 1new.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect for premium feel */
+  padding: 180px 40px 100px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.products-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.products-hero-content .meet-description {
+  margin: 0 auto;
+}
+
+.products-grid-section {
+  padding: 100px 40px;
+  background-color: #f4f7f9; /* Soft background contrasting product cards */
+}
+
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.product-card {
+  background: var(--froven-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(5, 64, 120, 0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+  height: 240px;
+  background-color: var(--froven-dark-blue);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card-image::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(3, 41, 77, 0.6) 100%);
+}
+
+.sales-bg {
+  background-image: url('https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=800&auto=format&fit=crop');
+}
+
+.rentals-bg {
+  background-image: url('https://images.unsplash.com/photo-1581428982868-e410dd047a90?q=80&w=800&auto=format&fit=crop');
+}
+
+.amc-bg {
+  background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop');
+}
+
+.card-content {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: linear-gradient(to bottom, var(--froven-light) 0%, #ffffff 100%);
+}
+
+.card-content .stat-num {
+  font-size: 32px;
+  color: var(--froven-dark-blue);
+  margin-bottom: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.card-desc {
+  font-size: 16px;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.product-btn {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .products-hero {
+    padding: 140px 20px 80px;
+  }
+}
+/* Reference Grid Styles (Ecommerce exact match) */
+.ref-grid-container {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 0 40px;
+}
+.ref-grid-header {
+  font-size: 28px;
+  font-weight: 800;
+  color: #054078;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  grid-auto-rows: 280px;
+}
+.ref-card {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f5f7;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.ref-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(5,64,120,0.15);
+}
+.ref-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0px; left: 0px; right: 0px;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(5,64,120,0.9) 100%);
+  z-index: 1;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+.ref-card:hover::after {
+  height: 70%;
+  opacity: 1;
+}
+
+/* Modifier for model cards with taller text specs */
+.ref-card.model-card::after {
+  height: 85%;
+  background: linear-gradient(to top, rgba(3,41,77,0.95) 0%, rgba(5,64,120,0.8) 45%, transparent 100%);
+}
+.ref-card.model-card:hover::after {
+  height: 100%;
+}
+.ref-card-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 2;
+  text-shadow: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: transform 0.4s ease;
+}
+.ref-card:hover .ref-card-title {
+  transform: translateY(-4px);
+}
+.ref-card.solid-blue {
+  background-color: #054078;
+}
+.ref-card.solid-blue .ref-card-title {
+  color: white;
+  margin-top: 20px;
+  font-size: 22px;
+}
+.ref-card-image {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.ref-card:hover .ref-card-image {
+  transform: scale(1.08);
+}
+.ref-card.center-image .ref-card-image {
+  background-position: center;
+}
+.ref-card-arrow {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 400;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+.ref-card:hover .ref-card-arrow {
+  transform: translate(4px, -4px);
+}
+.ref-card.solid-blue .ref-card-arrow {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Clean Professional Alternating Grid Framework */
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 200px; /* Reduced height to perfectly frame rectangular landscape thumbnails */
+  gap: 20px;
+}
+
+/* Row 1 & 3: 3 "Square-profile" cards per row (12/4 = 3) */
+.ref-grid > a:nth-child(1), .ref-grid > a:nth-child(2), .ref-grid > a:nth-child(3),
+.ref-grid > a:nth-child(8), .ref-grid > a:nth-child(9), .ref-grid > a:nth-child(10) {
+  grid-column: span 4 !important;
+}
+
+/* Row 2 & 4: 4 "Rectangle-profile" cards per row (12/3 = 4) */
+.ref-grid > a:nth-child(4), .ref-grid > a:nth-child(5), .ref-grid > a:nth-child(6), .ref-grid > a:nth-child(7),
+.ref-grid > a:nth-child(11), .ref-grid > a:nth-child(12), .ref-grid > a:nth-child(13), .ref-grid > a:nth-child(14) {
+  grid-column: span 3 !important;
+}
+
+.ref-grid > a {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .ref-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+  .ref-grid > a:nth-child(n) {
+    grid-column: span 1;
+  }
+}
+
+/* Clean, uniform grid specifically designed for model specification cards */
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-auto-rows: 280px;
+  gap: 30px;
+  margin: 0 auto;
+}
+.models-grid > a {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+/* =========================================
+   CONTACT PAGE STYLES (Professional)
+   ========================================= */
+
+.contact-main {
+  min-height: 100vh;
+  background-color: #f4f7f9;
+}
+
+.contact-hero {
+  position: relative;
+  background-color: var(--froven-dark-blue);
+  background-image: 
+    linear-gradient(135deg, rgba(8, 28, 51, 0.85) 0%, rgba(13, 44, 82, 0.95) 100%),
+    url('/3 slides/slide 3comp.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 160px 40px 100px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-content-section {
+  padding: 80px 40px 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.08); /* Premium shadow */
+  overflow: hidden;
+}
+
+/* LEFT PANEL: Contact Info */
+.contact-info-panel {
+  flex: 1;
+  background-color: var(--froven-dark-blue);
+  color: white;
+  padding: 60px 50px;
+  position: relative;
+  background-image: 
+    linear-gradient(135deg, rgba(3, 41, 77, 0.92) 0%, rgba(5, 64, 120, 0.88) 100%),
+    url('/products/REACH IN VENTILATED.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.contact-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.detail-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #3b82f6; /* Froven brand accent */
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-detail-item:hover .detail-icon {
+  background-color: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.contact-detail-item h4 {
+  font-size: 18px;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.contact-detail-item p {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+/* RIGHT PANEL: Form */
+.contact-form-panel {
+  flex: 1.6;
+  padding: 60px 80px;
+  background-color: #ffffff;
+}
+
+.premium-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group.full-width {
+  flex: 100%;
+}
+
+.contact-form-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--froven-dark-blue);
+  margin-bottom: 8px;
+}
+
+.contact-form-subtitle {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 32px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 24px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.9);
+  font-size: 15px;
+  color: #0f172a;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+  font-family: inherit;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-submit-btn {
+  align-self: flex-start;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  padding: 18px 48px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-submit-btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: all 0.6s ease;
+}
+
+.contact-submit-btn:hover::after {
+  left: 100%;
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(59, 130, 246, 0.4);
+}
+
+/* Contact Page Responsive */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-form-panel {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .contact-form-panel {
+    padding: 40px 24px;
+  }
+  .contact-info-panel {
+    padding: 50px 24px;
+  }
+  .contact-hero {
+    padding: 140px 20px 60px;
+  }
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  font-size: 32px;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse-green 2s infinite;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+  background-color: #1ebe57;
+  color: #FFF;
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}

@@ -2,6 +2,7 @@ import { Inter, Outfit } from 'next/font/google';
 import './globals.css';
 import './App.css';
 import './components.css';
+import WhatsAppFloat from '../components/WhatsAppFloat';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );

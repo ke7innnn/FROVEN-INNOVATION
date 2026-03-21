@@ -2,11 +2,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+import Link from 'next/link';
+
 const CoolCollections = () => {
   const services = [
-    { title: 'SALES', category: 'Premium Equipment', img: '/services/sales.png' },
-    { title: 'RENTALS', category: 'Flexible Plans', img: '/services/rental.png' },
-    { title: 'AMC', category: 'Annual Maintenance', img: '/services/amc.png' }
+    { title: 'SALES', category: 'Premium Equipment', img: '/services/sales.png', link: '/sales' },
+    { title: 'RENTALS', category: 'Flexible Plans', img: '/services/rental.png', link: '/rental' },
+    { title: 'AMC', category: 'Annual Maintenance', img: '/services/amc.png', link: '/amc' }
   ];
 
   return (
@@ -32,14 +34,16 @@ const CoolCollections = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
           >
-            <div 
-              className="service-card-image" 
-              style={{ backgroundImage: `url(${item.img})` }}
-            ></div>
-            <div className="service-card-content">
-              <h2>{item.title}</h2>
-              <p>{item.category}</p>
-            </div>
+            <Link href={item.link} style={{ display: 'block', height: '100%', textDecoration: 'none', color: 'inherit' }}>
+              <div 
+                className="service-card-image" 
+                style={{ backgroundImage: `url(${item.img})` }}
+              ></div>
+              <div className="service-card-content">
+                <h2>{item.title}</h2>
+                <p>{item.category}</p>
+              </div>
+            </Link>
           </motion.div>
         ))}
       </div>
