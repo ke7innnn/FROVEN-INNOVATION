@@ -67,7 +67,6 @@ export default function SingleModelDetailsPage() {
           {/* Left: Gallery */}
           <div className="pd-gallery">
             <div className="pd-main-image">
-              <i className="fa-solid fa-magnifying-glass pd-magnify"></i>
               {(() => {
                 const categoryImage = productsList?.find(p => p.slug === slug)?.image || modelDef.image || product.images[activeImage];
                 return <img src={categoryImage} alt={modelDef.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />;
