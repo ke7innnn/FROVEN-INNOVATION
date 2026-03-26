@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,7 +9,9 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-col brand-col">
             <div className="footer-logo">
-              <h1>FROVEN</h1>
+              <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <h1>FROVEN</h1>
+              </Link>
               <p>THE COMMERCIAL REFRIGERATION EXPERTS</p>
             </div>
             <p className="brand-desc">
@@ -17,8 +20,8 @@ const Footer = () => {
             <div className="social-links">
               <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
               <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-              <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               <a href="#" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
             </div>
           </div>
@@ -26,33 +29,33 @@ const Footer = () => {
           <div className="footer-col">
             <h3>Products</h3>
             <ul>
-              <li><a href="#">Beverage Solutions</a></li>
-              <li><a href="#">Kitchen Solutions</a></li>
-              <li><a href="#">Retail Solutions</a></li>
-              <li><a href="#">Healthcare Solutions</a></li>
-              <li><a href="#">Horeca Solutions</a></li>
+              <li><Link href="/products/visicooler">Beverage Solutions</Link></li>
+              <li><Link href="/products/reach-in-ventilated">Kitchen Solutions</Link></li>
+              <li><Link href="/products/visicooler">Retail Solutions</Link></li>
+              <li><Link href="/products/reach-in-static">Healthcare Solutions</Link></li>
+              <li><Link href="/products">Horeca Solutions</Link></li>
             </ul>
           </div>
           
           <div className="footer-col">
             <h3>Support</h3>
             <ul>
-              <li><a href="#">Service Request</a></li>
-              <li><a href="#">Track Service</a></li>
-              <li><a href="#">Warranty Policy</a></li>
-              <li><a href="#">User Manuals</a></li>
-              <li><a href="#">Locate Service Center</a></li>
+              <li><Link href="/amc">Service Request</Link></li>
+              <li><Link href="/contact">Track Service</Link></li>
+              <li><Link href="/contact">Warranty Policy</Link></li>
+              <li><Link href="/contact">User Manuals</Link></li>
+              <li><Link href="/contact">Locate Service Center</Link></li>
             </ul>
           </div>
           
           <div className="footer-col">
             <h3>Company</h3>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Milestones</a></li>
-              <li><a href="#">Media Center</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><Link href="/">About Us</Link></li>
+              <li><Link href="/">Milestones</Link></li>
+              <li><Link href="/gallery">Media Center</Link></li>
+              <li><Link href="/">Careers</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
         </div>
@@ -60,9 +63,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>Copyright © froveninnovations.com 2026. All rights reserved.</p>
           <div className="bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Sitemap</a>
+            <Link href="#">Privacy Policy</Link>
+            <Link href="#">Terms of Use</Link>
+            <Link href="/products">Sitemap</Link>
           </div>
         </div>
       </div>
