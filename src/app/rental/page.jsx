@@ -9,8 +9,8 @@ import { motion } from 'framer-motion';
 export default function RentalPage() {
   
   const rentalEquipment = [
-    { name: 'Glasstop Freezers', image: 'https://images.unsplash.com/photo-1574163473136-118f6d7ab7c3?q=80&w=800&auto=format&fit=crop', link: '#' },
-    { name: 'Hardtop Freezers', image: 'https://images.unsplash.com/photo-1571104508995-53641b6ce3bc?q=80&w=800&auto=format&fit=crop', link: '#' },
+    { name: 'Glasstop Freezers', image: '/product thumbnail/GLASS TOP CHEST FREEZER.png', link: '/products/glass-top-chest-freezer' },
+    { name: 'Hardtop Freezers', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', link: '/products/hard-top-chest-freezer' },
     { name: 'Visi Cooler', image: '/product thumbnail/visi cooler.jpeg', link: '/products/visicooler' }
   ];
 
