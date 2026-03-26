@@ -60,7 +60,6 @@ export const productsData = {
         { label: 'Temperature Range', spans: [{ val: '2°C to 8°C', colSpan: 6 }] },
         { label: 'Castors Wheels', spans: [{ val: 'Uni direction roller wheels without brake', colSpan: 6 }] },
         { label: 'Lock', spans: [{ val: 'Pad Lock', colSpan: 6 }] },
-        { label: 'Warranty Note', spans: [{ val: '1 Year Warranty', colSpan: 6 }] }
       ]
     },
     related: [
@@ -855,12 +854,12 @@ export const productsData = {
       '/product thumbnail/HARD TOP CHEST FREEZER.png',
     ],
     models: [
-      { id: 'MF3DHT230SD', name: 'MF3DHT230SD (200L)', specs: ['200L', '1 Basket', '1 Door', '3 Star', '+5°C ~ -27°C', '1 Year Warranty'] },
-      { id: 'MF3DHT340SD', name: 'MF3DHT340SD (300L)', specs: ['300L', '1 Basket', '1 Door', '3 Star', '+5°C ~ -27°C', '1 Year Warranty'] },
-      { id: 'MF4DHT450DD', name: 'MF4DHT450DD (400L)', specs: ['400L', '1 Basket', '2 Doors', '4 Star', '+5°C ~ -27°C', '1 Year Warranty'] },
-      { id: 'MF5DHT560DD', name: 'MF5DHT560DD (500L)', specs: ['500L', '2 Baskets', '2 Doors', '5 Star', '+5°C ~ -27°C', '1 Year Warranty'] },
-      { id: 'MFDHT310DDC', name: 'MFDHT310DDC (296L Combo)', specs: ['166C + 130F', '2 Baskets', '2 Doors', 'NA Star Rating', '+2°C ~ +8°C / -16°C ~ -24°C', '1 Year Warranty'] },
-      { id: 'MFDHT410DDC', name: 'MFDHT410DDC (401L Combo)', specs: ['218C + 183F', '2 Baskets', '2 Doors', 'NA Star Rating', '+2°C ~ +8°C / -16°C ~ -24°C', '1 Year Warranty'] }
+      { id: 'MF3DHT230SD', name: 'MF3DHT230SD (200L)', specs: ['200L', '1 Basket', '1 Door', '3 Star', '+5°C ~ -27°C'] },
+      { id: 'MF3DHT340SD', name: 'MF3DHT340SD (300L)', specs: ['300L', '1 Basket', '1 Door', '3 Star', '+5°C ~ -27°C'] },
+      { id: 'MF4DHT450DD', name: 'MF4DHT450DD (400L)', specs: ['400L', '1 Basket', '2 Doors', '4 Star', '+5°C ~ -27°C'] },
+      { id: 'MF5DHT560DD', name: 'MF5DHT560DD (500L)', specs: ['500L', '2 Baskets', '2 Doors', '5 Star', '+5°C ~ -27°C'] },
+      { id: 'MFDHT310DDC', name: 'MFDHT310DDC (296L Combo)', specs: ['166C + 130F', '2 Baskets', '2 Doors', 'NA Star Rating', '+2°C ~ +8°C / -16°C ~ -24°C'] },
+      { id: 'MFDHT410DDC', name: 'MFDHT410DDC (401L Combo)', specs: ['218C + 183F', '2 Baskets', '2 Doors', 'NA Star Rating', '+2°C ~ +8°C / -16°C ~ -24°C'] }
     ],
     specTable: {
       columns: ['Description', 'MF3DHT230SD', 'MF3DHT340SD', 'MF4DHT450DD', 'MF5DHT560DD', 'MFDHT310DDC', 'MFDHT410DDC'],
@@ -874,7 +873,6 @@ export const productsData = {
         { label: 'Temperature Range - °C', values: ['+5°C to -27°C', '+5°C to -27°C', '+5°C to -27°C', '+5°C to -27°C', '+2°C to +8°C / -16°C to -24°C', '+2°C to +8°C / -16°C to -24°C'] },
         { label: 'Castors (Wheels)', spans: [{ val: 'Yes', colSpan: 6 }] },
         { label: 'Lock & Key', spans: [{ val: 'Yes', colSpan: 6 }] },
-        { label: 'Warranty Note', spans: [{ val: '1 Year Full Warranty', colSpan: 6 }] },
       ]
     },
     features: [
@@ -901,12 +899,12 @@ export const productsData = {
       '/product thumbnail/HARD TOP CHEST FREEZER70MM.png',
     ],
     models: [
-      { id: 'MF3DHT150SD', name: 'MF3DHT150SD (102L)', specs: ['102L', '1 Basket', '1 Door', '3 Star', '2.5°C ~ -29°C', '1 Year Warranty'] },
-      { id: 'MF4DHT250SD', name: 'MF4DHT250SD (205L)', specs: ['205L', '1 Basket', '1 Door', '4 Star', '2.5°C ~ -29°C', '1 Year Warranty'] },
-      { id: 'MF5DHT350SD', name: 'MF5DHT350SD (315L)', specs: ['315L', '1 Basket', '1 Door', '5 Star', '2.5°C ~ -29°C', '1 Year Warranty'] },
-      { id: 'MF5DHT350DD', name: 'MF5DHT350DD (315L DD)', specs: ['315L', '2 Baskets', '2 Doors', '5 Star', '2.5°C ~ -29°C', '1 Year Warranty'] },
-      { id: 'MF5DHT450DD', name: 'MF5DHT450DD (421L)', specs: ['421L', '2 Baskets', '2 Doors', '5 Star', '2.5°C ~ -29°C', '1 Year Warranty'] },
-      { id: 'MF5DHT550DD', name: 'MF5DHT550DD (530L)', specs: ['530L', '2 Baskets', '2 Doors', '5 Star', '2.5°C ~ -29°C', '1 Year Warranty'] }
+      { id: 'MF3DHT150SD', name: 'MF3DHT150SD (102L)', specs: ['102L', '1 Basket', '1 Door', '3 Star', '2.5°C ~ -29°C'] },
+      { id: 'MF4DHT250SD', name: 'MF4DHT250SD (205L)', specs: ['205L', '1 Basket', '1 Door', '4 Star', '2.5°C ~ -29°C'] },
+      { id: 'MF5DHT350SD', name: 'MF5DHT350SD (315L)', specs: ['315L', '1 Basket', '1 Door', '5 Star', '2.5°C ~ -29°C'] },
+      { id: 'MF5DHT350DD', name: 'MF5DHT350DD (315L DD)', specs: ['315L', '2 Baskets', '2 Doors', '5 Star', '2.5°C ~ -29°C'] },
+      { id: 'MF5DHT450DD', name: 'MF5DHT450DD (421L)', specs: ['421L', '2 Baskets', '2 Doors', '5 Star', '2.5°C ~ -29°C'] },
+      { id: 'MF5DHT550DD', name: 'MF5DHT550DD (530L)', specs: ['530L', '2 Baskets', '2 Doors', '5 Star', '2.5°C ~ -29°C'] }
     ],
     specTable: {
       columns: ['Model', 'MF3DHT150SD', 'MF4DHT250SD', 'MF5DHT350SD', 'MF5DHT350DD', 'MF5DHT450DD', 'MF5DHT550DD'],
@@ -920,7 +918,6 @@ export const productsData = {
         { label: 'Temperature Range', spans: [{ val: '2.5°C ~ -29°C', colSpan: 6 }] },
         { label: 'Castors', spans: [{ val: 'Yes', colSpan: 6 }] },
         { label: 'Lock', spans: [{ val: 'Yes', colSpan: 6 }] },
-        { label: 'Warranty Note', spans: [{ val: '1 Year Full Warranty', colSpan: 6 }] },
       ]
     },
     features: [
@@ -947,10 +944,10 @@ export const productsData = {
       '/product thumbnail/GLASS TOP CHEST FREEZER.png',
     ],
     models: [
-      { id: 'MF5DGT250', name: 'MF5DGT250 (200L)', specs: ['200L', '2 Baskets', 'Sliding Doors', '5 Star', '-17°C ~ -31°C', '1 Year Warranty'] },
-      { id: 'MF5DGT350', name: 'MF5DGT350 (320L)', specs: ['320L', '3 Baskets', 'Sliding Doors', '5 Star', '-17°C ~ -31°C', '1 Year Warranty'] },
-      { id: 'MF5DGT450', name: 'MF5DGT450 (430L)', specs: ['430L', '4 Baskets', 'Sliding Doors', '5 Star', '-17°C ~ -31°C', '1 Year Warranty'] },
-      { id: 'MF5DGT550', name: 'MF5DGT550 (540L)', specs: ['540L', '5 Baskets', 'Sliding Doors', '5 Star', '-17°C ~ -31°C', '1 Year Warranty'] }
+      { id: 'MF5DGT250', name: 'MF5DGT250 (200L)', specs: ['200L', '2 Baskets', 'Sliding Doors', '5 Star', '-17°C ~ -31°C'] },
+      { id: 'MF5DGT350', name: 'MF5DGT350 (320L)', specs: ['320L', '3 Baskets', 'Sliding Doors', '5 Star', '-17°C ~ -31°C'] },
+      { id: 'MF5DGT450', name: 'MF5DGT450 (430L)', specs: ['430L', '4 Baskets', 'Sliding Doors', '5 Star', '-17°C ~ -31°C'] },
+      { id: 'MF5DGT550', name: 'MF5DGT550 (540L)', specs: ['540L', '5 Baskets', 'Sliding Doors', '5 Star', '-17°C ~ -31°C'] }
     ],
     specTable: {
       columns: ['Model', 'MF5DGT250', 'MF5DGT350', 'MF5DGT450', 'MF5DGT550'],
@@ -964,7 +961,6 @@ export const productsData = {
         { label: 'Temperature Range - °C', spans: [{ val: '-17°C ~ -31°C', colSpan: 4 }] },
         { label: 'Castors', spans: [{ val: 'Yes', colSpan: 4 }] },
         { label: 'Inbuilt Lock', spans: [{ val: 'Yes', colSpan: 4 }] },
-        { label: 'Warranty Note', spans: [{ val: '1 Year Full Warranty', colSpan: 4 }] },
       ]
     },
     features: [
