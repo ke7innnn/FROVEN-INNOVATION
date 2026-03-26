@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           
           <div className="footer-col">
-            <h3>Products</h3>
+            <h3>Products Selection</h3>
             <ul>
               <li><Link href="/products/visicooler">Beverage Solutions</Link></li>
               <li><Link href="/products/reach-in-ventilated">Kitchen Solutions</Link></li>
@@ -38,23 +38,23 @@ const Footer = () => {
           </div>
           
           <div className="footer-col">
-            <h3>Support</h3>
+            <h3>Business Services</h3>
             <ul>
-              <li><Link href="/amc">Service Request</Link></li>
-              <li><Link href="/contact">Track Service</Link></li>
-              <li><Link href="/contact">Warranty Policy</Link></li>
-              <li><Link href="/contact">User Manuals</Link></li>
-              <li><Link href="/contact">Locate Service Center</Link></li>
+              <li><Link href="/sales">Sales & Equipment</Link></li>
+              <li><Link href="/rental">Rental Solutions</Link></li>
+              <li><Link href="/amc">AMC Services</Link></li>
+              <li><Link href="/contact">Maintenance & Repair</Link></li>
+              <li><Link href="/contact">Warranty Support</Link></li>
             </ul>
           </div>
           
           <div className="footer-col">
-            <h3>Company</h3>
+            <h3>About Froven</h3>
             <ul>
-              <li><Link href="/">About Us</Link></li>
-              <li><Link href="/">Milestones</Link></li>
-              <li><Link href="/gallery">Media Center</Link></li>
-              <li><Link href="/">Careers</Link></li>
+              <li><Link href="/#meet-the-pro">Meet the Pro</Link></li>
+              <li><Link href="/#sustainable-cooling">Sustainable Cooling</Link></li>
+              <li><Link href="/#brands">Our Brands</Link></li>
+              <li><Link href="/#stats">Froven Stats</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>

@@ -13,7 +13,7 @@ const solutions = [
 
 const CoolingSolutions = () => {
   return (
-    <section className="cooling-solutions-section">
+    <section id="sustainable-cooling" className="cooling-solutions-section">
       <motion.div 
         className="cs-header"
         initial={{ opacity: 0, y: 30 }}

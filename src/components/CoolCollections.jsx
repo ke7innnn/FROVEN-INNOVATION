@@ -12,7 +12,7 @@ const CoolCollections = () => {
   ];
 
   return (
-    <section className="cool-collections">
+    <section id="collections" className="cool-collections">
       <motion.div 
         className="cc-header"
         initial={{ opacity: 0, y: 30 }}

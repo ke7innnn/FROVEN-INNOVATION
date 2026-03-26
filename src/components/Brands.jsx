@@ -8,7 +8,7 @@ const bottomBrands = ['The Leela', 'Hilton', 'Hyatt', 'Courtyard Marriott', 'Hol
 
 const Brands = () => {
   return (
-    <section className="brands-section">
+    <section id="brands" className="brands-section">
       <motion.div 
         className="brands-blue-banner"
         initial={{ opacity: 0, scale: 0.95, y: 30 }}

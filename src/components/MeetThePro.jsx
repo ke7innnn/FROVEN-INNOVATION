@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const MeetThePro = () => {
   return (
-    <section className="meet-the-pro" style={{ backgroundImage: 'url("/mission-bg.png")' }}>
+    <section id="meet-the-pro" className="meet-the-pro" style={{ backgroundImage: 'url("/mission-bg.png")' }}>
       <div className="meet-overlay"></div>
       <div className="meet-container">
         <motion.div 

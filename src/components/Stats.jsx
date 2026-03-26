@@ -10,7 +10,7 @@ const statsData = [
 
 const Stats = () => {
   return (
-    <div className="stats-wrapper">
+    <div id="stats" className="stats-wrapper">
       {statsData.map((stat, i) => (
         <motion.div 
           className="stat-item"
