@@ -35,7 +35,7 @@ export default function RentalPage() {
           <div className="hero-overlay" style={{
             position: 'absolute',
             top: 0, left: 0, right: 0, bottom: 0,
-            background: 'linear-gradient(to right, rgba(234,88,12,0.95), rgba(5,64,120,0.8))',
+            background: 'linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(5,64,120,0.80) 100%)',
             zIndex: 1
           }}></div>
           <div className="products-hero-content" style={{ position: 'relative', zIndex: 2 }}>
