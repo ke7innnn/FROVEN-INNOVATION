@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 const slideImages = [
   '/3 slides/slide 1new.png',
@@ -13,7 +14,7 @@ const slidesContent = [
     small: "Commercial Refrigeration",
     main: <>KEEPING<br/>YOUR BUSINESS<br/><span className="highlight-blue">COLD.</span></>,
     desc: "End-to-end refrigeration solutions for hospitality, retail, healthcare, and food & beverage industries.",
-    buttons: [{ text: "Explore Products", primary: true }],
+    buttons: [{ text: "Explore Products", primary: true, link: "/products" }],
     align: 'right'
   },
   {
@@ -21,8 +22,8 @@ const slidesContent = [
     main: <>BUILT FOR<br/>THE KITCHEN.<br/><span className="highlight-yellow">PROVEN.</span></>,
     desc: "From ice cubers to walk-in cold rooms — professional-grade refrigeration for hotels, restaurants, and catering operations.",
     buttons: [
-      { text: "HORECA Range", primary: true },
-      { text: "Rent Equipment", primary: false }
+      { text: "HORECA Range", primary: true, link: "/products" },
+      { text: "Rent Equipment", primary: false, link: "/rental" }
     ],
     align: 'left'
   },
@@ -30,7 +31,7 @@ const slidesContent = [
     small: "21+ Years of Expertise",
     main: <>RELIABLE<br/><span className="highlight-blue">AMC &</span><br/>SERVICE.</>,
     desc: "Annual Maintenance Contracts designed to keep your refrigeration running flawlessly — comprehensive or non-comprehensive.",
-    buttons: [{ text: "Contact Service", primary: true }],
+    buttons: [{ text: "Contact Service", primary: true, link: "/amc" }],
     align: 'right'
   }
 ];
@@ -82,9 +83,11 @@ const Hero = () => {
             <p className="hero-desc">{slidesContent[currentSlide].desc}</p>
             <div className="hero-buttons">
               {slidesContent[currentSlide].buttons.map((btn, idx) => (
-                <button key={idx} className={btn.primary ? "btn-primary" : "btn-secondary"}>
-                  {btn.text}
-                </button>
+                <Link href={btn.link} key={idx} style={{ textDecoration: 'none' }}>
+                  <button className={btn.primary ? "btn-primary" : "btn-secondary"}>
+                    {btn.text}
+                  </button>
+                </Link>
               ))}
             </div>
           </motion.div>
