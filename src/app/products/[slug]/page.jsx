@@ -859,8 +859,8 @@ export const productsData = {
       { id: 'MF3DHT340SD', name: 'MF3DHT340SD (300L)', specs: ['300L', '1 Basket', '1 Door', '3 Star', '+5°C ~ -27°C', '1 Year Warranty'] },
       { id: 'MF4DHT450DD', name: 'MF4DHT450DD (400L)', specs: ['400L', '1 Basket', '2 Doors', '4 Star', '+5°C ~ -27°C', '1 Year Warranty'] },
       { id: 'MF5DHT560DD', name: 'MF5DHT560DD (500L)', specs: ['500L', '2 Baskets', '2 Doors', '5 Star', '+5°C ~ -27°C', '1 Year Warranty'] },
-      { id: 'MFDHT310DDC', name: 'MFDHT310DDC (296L Combo)', specs: ['166C + 130F', '2 Baskets', '2 Doors', '+2°C ~ +8°C / -16°C ~ -24°C', '1 Year Warranty'] },
-      { id: 'MFDHT410DDC', name: 'MFDHT410DDC (401L Combo)', specs: ['218C + 183F', '2 Baskets', '2 Doors', '+2°C ~ +8°C / -16°C ~ -24°C', '1 Year Warranty'] }
+      { id: 'MFDHT310DDC', name: 'MFDHT310DDC (296L Combo)', specs: ['166C + 130F', '2 Baskets', '2 Doors', 'NA Star Rating', '+2°C ~ +8°C / -16°C ~ -24°C', '1 Year Warranty'] },
+      { id: 'MFDHT410DDC', name: 'MFDHT410DDC (401L Combo)', specs: ['218C + 183F', '2 Baskets', '2 Doors', 'NA Star Rating', '+2°C ~ +8°C / -16°C ~ -24°C', '1 Year Warranty'] }
     ],
     specTable: {
       columns: ['Description', 'MF3DHT230SD', 'MF3DHT340SD', 'MF4DHT450DD', 'MF5DHT560DD', 'MFDHT310DDC', 'MFDHT410DDC'],
