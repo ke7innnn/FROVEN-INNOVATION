@@ -686,16 +686,19 @@
   gap: 20px;
 }
 
-/* Row 1, 3 & 6: 3 "Square-profile" cards per row (12/4 = 3) */
+/* Rows 1, 3, 7, 8, 9: 3 "Square-profile" cards per row (12/4 = 3) */
 .ref-grid > a:nth-child(1), .ref-grid > a:nth-child(2), .ref-grid > a:nth-child(3),
 .ref-grid > a:nth-child(8), .ref-grid > a:nth-child(9), .ref-grid > a:nth-child(10),
-.ref-grid > a:nth-child(15) {
+.ref-grid > a:nth-child(15),
+.ref-grid > a:nth-child(20), .ref-grid > a:nth-child(21), .ref-grid > a:nth-child(22),
+.ref-grid > a:nth-child(23), .ref-grid > a:nth-child(24), .ref-grid > a:nth-child(25) {
   grid-column: span 4 !important;
 }
 
-/* Row 2 & 4: 4 "Rectangle-profile" cards per row (12/3 = 4) */
+/* Rows 2, 4, 5, 6: 4 "Rectangle-profile" cards per row (12/3 = 4) */
 .ref-grid > a:nth-child(4), .ref-grid > a:nth-child(5), .ref-grid > a:nth-child(6), .ref-grid > a:nth-child(7),
-.ref-grid > a:nth-child(11), .ref-grid > a:nth-child(12), .ref-grid > a:nth-child(13), .ref-grid > a:nth-child(14) {
+.ref-grid > a:nth-child(11), .ref-grid > a:nth-child(12), .ref-grid > a:nth-child(13), .ref-grid > a:nth-child(14),
+.ref-grid > a:nth-child(16), .ref-grid > a:nth-child(17), .ref-grid > a:nth-child(18), .ref-grid > a:nth-child(19) {
   grid-column: span 3 !important;
 }
 

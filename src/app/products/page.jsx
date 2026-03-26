@@ -22,6 +22,9 @@ export const productsList = [
   { id: 20, name: 'Mini Bar With Absorption', slug: 'minibar-absorption', image: '/product thumbnail/mini bar with absorbtion.jpeg', type: 'image', centerImage: true },
   { id: 21, name: 'Cake Display Cabinets', slug: 'cake-display', image: '/product thumbnail/cake.jpeg', type: 'image', centerImage: true },
   { id: 22, name: 'Water Dispenser', slug: 'water-dispenser', image: '/product thumbnail/ water dispenser new.jpeg', type: 'image', centerImage: true, containImage: true },
+  { id: 23, name: 'Hard Top Chest Freezer', slug: 'hard-top-chest-freezer', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', type: 'image', centerImage: true },
+  { id: 24, name: 'Glass Top Chest Freezer', slug: 'glass-top-chest-freezer', image: '/product thumbnail/GLASS TOP CHEST FREEZER.png', type: 'image', centerImage: true },
+  { id: 25, name: 'Hard Top Chest Freezer 70mm', slug: 'hard-top-chest-freezer-70mm', image: '/product thumbnail/HARD TOP CHEST FREEZER70MM.png', type: 'image', centerImage: true },
 ];
 
 export default function ProductsPage() {

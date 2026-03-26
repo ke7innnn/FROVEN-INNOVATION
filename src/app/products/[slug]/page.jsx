@@ -843,6 +843,119 @@ export const productsData = {
       { id: 16, name: 'Blast Freezer', image: '/products/Blast Freezer.jpg', link: '/products/blast-freezer' },
       { id: 21, name: 'Cake Display Cabinets', image: '/products/CAKE DISPLAY CABINETS.jpg', link: '/products/cake-display' },
     ]
+  },
+  'hard-top-chest-freezer': {
+    name: 'Hard Top Chest Freezer',
+    models: [
+      { id: 'MF3DHT230SD', name: 'MF3DHT230SD (200L)', specs: ['200 Litres', '1 Basket', '1 Door', '+5°C to -27°C', '1 Year Warranty'] },
+      { id: 'MF3DHT340SD', name: 'MF3DHT340SD (300L)', specs: ['300 Litres', '1 Basket', '1 Door', '+5°C to -27°C', '1 Year Warranty'] },
+      { id: 'MF4DHT450DD', name: 'MF4DHT450DD (400L)', specs: ['400 Litres', '1 Basket', '2 Doors', '+5°C to -27°C', '1 Year Warranty'] },
+      { id: 'MF5DHT560DD', name: 'MF5DHT560DD (500L)', specs: ['500 Litres', '2 Baskets', '2 Doors', '+5°C to -27°C', '1 Year Warranty'] },
+      { id: 'MFDHT310DDC', name: 'MFDHT310DDC (296L Combo)', specs: ['166C + 130F', '2 Baskets', '2 Doors', '+2°C to +8°C / -16°C to -24°C', '1 Year Warranty'] },
+      { id: 'MFDHT410DDC', name: 'MFDHT410DDC (401L Combo)', specs: ['218C + 183F', '2 Baskets', '2 Doors', '+2°C to +8°C / -16°C to -24°C', '1 Year Warranty'] }
+    ],
+    specTable: {
+      columns: ['Specification', 'MF3DHT230SD', 'MF3DHT340SD', 'MF4DHT450DD', 'MF5DHT560DD', 'MFDHT310DDC', 'MFDHT410DDC'],
+      rows: [
+        { label: 'Star Rating (BEE)', values: ['3 Star', '3 Star', '4 Star', '5 Star', 'NA', 'NA'] },
+        { label: 'Capacity (Litres)', values: ['200', '300', '400', '500', '166C + 130F', '218C + 183F'] },
+        { label: 'External Dim (WxDxH mm)', values: ['815x720x825', '1105x720x845', '1395x720x845', '1685x720x845', '1115x720x845', '1395x720x845'] },
+        { label: 'Packaging Dim (WxDxH mm)', values: ['885x760x900', '1175x760x900', '1465x760x900', '1755x760x900', '1180x770x885', '1475x770x885'] },
+        { label: 'Baskets', values: ['1', '1', '1', '2', '2', '2'] },
+        { label: 'No Of Doors', values: ['1', '1', '2', '2', '2', '2'] },
+        { label: 'Temp Range - °C', values: ['+5°C to -27°C', '+5°C to -27°C', '+5°C to -27°C', '+5°C to -27°C', '+2°C to +8°C / -16°C to -24°C', '+2°C to +8°C / -16°C to -24°C'] },
+        { label: 'Castors (Wheels)', spans: [{ val: 'Yes', colSpan: 6 }] },
+        { label: 'Lock & Key', spans: [{ val: 'Yes', colSpan: 6 }] },
+        { label: 'Warranty', spans: [{ val: '1 Year', colSpan: 6 }] },
+      ]
+    },
+    features: [
+      { name: 'Eco-Friendly Refrigerant', icon: 'leaf' },
+      { name: 'Low Power Consumption', icon: 'plug' },
+      { name: 'Hinge Door', icon: 'door-open' },
+      { name: 'Door Lock', icon: 'lock' },
+      { name: 'Durable Castors (Wheels)', icon: 'truck-loading' },
+      { name: 'Tropicalized @ 50°C', icon: 'thermometer-half' }
+    ],
+    related: [
+      { id: 16, name: 'Blast Freezer', image: '/products/Blast Freezer.jpg', link: '/products/blast-freezer' },
+      { id: 22, name: 'Water Dispenser', image: '/product thumbnail/ water dispenser new.jpeg', link: '/products/water-dispenser' },
+    ]
+  },
+  'hard-top-chest-freezer-70mm': {
+    name: 'Hard Top Chest Freezer 70mm',
+    models: [
+      { id: 'MF3DHT150SD', name: 'MF3DHT150SD (102L)', specs: ['102 Litres', '1 Basket', '1 Door', '-2.5°C to -28°C', '1 Year Warranty'] },
+      { id: 'MF4DHT250SD', name: 'MF4DHT250SD (205L)', specs: ['205 Litres', '1 Basket', '1 Door', '-2.5°C to -28°C', '1 Year Warranty'] },
+      { id: 'MF5DHT350SD', name: 'MF5DHT350SD (315L)', specs: ['315 Litres', '1 Basket', '1 Door', '-2.5°C to -28°C', '1 Year Warranty'] },
+      { id: 'MF5DHT350DD', name: 'MF5DHT350DD (315L DD)', specs: ['315 Litres', '2 Baskets', '2 Doors', '-2.5°C to -28°C', '1 Year Warranty'] },
+      { id: 'MF5DHT450DD', name: 'MF5DHT450DD (421L)', specs: ['421 Litres', '2 Baskets', '2 Doors', '-2.5°C to -28°C', '1 Year Warranty'] },
+      { id: 'MF5DHT550DD', name: 'MF5DHT550DD (530L)', specs: ['530 Litres', '2 Baskets', '2 Doors', '-2.5°C to -28°C', '1 Year Warranty'] }
+    ],
+    specTable: {
+      columns: ['Specification', 'MF3DHT150SD', 'MF4DHT250SD', 'MF5DHT350SD', 'MF5DHT350DD', 'MF5DHT450DD', 'MF5DHT550DD'],
+      rows: [
+        { label: 'Star Rating (BEE)', values: ['3 Star', '4 Star', '5 Star', '5 Star', '5 Star', '5 Star'] },
+        { label: 'Capacity (Litres)', values: ['102', '205', '315', '315', '421', '530'] },
+        { label: 'External Dim (WxDxH mm)', values: ['580x630x835', '940x630x835', '1100x740x835', '1100x740x835', '1390x740x835', '1680x740x835'] },
+        { label: 'Internal Dim (WxDxH mm)', values: ['440x440x632', '790x440x632', '960x550x632', '960x550x632', '1250x550x632', '1540x550x632'] },
+        { label: 'Baskets', values: ['1', '1', '1', '2', '2', '2'] },
+        { label: 'No Of Doors', values: ['1', '1', '1', '2', '2', '2'] },
+        { label: 'Temp Range - °C', spans: [{ val: '-2.5°C to -28°C', colSpan: 6 }] },
+        { label: 'Castors (Wheels)', spans: [{ val: 'Yes', colSpan: 6 }] },
+        { label: 'Lock & Key', spans: [{ val: 'Yes', colSpan: 6 }] },
+        { label: 'Warranty', spans: [{ val: '1 Year', colSpan: 6 }] },
+      ]
+    },
+    features: [
+      { name: 'Eco-Friendly Refrigerant', icon: 'leaf' },
+      { name: 'Low Power Consumption', icon: 'plug' },
+      { name: 'Hinge Door', icon: 'door-open' },
+      { name: 'Door Lock', icon: 'lock' },
+      { name: 'Durable Castors (Wheels)', icon: 'truck-loading' },
+      { name: 'Tropicalized @ 50°C', icon: 'thermometer-half' }
+    ],
+    related: [
+      { id: 16, name: 'Blast Freezer', image: '/products/Blast Freezer.jpg', link: '/products/blast-freezer' },
+      { id: 23, name: 'Hard Top Chest Freezer', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', link: '/products/hard-top-chest-freezer' },
+    ]
+  },
+  'glass-top-chest-freezer': {
+    name: 'Glass Top Chest Freezer',
+    models: [
+      { id: 'MF5DGT250', name: 'MF5DGT250 (200L)', specs: ['200 Litres', '2 Baskets', '2 Sliding Doors', '-17°C to -31°C', '1 Year Warranty'] },
+      { id: 'MF5DGT350', name: 'MF5DGT350 (320L)', specs: ['320 Litres', '3 Baskets', '2 Sliding Doors', '-17°C to -31°C', '1 Year Warranty'] },
+      { id: 'MF5DGT450', name: 'MF5DGT450 (430L)', specs: ['430 Litres', '4 Baskets', '2 Sliding Doors', '-17°C to -31°C', '1 Year Warranty'] },
+      { id: 'MF5DGT550', name: 'MF5DGT550 (540L)', specs: ['540 Litres', '5 Baskets', '2 Sliding Doors', '-17°C to -31°C', '1 Year Warranty'] }
+    ],
+    specTable: {
+      columns: ['Specification', 'MF5DGT250', 'MF5DGT350', 'MF5DGT450', 'MF5DGT550'],
+      rows: [
+        { label: 'Star Rating (BEE)', values: ['5 Star', '5 Star', '5 Star', '5 Star'] },
+        { label: 'Capacity (Litres)', values: ['200', '320', '430', '540'] },
+        { label: 'External Dim (WxDxH mm)', values: ['940x630x835', '1100x740x800', '1390x740x800', '1680x740x800'] },
+        { label: 'Internal Dim (WxDxH mm)', values: ['790x440x632', '960x550x632', '1250x550x632', '1540x550x632'] },
+        { label: 'Baskets', values: ['2', '3', '4', '5'] },
+        { label: 'No Of Doors (Sliding)', values: ['2', '2', '2', '2'] },
+        { label: 'Temp Range - °C', spans: [{ val: '-17°C ~ -31°C', colSpan: 4 }] },
+        { label: 'Castors (Wheels)', spans: [{ val: 'Yes', colSpan: 4 }] },
+        { label: 'Inbuilt Lock', spans: [{ val: 'Yes', colSpan: 4 }] },
+        { label: 'Warranty', spans: [{ val: '1 Year', colSpan: 4 }] },
+      ]
+    },
+    features: [
+      { name: 'Eco-Friendly Refrigerant', icon: 'leaf' },
+      { name: 'Low Power Consumption', icon: 'plug' },
+      { name: 'Sliding Glass Door', icon: 'door-open' },
+      { name: 'Inbuilt Lock', icon: 'lock' },
+      { name: 'Durable Castors (Wheels)', icon: 'truck-loading' },
+      { name: 'Tropicalized @ 50°C', icon: 'thermometer-half' }
+    ],
+    related: [
+      { id: 16, name: 'Blast Freezer', image: '/products/Blast Freezer.jpg', link: '/products/blast-freezer' },
+      { id: 23, name: 'Hard Top Chest Freezer', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', link: '/products/hard-top-chest-freezer' },
+      { id: 24, name: 'Hard Top Chest Freezer 70mm', image: '/product thumbnail/HARD TOP CHEST FREEZER70MM.png', link: '/products/hard-top-chest-freezer-70mm' },
+    ]
   }
 };
 
