@@ -19,7 +19,7 @@ export const productsData = {
     sku: 'FVC Series',
     models: [
       { id: 'fvc200g', name: 'FVC200G', image: '/products/visicooler.jpg', specs: ['217L', '530x510x1570', '4 Shelves'] },
-      { id: 'fvc300g', name: 'FVC300G', image: '/products/visicooler.jpg', specs: ['345L', '583x684x1660', '5 Shelves'] },
+      { id: 'fvc300g', name: 'FVC300G (300L)', image: '/products/visicooler.jpg', specs: ['345L', '583x684x1660', '5 Shelves', '1 Year Warranty'] },
       { id: 'fvc400g', name: 'FVC400G', image: '/products/visicooler.jpg', specs: ['436L', '583x684x1991', '5 Shelves'] },
       { id: 'fvc500g', name: 'FVC500G', image: '/products/visicooler.jpg', specs: ['485L', '643x684x1991', '5 Shelves'] },
       { id: 'fvc700g', name: 'FVC700G', image: '/products/visicooler.jpg', specs: ['766L', '950x684x1991', '10 Shelves'] },
