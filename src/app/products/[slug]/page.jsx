@@ -846,6 +846,14 @@ export const productsData = {
   },
   'hard-top-chest-freezer': {
     name: 'Hard Top Chest Freezer',
+    category: 'Commercial Refrigeration',
+    breadcrumbs: ['Home', 'Commercial Cooling', 'Hard Top Chest Freezer'],
+    sku: 'MF-DHT Series',
+    images: [
+      '/product thumbnail/HARD TOP CHEST FREEZER.png',
+      '/product thumbnail/HARD TOP CHEST FREEZER.png',
+      '/product thumbnail/HARD TOP CHEST FREEZER.png',
+    ],
     models: [
       { id: 'MF3DHT230SD', name: 'MF3DHT230SD (200L)', specs: ['200 Litres', '1 Basket', '1 Door', '+5°C to -27°C', '1 Year Warranty'] },
       { id: 'MF3DHT340SD', name: 'MF3DHT340SD (300L)', specs: ['300 Litres', '1 Basket', '1 Door', '+5°C to -27°C', '1 Year Warranty'] },
@@ -870,12 +878,12 @@ export const productsData = {
       ]
     },
     features: [
-      { name: 'Eco-Friendly Refrigerant', icon: 'leaf' },
-      { name: 'Low Power Consumption', icon: 'plug' },
-      { name: 'Hinge Door', icon: 'door-open' },
-      { name: 'Door Lock', icon: 'lock' },
-      { name: 'Durable Castors (Wheels)', icon: 'truck-loading' },
-      { name: 'Tropicalized @ 50°C', icon: 'thermometer-half' }
+      { text: 'Eco-Friendly Refrigerant', icon: 'fa-solid fa-leaf' },
+      { text: 'Low Power Consumption', icon: 'fa-solid fa-plug' },
+      { text: 'Hinge Door', icon: 'fa-solid fa-door-open' },
+      { text: 'Door Lock', icon: 'fa-solid fa-lock' },
+      { text: 'Durable Castors (Wheels)', icon: 'fa-solid fa-circle-dot' },
+      { text: 'Tropicalized @ 50°C', icon: 'fa-solid fa-thermometer' }
     ],
     related: [
       { id: 16, name: 'Blast Freezer', image: '/products/Blast Freezer.jpg', link: '/products/blast-freezer' },
@@ -884,6 +892,14 @@ export const productsData = {
   },
   'hard-top-chest-freezer-70mm': {
     name: 'Hard Top Chest Freezer 70mm',
+    category: 'Commercial Refrigeration',
+    breadcrumbs: ['Home', 'Commercial Cooling', 'Hard Top Chest Freezer 70mm'],
+    sku: 'MF-DHT 70mm Series',
+    images: [
+      '/product thumbnail/HARD TOP CHEST FREEZER70MM.png',
+      '/product thumbnail/HARD TOP CHEST FREEZER70MM.png',
+      '/product thumbnail/HARD TOP CHEST FREEZER70MM.png',
+    ],
     models: [
       { id: 'MF3DHT150SD', name: 'MF3DHT150SD (102L)', specs: ['102 Litres', '1 Basket', '1 Door', '-2.5°C to -28°C', '1 Year Warranty'] },
       { id: 'MF4DHT250SD', name: 'MF4DHT250SD (205L)', specs: ['205 Litres', '1 Basket', '1 Door', '-2.5°C to -28°C', '1 Year Warranty'] },
@@ -908,12 +924,12 @@ export const productsData = {
       ]
     },
     features: [
-      { name: 'Eco-Friendly Refrigerant', icon: 'leaf' },
-      { name: 'Low Power Consumption', icon: 'plug' },
-      { name: 'Hinge Door', icon: 'door-open' },
-      { name: 'Door Lock', icon: 'lock' },
-      { name: 'Durable Castors (Wheels)', icon: 'truck-loading' },
-      { name: 'Tropicalized @ 50°C', icon: 'thermometer-half' }
+      { text: 'Eco-Friendly Refrigerant', icon: 'fa-solid fa-leaf' },
+      { text: 'Low Power Consumption', icon: 'fa-solid fa-plug' },
+      { text: 'Hinge Door', icon: 'fa-solid fa-door-open' },
+      { text: 'Door Lock', icon: 'fa-solid fa-lock' },
+      { text: 'Durable Castors (Wheels)', icon: 'fa-solid fa-circle-dot' },
+      { text: 'Tropicalized @ 50°C', icon: 'fa-solid fa-thermometer' }
     ],
     related: [
       { id: 16, name: 'Blast Freezer', image: '/products/Blast Freezer.jpg', link: '/products/blast-freezer' },
@@ -922,6 +938,14 @@ export const productsData = {
   },
   'glass-top-chest-freezer': {
     name: 'Glass Top Chest Freezer',
+    category: 'Commercial Refrigeration',
+    breadcrumbs: ['Home', 'Commercial Cooling', 'Glass Top Chest Freezer'],
+    sku: 'MF5DGT Series',
+    images: [
+      '/product thumbnail/GLASS TOP CHEST FREEZER.png',
+      '/product thumbnail/GLASS TOP CHEST FREEZER.png',
+      '/product thumbnail/GLASS TOP CHEST FREEZER.png',
+    ],
     models: [
       { id: 'MF5DGT250', name: 'MF5DGT250 (200L)', specs: ['200 Litres', '2 Baskets', '2 Sliding Doors', '-17°C to -31°C', '1 Year Warranty'] },
       { id: 'MF5DGT350', name: 'MF5DGT350 (320L)', specs: ['320 Litres', '3 Baskets', '2 Sliding Doors', '-17°C to -31°C', '1 Year Warranty'] },
@@ -944,12 +968,12 @@ export const productsData = {
       ]
     },
     features: [
-      { name: 'Eco-Friendly Refrigerant', icon: 'leaf' },
-      { name: 'Low Power Consumption', icon: 'plug' },
-      { name: 'Sliding Glass Door', icon: 'door-open' },
-      { name: 'Inbuilt Lock', icon: 'lock' },
-      { name: 'Durable Castors (Wheels)', icon: 'truck-loading' },
-      { name: 'Tropicalized @ 50°C', icon: 'thermometer-half' }
+      { text: 'Eco-Friendly Refrigerant', icon: 'fa-solid fa-leaf' },
+      { text: 'Low Power Consumption', icon: 'fa-solid fa-plug' },
+      { text: 'Sliding Glass Door', icon: 'fa-solid fa-door-open' },
+      { text: 'Inbuilt Lock', icon: 'fa-solid fa-lock' },
+      { text: 'Durable Castors (Wheels)', icon: 'fa-solid fa-circle-dot' },
+      { text: 'Tropicalized @ 50°C', icon: 'fa-solid fa-thermometer' }
     ],
     related: [
       { id: 16, name: 'Blast Freezer', image: '/products/Blast Freezer.jpg', link: '/products/blast-freezer' },
