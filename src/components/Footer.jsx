@@ -17,45 +17,36 @@ const Footer = () => {
             <p className="brand-desc">
               Froven Innovations is India's leading commercial refrigeration company.
             </p>
-            <div className="social-links">
-              <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-              <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
-            </div>
           </div>
           
           <div className="footer-col">
-            <h3>Products Selection</h3>
+            <h3>Products</h3>
             <ul>
-              <li><Link href="/products/visicooler">Beverage Solutions</Link></li>
-              <li><Link href="/products/reach-in-ventilated">Kitchen Solutions</Link></li>
-              <li><Link href="/products/visicooler">Retail Solutions</Link></li>
-              <li><Link href="/products/reach-in-static">Healthcare Solutions</Link></li>
-              <li><Link href="/products">Horeca Solutions</Link></li>
+              <li><Link href="/products">All Products</Link></li>
+              <li><Link href="/products/visicooler">Visi Cooler</Link></li>
+              <li><Link href="/products/hard-top-chest-freezer">Chest Freezers</Link></li>
+              <li><Link href="/products/blast-freezer">Blast Freezer</Link></li>
+              <li><Link href="/products/water-dispenser">Water Dispenser</Link></li>
             </ul>
           </div>
           
           <div className="footer-col">
-            <h3>Business Services</h3>
+            <h3>Services</h3>
             <ul>
-              <li><Link href="/sales">Sales & Equipment</Link></li>
               <li><Link href="/rental">Rental Solutions</Link></li>
               <li><Link href="/amc">AMC Services</Link></li>
-              <li><Link href="/contact">Maintenance & Repair</Link></li>
-              <li><Link href="/contact">Warranty Support</Link></li>
+              <li><Link href="/sales">Sales & Equipment</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
           
           <div className="footer-col">
-            <h3>About Froven</h3>
+            <h3>Explore</h3>
             <ul>
-              <li><Link href="/#meet-the-pro">Meet the Pro</Link></li>
-              <li><Link href="/#sustainable-cooling">Sustainable Cooling</Link></li>
-              <li><Link href="/#brands">Our Brands</Link></li>
-              <li><Link href="/#stats">Froven Stats</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/gallery">Gallery</Link></li>
+              <li><Link href="/products">Catalog</Link></li>
+              <li><Link href="/contact">Get a Quote</Link></li>
             </ul>
           </div>
         </div>
@@ -63,9 +54,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>Copyright © froveninnovations.com 2026. All rights reserved.</p>
           <div className="bottom-links">
-            <Link href="#">Privacy Policy</Link>
-            <Link href="#">Terms of Use</Link>
-            <Link href="/products">Sitemap</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms-of-use">Terms of Use</Link>
+            <Link href="/sitemap">Sitemap</Link>
           </div>
         </div>
       </div>
