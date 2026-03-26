@@ -1107,7 +1107,6 @@ ${form.message.value}`;
           {/* Left: Gallery */}
           <div className="pd-gallery">
             <div className="pd-main-image">
-              <i className="fa-solid fa-magnifying-glass pd-magnify"></i>
               <img src={product.images[activeImage]} alt={product.name} />
             </div>
             <div className="pd-thumbnails">
