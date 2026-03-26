@@ -980,6 +980,15 @@ export const productsData = {
       { id: 23, name: 'Hard Top Chest Freezer', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', link: '/products/hard-top-chest-freezer' },
       { id: 24, name: 'Hard Top Chest Freezer 70mm', image: '/product thumbnail/HARD TOP CHEST FREEZER70MM.png', link: '/products/hard-top-chest-freezer-70mm' },
     ]
+  },
+  'hard-top-selection': {
+    name: 'Hard Top Chest Freezer',
+    category: 'Commercial Refrigeration',
+    breadcrumbs: ['Home', 'Commercial Cooling', 'Hard Top Chest Freezer'],
+    selectionItems: [
+      { name: 'Hard Top (Normal)', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', slug: 'hard-top-chest-freezer', desc: 'Standard high-performance cooling' },
+      { name: 'Hard Top (70mm)', image: '/product thumbnail/HARD TOP CHEST FREEZER70MM.png', slug: 'hard-top-chest-freezer-70mm', desc: 'Enhanced 70mm insulation for extreme conditions' }
+    ]
   }
 };
 
@@ -1022,7 +1031,37 @@ ${form.message.value}`;
 
       <div className="pd-container">
         
-        {product.models ? (
+        {product.selectionItems ? (
+          /* =========================================
+             SELECTION GATEWAY VIEW (e.g. Normal vs 70mm)
+             ========================================= */
+          <div className="selection-gateway-view" style={{ padding: '60px 0 100px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+              <h1 style={{ fontSize: '42px', color: 'var(--froven-dark-blue)', fontWeight: 800, marginBottom: '20px' }}>Choose Your Series</h1>
+              <p style={{ fontSize: '19px', color: '#64748b', maxWidth: '700px', margin: '0 auto' }}>
+                Select the insulation thickness and performance series that best fits your business environment.
+              </p>
+            </div>
+            
+            <div className="models-grid" style={{ maxWidth: '900px', margin: '0 auto', gap: '40px' }}>
+              {product.selectionItems.map((item, idx) => (
+                <Link href={`/products/${item.slug}`} key={idx} style={{ textDecoration: 'none' }}>
+                  <div className="ref-card center-image model-card selection-card" style={{ height: '450px' }}>
+                    <div className="ref-card-title" style={{ fontSize: '24px', padding: '25px' }}>
+                      {item.name}
+                      <p style={{ fontSize: '14px', fontWeight: 400, opacity: 0.9, marginTop: '8px', textTransform: 'none' }}>{item.desc}</p>
+                    </div>
+                    <div 
+                      className="ref-card-image" 
+                      style={{ backgroundImage: `url('${item.image}')`, height: '280px' }}
+                    ></div>
+                    <div className="ref-card-arrow" style={{ bottom: '30px' }}>Select Series →</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : product.models ? (
           /* =========================================
              MODEL SELECTION GRID VIEW
              ========================================= */
