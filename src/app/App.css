@@ -686,9 +686,10 @@
   gap: 20px;
 }
 
-/* Row 1 & 3: 3 "Square-profile" cards per row (12/4 = 3) */
+/* Row 1, 3 & 6: 3 "Square-profile" cards per row (12/4 = 3) */
 .ref-grid > a:nth-child(1), .ref-grid > a:nth-child(2), .ref-grid > a:nth-child(3),
-.ref-grid > a:nth-child(8), .ref-grid > a:nth-child(9), .ref-grid > a:nth-child(10) {
+.ref-grid > a:nth-child(8), .ref-grid > a:nth-child(9), .ref-grid > a:nth-child(10),
+.ref-grid > a:nth-child(15) {
   grid-column: span 4 !important;
 }
 

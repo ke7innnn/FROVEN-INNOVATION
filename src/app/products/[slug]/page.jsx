@@ -778,9 +778,74 @@ export const productsData = {
       { id: 18, name: 'Wine Chiller', image: '/products/WINE CHILLER.jpg', link: '/products/wine-chiller' },
       { id: 19, name: 'Ice Machine', image: '/products/ICE MACHINE.jpg', link: '/products/ice-machine' },
       { id: 20, name: 'Mini Bar With Absorption', image: '/products/MINI BAR WITH ABSORPTION.jpg', link: '/products/minibar-absorption' },
+      { id: 22, name: 'Water Dispenser', image: '/product thumbnail/ water dispenser new.jpeg', link: '/products/water-dispenser' },
+    ]
+  },
+
+  // ─────────────────────────────────────────────────────────
+  'water-dispenser': {
+    name: 'WATER DISPENSER',
+    category: 'Water Dispensing',
+    breadcrumbs: ['Home', 'Products', 'Water Dispenser'],
+    sku: 'MFWD Series',
+    models: [
+      {
+        id: 'mfwdttblkwh',
+        name: 'MFWDTTBLKWH',
+        image: '/product thumbnail/ water dispenser new.jpeg',
+        specs: ['Table Top', '3 Taps', '3 Lit/hr Cooling', '1 Year Warranty']
+      },
+      {
+        id: 'mfwdfcblkwh',
+        name: 'MFWDFCBLKWH',
+        image: '/product thumbnail/ water dispenser new.jpeg',
+        specs: ['Floor Standing + Cabinet', '3 Taps', '3 Lit/hr Cooling', '1 Year Warranty']
+      },
+      {
+        id: 'mfwdfrblkwh',
+        name: 'MFWDFRBLKWH',
+        image: '/product thumbnail/ water dispenser new.jpeg',
+        specs: ['Floor Standing + Cooling Cabinet', '3 Taps', '3 Lit/hr Cooling', '1 Year Warranty']
+      },
+    ],
+    images: [
+      '/product thumbnail/ water dispenser new.jpeg',
+      '/product thumbnail/ water dispenser new.jpeg',
+      '/product thumbnail/ water dispenser new.jpeg',
+    ],
+    features: [
+      { text: 'Multi-Temperature Options', icon: 'fa-solid fa-temperature-half' },
+      { text: 'Refrigerated Cabinet', icon: 'fa-solid fa-box' },
+      { text: 'Durability & Energy Efficiency', icon: 'fa-solid fa-bolt' },
+      { text: 'User-Friendly Design', icon: 'fa-solid fa-hand-pointer' },
+      { text: 'Child Lock', icon: 'fa-solid fa-lock' },
+      { text: 'Hygiene Assured', icon: 'fa-solid fa-shield-halved' },
+    ],
+    specTable: {
+      columns: ['Specification', 'MFWDTTBLKWH', 'MFWDFCBLKWH', 'MFWDFRBLKWH'],
+      rows: [
+        { label: 'BWD Type', values: ['Table Top', 'Floor Standing with cabinet', 'Floor Standing with Cooling cabinet'] },
+        { label: 'No Of Taps', values: ['3', '3', '3'] },
+        { label: 'External Dimension (WxDxH) (MM)', values: ['352 x 350 x 500', '313 x 350 x 946', '352 x 335 x 990'] },
+        { label: 'Packed Dimension (WxDxH) (MM)', values: ['352 x 380 x 552', '352 x 380 x 990', '352 x 380 x 990'] },
+        { label: 'Water Cooling Capacity', values: ['3 Lit / hr', '3 Lit / hr', '3 Lit / hr'] },
+        { label: 'Water Heating Capacity', values: ['5 Lit /hr', '5 Lit /hr', '5 Lit /hr'] },
+        { label: 'Tap Distribution', spans: [{ val: 'Hot / Normal / Cold', colSpan: 3 }] },
+        { label: 'Cold Storage Capacity', values: ['3.2 Lit', '3.2 Lit', '3.2 Lit'] },
+        { label: 'Hot Storage Capacity', values: ['1 Lit', '1 Lit', '1 Lit'] },
+        { label: 'Bottom Compartment', values: ['NA', 'Only Storage', 'Refrigerated'] },
+        { label: 'Warranty', spans: [{ val: '1 Year', colSpan: 3 }] },
+      ]
+    },
+    related: [
+      { id: 1, name: 'Visi Cooler', image: '/products/visicooler.jpg', link: '/products/visicooler' },
+      { id: 7, name: 'Mini Bar', image: '/products/MINI BAR.jpg', link: '/products/minibars' },
+      { id: 16, name: 'Blast Freezer', image: '/products/Blast Freezer.jpg', link: '/products/blast-freezer' },
+      { id: 21, name: 'Cake Display Cabinets', image: '/products/CAKE DISPLAY CABINETS.jpg', link: '/products/cake-display' },
     ]
   }
 };
+
 
 export default function ProductDetailsPage() {
   const params = useParams();

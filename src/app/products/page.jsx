@@ -21,6 +21,7 @@ export const productsList = [
   { id: 19, name: 'Ice Machine', slug: 'ice-machine', image: '/product thumbnail/water dispenser.png', type: 'image', centerImage: true },
   { id: 20, name: 'Mini Bar With Absorption', slug: 'minibar-absorption', image: '/product thumbnail/mini bar with absorbtion.jpeg', type: 'image', centerImage: true },
   { id: 21, name: 'Cake Display Cabinets', slug: 'cake-display', image: '/product thumbnail/cake.jpeg', type: 'image', centerImage: true },
+  { id: 22, name: 'Water Dispenser', slug: 'water-dispenser', image: '/product thumbnail/ water dispenser new.jpeg', type: 'image', centerImage: true, containImage: true },
 ];
 
 export default function ProductsPage() {
@@ -94,14 +95,17 @@ export default function ProductsPage() {
 
             {productsList.map((product) => (
               <Link href={`/products/${product.slug}`} key={product.id} style={{ textDecoration: 'none' }}>
-                <div 
+                <div
                   className={`ref-card ${product.type === 'solid' ? 'solid-blue' : ''} ${product.centerImage ? 'center-image' : ''}`}
                 >
                   <div className="ref-card-title">{product.name}</div>
                   {product.type === 'image' && (
-                    <div 
-                      className="ref-card-image" 
-                      style={{ backgroundImage: `url('${product.image}')` }}
+                    <div
+                      className="ref-card-image"
+                      style={{
+                        backgroundImage: `url('${product.image}')`,
+                        ...(product.containImage ? { backgroundSize: 'contain', backgroundColor: '#f4f5f7' } : {})
+                      }}
                     ></div>
                   )}
                   <div className="ref-card-arrow">→</div>
