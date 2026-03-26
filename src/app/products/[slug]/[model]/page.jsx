@@ -38,7 +38,7 @@ export default function SingleModelDetailsPage() {
   // e.g. columns = ['Specification', 'FVC200G', 'FVC300G']
   // If modelDef.name is 'FVC200G', colIndex = 1
   const colIndex = product.specTable.columns.findIndex(
-    col => col.toUpperCase() === modelDef.name.toUpperCase()
+    col => col.toUpperCase() === modelDef.id.toUpperCase()
   );
 
   return (
