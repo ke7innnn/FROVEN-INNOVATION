@@ -1075,7 +1075,7 @@ ${form.message.value}`;
             
             <div className="models-grid">
               {product.models.map((m) => {
-                const categoryImage = productsList?.find(p => p.slug === slug)?.image || m.image;
+                const categoryImage = productsList?.find(p => p.slug === slug)?.image || m.image || product.images?.[0];
                 
                 return (
                   <Link href={`/products/${slug}/${m.id}`} key={m.id} style={{ textDecoration: 'none' }}>
