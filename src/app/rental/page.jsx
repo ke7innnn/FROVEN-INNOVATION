@@ -62,24 +62,22 @@ export default function RentalPage() {
             </p>
           </div>
 
-          <div className="models-grid">
+          <div className="ref-grid" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 40px' }}>
             {rentalEquipment.map((equipment, idx) => (
               <Link href={equipment.link} key={idx} style={{ textDecoration: 'none' }}>
-                <motion.div 
-                  className="ref-card center-image model-card"
+                <motion.div
+                  className="ref-card center-image"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.15 }}
                 >
-                  <div className="ref-card-title" style={{ fontSize: '26px' }}>
-                    {equipment.name}
-                  </div>
-                  <div 
-                    className="ref-card-image" 
+                  <div
+                    className="ref-card-image"
                     style={{ backgroundImage: `url('${equipment.image}')` }}
-                  ></div>
-                  <div className="ref-card-arrow">→</div>
+                  />
+                  <div className="ref-card-title">{equipment.name}</div>
+                  <div className="ref-card-arrow">View Details</div>
                 </motion.div>
               </Link>
             ))}

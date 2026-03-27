@@ -113,15 +113,13 @@ export default function SalesPage() {
             <div className="ref-grid">
               {displayProducts.map((product) => (
                 <Link href={`/products/${product.slug}`} key={product.id} style={{ textDecoration: 'none' }}>
-                  <div 
-                    className={`ref-card ${product.centerImage ? 'center-image' : ''}`}
-                  >
-                    <div className="ref-card-title">{product.name}</div>
-                    <div 
-                      className="ref-card-image" 
+                  <div className={`ref-card ${product.centerImage ? 'center-image' : ''}`}>
+                    <div
+                      className="ref-card-image"
                       style={{ backgroundImage: `url('${product.image}')` }}
-                    ></div>
-                    <div className="ref-card-arrow">→</div>
+                    />
+                    <div className="ref-card-title">{product.name}</div>
+                    <div className="ref-card-arrow">View Products</div>
                   </div>
                 </Link>
               ))}
