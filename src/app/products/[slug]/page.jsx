@@ -1061,10 +1061,15 @@ ${form.message.value}`;
           /* =========================================
              MODEL SELECTION GRID VIEW
              ========================================= */
-          <div className="models-selection-view" style={{ padding: '40px 0 80px' }}>
-            <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-              <h1 style={{ fontSize: '36px', color: 'var(--froven-dark-blue)', marginBottom: '16px' }}>Select a Model</h1>
-              <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
+        <div className="models-selection-view" style={{ padding: '40px 0 100px', background: '#f4f8fc' }}>
+            <div style={{ textAlign: 'center', marginBottom: '60px', padding: '0 40px' }}>
+              <p style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: '#3b82f6', marginBottom: '12px' }}>
+                {product.name}
+              </p>
+              <h1 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 900, color: '#0f2a47', marginBottom: '14px', letterSpacing: '-0.5px' }}>
+                Select a Model
+              </h1>
+              <p style={{ fontSize: '17px', color: '#64748b', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
                 Discover our range of {product.name} configurations tailored to your specific cooling requirements.
               </p>
             </div>
@@ -1075,22 +1080,25 @@ ${form.message.value}`;
                 
                 return (
                   <Link href={`/products/${slug}/${m.id}`} key={m.id} style={{ textDecoration: 'none' }}>
-                    <div className="ref-card center-image model-card">
-                      <div className="ref-card-title">
-                        {m.name}
-                        <div style={{ display: 'flex', gap: '6px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '6px' }}>
-                          {m.specs.map((spec, i) => (
-                             <span key={i} style={{ fontSize: '12px', background: 'rgba(255,255,255,0.2)', padding: '2px 8px', borderRadius: '4px', color: 'white' }}>
-                               {spec}
-                             </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div 
-                        className="ref-card-image" 
+                    <div className="model-ec-card">
+                      <div
+                        className="ec-image"
                         style={{ backgroundImage: `url('${categoryImage}')` }}
-                      ></div>
-                      <div className="ref-card-arrow">→</div>
+                      />
+                      <div className="ec-body">
+                        <div className="ec-name">{m.name}</div>
+                        {m.specs && m.specs.length > 0 && (
+                          <div className="ec-specs">
+                            {m.specs.map((spec, i) => (
+                              <span key={i} className="ec-spec-tag">{spec}</span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      <div className="ec-cta">
+                        <span>View Specifications</span>
+                        <i className="fa-solid fa-arrow-right"></i>
+                      </div>
                     </div>
                   </Link>
                 );

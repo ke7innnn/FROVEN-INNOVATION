@@ -64,7 +64,7 @@ export default function SalesPage() {
               className="sales-category-card"
               style={{
                 flex: '1', minWidth: '300px', maxWidth: '500px', height: '350px',
-                backgroundImage: "url('/products/visicooler.jpg')", backgroundSize: 'cover', backgroundPosition: 'center',
+                backgroundImage: "url('/products/commercial_refrigeration_new.png')", backgroundSize: 'cover', backgroundPosition: 'center',
                 position: 'relative', cursor: 'pointer', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
               }}
             >
