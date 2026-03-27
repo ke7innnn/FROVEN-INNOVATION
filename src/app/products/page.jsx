@@ -57,40 +57,40 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        <section className="ref-grid-container" style={{ paddingTop: '48px' }}>
+        <section className="ref-grid-container" style={{ paddingTop: '40px' }}>
           <p className="ref-grid-header">CATALOG</p>
-          <h2 style={{ fontSize: '34px', fontWeight: 900, color: '#ffffff', marginBottom: '10px', letterSpacing: '-0.5px' }}>Our Products</h2>
-          <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.45)', marginBottom: '40px' }}>
-            {productsList.length} products across commercial refrigeration, HORECA & dispensing.
+          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#0f2a47', marginBottom: '12px', letterSpacing: '-0.5px' }}>Our Products</h2>
+          <p style={{ fontSize: '16px', color: '#64748b', marginBottom: '40px' }}>
+            {productsList.length} products across commercial refrigeration, HORECA, and dispensing solutions.
           </p>
 
           {/* Quick Nav Buttons */}
-          <div style={{ display: 'flex', gap: '14px', marginBottom: '40px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '20px', justifyContent: 'flex-start', marginBottom: '40px', flexWrap: 'wrap' }}>
             <Link href="/sales" style={{ textDecoration: 'none' }}>
               <div style={{
-                display: 'flex', alignItems: 'center', gap: '8px',
-                padding: '11px 26px', backgroundColor: '#1d4ed8',
-                color: 'white', borderRadius: '50px', fontSize: '12px', fontWeight: 700,
+                display: 'flex', alignItems: 'center', gap: '10px',
+                padding: '12px 28px', backgroundColor: 'var(--froven-dark-blue)',
+                color: 'white', borderRadius: '50px', fontSize: '13px', fontWeight: 700,
                 letterSpacing: '1.5px', textTransform: 'uppercase',
+                boxShadow: '0 8px 20px rgba(5,64,120,0.25)',
                 transition: 'all 0.3s ease', cursor: 'pointer'
               }}
-              onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#2563eb'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.backgroundColor = '#1d4ed8'; e.currentTarget.style.transform = 'translateY(0)'; }}
+              onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 15px 30px rgba(5,64,120,0.35)'; }}
+              onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(5,64,120,0.25)'; }}
               >
                 <i className="fas fa-tag"></i> Sales
               </div>
             </Link>
             <Link href="/rental" style={{ textDecoration: 'none' }}>
               <div style={{
-                display: 'flex', alignItems: 'center', gap: '8px',
-                padding: '11px 26px', backgroundColor: 'rgba(255,255,255,0.08)',
-                color: 'white', borderRadius: '50px', fontSize: '12px', fontWeight: 700,
-                letterSpacing: '1.5px', textTransform: 'uppercase',
-                border: '1.5px solid rgba(255,255,255,0.2)',
+                display: 'flex', alignItems: 'center', gap: '10px',
+                padding: '12px 28px', backgroundColor: 'white',
+                color: 'var(--froven-dark-blue)', borderRadius: '50px', fontSize: '13px', fontWeight: 700,
+                letterSpacing: '1.5px', textTransform: 'uppercase', border: '2px solid #bdd4f0',
                 transition: 'all 0.3s ease', cursor: 'pointer'
               }}
-              onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.14)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+              onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 10px 24px rgba(5,64,120,0.12)'; }}
+              onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
               >
                 <i className="fas fa-boxes-stacked"></i> Rental
               </div>
@@ -106,15 +106,12 @@ export default function ProductsPage() {
                       className="ref-card-image"
                       style={{
                         backgroundImage: `url('${product.image}')`,
-                        ...(product.containImage ? { backgroundSize: 'contain' } : {})
+                        ...(product.containImage ? { backgroundSize: 'contain', backgroundColor: '#f4f5f7' } : {})
                       }}
-                    />
+                    ></div>
                   )}
-                  <div className="ref-card-badge">View Products</div>
-                  <div className="ref-card-content-bottom">
-                    <div className="ref-card-title">{product.name}</div>
-                    <div className="ref-card-arrow">→</div>
-                  </div>
+                  <div className="ref-card-title">{product.name}</div>
+                  <div className="ref-card-arrow">View Products</div>
                 </div>
               </Link>
             ))}
