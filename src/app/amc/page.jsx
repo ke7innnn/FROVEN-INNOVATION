@@ -85,17 +85,11 @@ export default function AmcPage() {
             
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8 }}
-              style={{ flex: 1, minWidth: '400px', position: 'relative' }}
+              style={{ flex: 1, minWidth: '280px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-              <div style={{ position: 'absolute', inset: '-20px', backgroundColor: '#f1f5f9', borderRadius: '24px', zIndex: 0, transform: 'rotate(-3deg)' }}></div>
-              <img 
-                src="https://images.unsplash.com/photo-1549488344-c62529949989?q=80&w=1200&auto=format&fit=crop" 
-                alt="Chef in professional kitchen" 
-                style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '24px', position: 'relative', zIndex: 1, boxShadow: '0 30px 60px rgba(0,0,0,0.15)' }} 
-              />
-              <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', backgroundColor: 'var(--froven-dark-blue)', color: 'white', padding: '30px', borderRadius: '16px', zIndex: 2, boxShadow: '0 20px 40px rgba(5,64,120,0.3)' }}>
-                <div style={{ fontSize: '48px', fontWeight: 900, color: '#38bdf8', marginBottom: '5px' }}>99.9%</div>
-                <div style={{ fontSize: '16px', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>Uptime Guaranteed</div>
+              <div style={{ backgroundColor: 'var(--froven-dark-blue)', color: 'white', padding: '50px 60px', borderRadius: '24px', textAlign: 'center', boxShadow: '0 30px 60px rgba(5,64,120,0.3)' }}>
+                <div style={{ fontSize: '72px', fontWeight: 900, color: '#38bdf8', marginBottom: '8px', lineHeight: 1 }}>99.9%</div>
+                <div style={{ fontSize: '18px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', opacity: 0.85 }}>Uptime Guaranteed</div>
               </div>
             </motion.div>
           </div>
