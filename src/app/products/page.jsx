@@ -57,16 +57,20 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        <section className="ref-grid-container" style={{ paddingTop: '60px' }}>
-          <h2 className="ref-grid-header">PRODUCTS</h2>
+        <section className="ref-grid-container" style={{ paddingTop: '40px' }}>
+          <p className="ref-grid-header">CATALOG</p>
+          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#0f2a47', marginBottom: '12px', letterSpacing: '-0.5px' }}>Our Products</h2>
+          <p style={{ fontSize: '16px', color: '#64748b', marginBottom: '40px' }}>
+            {productsList.length} products across commercial refrigeration, HORECA, and dispensing solutions.
+          </p>
 
           {/* Quick Nav Buttons */}
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginBottom: '50px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '20px', justifyContent: 'flex-start', marginBottom: '40px', flexWrap: 'wrap' }}>
             <Link href="/sales" style={{ textDecoration: 'none' }}>
               <div style={{
-                display: 'flex', alignItems: 'center', gap: '12px',
-                padding: '16px 40px', backgroundColor: 'var(--froven-dark-blue)',
-                color: 'white', borderRadius: '50px', fontSize: '16px', fontWeight: 700,
+                display: 'flex', alignItems: 'center', gap: '10px',
+                padding: '12px 28px', backgroundColor: 'var(--froven-dark-blue)',
+                color: 'white', borderRadius: '50px', fontSize: '13px', fontWeight: 700,
                 letterSpacing: '1.5px', textTransform: 'uppercase',
                 boxShadow: '0 8px 20px rgba(5,64,120,0.25)',
                 transition: 'all 0.3s ease', cursor: 'pointer'
@@ -74,34 +78,29 @@ export default function ProductsPage() {
               onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 15px 30px rgba(5,64,120,0.35)'; }}
               onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(5,64,120,0.25)'; }}
               >
-                <i className="fas fa-tag"></i> SALES
+                <i className="fas fa-tag"></i> Sales
               </div>
             </Link>
             <Link href="/rental" style={{ textDecoration: 'none' }}>
               <div style={{
-                display: 'flex', alignItems: 'center', gap: '12px',
-                padding: '16px 40px', backgroundColor: 'var(--froven-dark-blue)',
-                color: 'white', borderRadius: '50px', fontSize: '16px', fontWeight: 700,
-                letterSpacing: '1.5px', textTransform: 'uppercase',
-                boxShadow: '0 8px 20px rgba(5,64,120,0.25)',
+                display: 'flex', alignItems: 'center', gap: '10px',
+                padding: '12px 28px', backgroundColor: 'white',
+                color: 'var(--froven-dark-blue)', borderRadius: '50px', fontSize: '13px', fontWeight: 700,
+                letterSpacing: '1.5px', textTransform: 'uppercase', border: '2px solid #bdd4f0',
                 transition: 'all 0.3s ease', cursor: 'pointer'
               }}
-              onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 15px 30px rgba(5,64,120,0.35)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(5,64,120,0.25)'; }}
+              onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 10px 24px rgba(5,64,120,0.12)'; }}
+              onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
               >
-                <i className="fas fa-boxes-stacked"></i> RENTAL
+                <i className="fas fa-boxes-stacked"></i> Rental
               </div>
             </Link>
           </div>
 
           <div className="ref-grid">
-
             {productsList.map((product) => (
               <Link href={`/products/${product.slug}`} key={product.id} style={{ textDecoration: 'none' }}>
-                <div
-                  className={`ref-card ${product.type === 'solid' ? 'solid-blue' : ''} ${product.centerImage ? 'center-image' : ''}`}
-                >
-                  <div className="ref-card-title">{product.name}</div>
+                <div className={`ref-card ${product.type === 'solid' ? 'solid-blue' : ''} ${product.centerImage ? 'center-image' : ''}`}>
                   {product.type === 'image' && (
                     <div
                       className="ref-card-image"
@@ -111,7 +110,8 @@ export default function ProductsPage() {
                       }}
                     ></div>
                   )}
-                  <div className="ref-card-arrow">→</div>
+                  <div className="ref-card-title">{product.name}</div>
+                  <div className="ref-card-arrow">View Products</div>
                 </div>
               </Link>
             ))}

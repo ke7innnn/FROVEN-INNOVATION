@@ -563,158 +563,122 @@
     padding: 140px 20px 80px;
   }
 }
-/* Reference Grid Styles (Ecommerce exact match) */
+/* =========================================
+   PREMIUM E-COMMERCE PRODUCTS GRID
+   ========================================= */
 .ref-grid-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto 100px;
   padding: 0 40px;
+  background: #f4f8fc;
+  border-radius: 24px;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 .ref-grid-header {
-  font-size: 28px;
+  font-size: 13px;
   font-weight: 800;
-  color: #054078;
-  margin-bottom: 20px;
-  text-transform: capitalize;
-}
-.ref-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
-  grid-auto-rows: 280px;
-}
-.ref-card {
-  width: 100%;
-  height: 100%;
-  background-color: #f4f5f7;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-.ref-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(5,64,120,0.15);
-}
-.ref-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0px; left: 0px; right: 0px;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(5,64,120,0.9) 100%);
-  z-index: 1;
-  transition: height 0.4s ease, opacity 0.4s ease;
-}
-.ref-card:hover::after {
-  height: 70%;
-  opacity: 1;
-}
-
-/* Modifier for model cards with taller text specs */
-.ref-card.model-card::after {
-  height: 85%;
-  background: linear-gradient(to top, rgba(3,41,77,0.95) 0%, rgba(5,64,120,0.8) 45%, transparent 100%);
-}
-.ref-card.model-card:hover::after {
-  height: 100%;
-}
-.ref-card-title {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
-  padding: 0;
-  font-size: 15px;
-  font-weight: 600;
-  color: #ffffff;
-  z-index: 2;
-  text-shadow: none;
-  letter-spacing: 0.5px;
+  color: #3b82f6;
+  margin-bottom: 8px;
   text-transform: uppercase;
-  transition: transform 0.4s ease;
+  letter-spacing: 3px;
 }
-.ref-card:hover .ref-card-title {
-  transform: translateY(-4px);
-}
-.ref-card.solid-blue {
-  background-color: #054078;
-}
-.ref-card.solid-blue .ref-card-title {
-  color: white;
-  margin-top: 20px;
-  font-size: 22px;
-}
-.ref-card-image {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  z-index: 1;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.ref-card:hover .ref-card-image {
-  transform: scale(1.08);
-}
-.ref-card.center-image .ref-card-image {
-  background-position: center;
-}
-.ref-card-arrow {
-  position: absolute;
-  bottom: 16px;
-  right: 20px;
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: 400;
-  z-index: 2;
-  transition: all 0.4s ease;
-}
-.ref-card:hover .ref-card-arrow {
-  transform: translate(4px, -4px);
-}
-.ref-card.solid-blue .ref-card-arrow {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* Clean Professional Alternating Grid Framework */
+/* New unified auto-fill grid */
 .ref-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 200px; /* Reduced height to perfectly frame rectangular landscape thumbnails */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
 }
-
-/* Rows 1, 3, 7, 8, 9: 3 "Square-profile" cards per row (12/4 = 3) */
-.ref-grid > a:nth-child(1), .ref-grid > a:nth-child(2), .ref-grid > a:nth-child(3),
-.ref-grid > a:nth-child(8), .ref-grid > a:nth-child(9), .ref-grid > a:nth-child(10),
-.ref-grid > a:nth-child(15),
-.ref-grid > a:nth-child(20), .ref-grid > a:nth-child(21), .ref-grid > a:nth-child(22),
-.ref-grid > a:nth-child(23), .ref-grid > a:nth-child(24), .ref-grid > a:nth-child(25) {
-  grid-column: span 4 !important;
-}
-
-/* Rows 2, 4, 5, 6: 4 "Rectangle-profile" cards per row (12/3 = 4) */
-.ref-grid > a:nth-child(4), .ref-grid > a:nth-child(5), .ref-grid > a:nth-child(6), .ref-grid > a:nth-child(7),
-.ref-grid > a:nth-child(11), .ref-grid > a:nth-child(12), .ref-grid > a:nth-child(13), .ref-grid > a:nth-child(14),
-.ref-grid > a:nth-child(16), .ref-grid > a:nth-child(17), .ref-grid > a:nth-child(18), .ref-grid > a:nth-child(19) {
-  grid-column: span 3 !important;
-}
-
 .ref-grid > a {
   display: block;
   text-decoration: none;
   height: 100%;
 }
+/* E-Commerce white product card */
+.ref-card {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+.ref-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(5, 64, 120, 0.12);
+  border-color: #bdd4f0;
+}
+.ref-card-image {
+  width: 100%;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f4f8fc;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+.ref-card:hover .ref-card-image {
+  transform: scale(1.04);
+}
+.ref-card.center-image .ref-card-image {
+  background-position: center;
+}
+.ref-card-title {
+  padding: 16px 18px 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f2a47;
+  line-height: 1.3;
+  flex: 1;
+}
+.ref-card-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--froven-blue, #054078);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-top: 1px solid #e8edf3;
+  background: #f8fafc;
+  transition: color 0.2s ease;
+}
+.ref-card:hover .ref-card-arrow {
+  color: #1d4ed8;
+}
+.ref-card-arrow::after {
+  content: '→';
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+.ref-card:hover .ref-card-arrow::after {
+  transform: translateX(4px);
+}
+/* Solid blue variant (no longer used but kept for safety) */
+.ref-card.solid-blue {
+  background-color: #054078;
+}
+.ref-card.solid-blue .ref-card-title {
+  color: white;
+}
 
 @media (max-width: 768px) {
   .ref-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 250px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
   }
-  .ref-grid > a:nth-child(n) {
-    grid-column: span 1;
+  .ref-grid-container {
+    padding: 24px 20px 40px;
+  }
+  .ref-card-image {
+    height: 140px;
   }
 }
 
