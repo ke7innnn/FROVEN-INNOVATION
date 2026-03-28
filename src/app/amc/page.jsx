@@ -50,7 +50,7 @@ export default function AmcPage() {
                 24/7 Priority Support
               </div>
               <h1 style={{ fontSize: '64px', fontWeight: 900, color: 'white', lineHeight: '1.1', marginBottom: '30px', letterSpacing: '-1px' }}>
-                PROTECTING YOUR <br/><span style={{ color: '#bae6fd' }}>COLD CHAIN.</span>
+                SERVICING FOR <br/><span style={{ color: '#bae6fd' }}>BEST PERFORMANCE.</span>
               </h1>
               <p style={{ fontSize: '22px', color: '#e2e8f0', lineHeight: '1.6', marginBottom: '40px', maxWidth: '650px', fontWeight: 300 }}>
                 An unexpected breakdown isn't just an inconvenience—it's catastrophic inventory loss. Froven's Annual Maintenance Contracts shift your strategy from reactive panic to proactive security.
