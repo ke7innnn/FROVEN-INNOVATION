@@ -19,9 +19,9 @@ export default function Home() {
         <Hero />
         <Stats />
         <MeetThePro />
-        <CoolingSolutions />
-        <Brands />
         <CoolCollections />
+        <Brands />
+        <CoolingSolutions />
         <ContactForm />
       </main>
 
