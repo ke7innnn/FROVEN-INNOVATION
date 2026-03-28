@@ -25,6 +25,8 @@ export const productsList = [
   { id: 23, name: 'Hard Top Chest Freezer', slug: 'hard-top-selection', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', type: 'image', centerImage: true },
   { id: 24, name: 'Glass Top Chest Freezer', slug: 'glass-top-chest-freezer', image: '/product thumbnail/GLASS TOP CHEST FREEZER.png', type: 'image', centerImage: true },
   { id: 25, name: 'Hard Top Chest Freezer 70mm', slug: 'hard-top-chest-freezer-70mm', image: '/product thumbnail/HARD TOP CHEST FREEZER70MM.png', type: 'image', centerImage: true },
+  { id: 26, name: 'Water Cooler', slug: '#', image: '', type: 'image', centerImage: true, comingSoon: true },
+  { id: 27, name: 'Pharma', slug: '#', image: '', type: 'image', centerImage: true, comingSoon: true },
 ];
 
 export default function ProductsPage() {
@@ -99,21 +101,41 @@ export default function ProductsPage() {
 
           <div className="ref-grid">
             {productsList.map((product) => (
-              <Link href={`/products/${product.slug}`} key={product.id} style={{ textDecoration: 'none' }}>
-                <div className={`ref-card ${product.type === 'solid' ? 'solid-blue' : ''} ${product.centerImage ? 'center-image' : ''}`}>
-                  {product.type === 'image' && (
+              <div key={product.id} style={{ position: 'relative' }}>
+                {product.slug === '#' ? (
+                  <div className={`ref-card ${product.type === 'solid' ? 'solid-blue' : ''} ${product.centerImage ? 'center-image' : ''}`} style={{ cursor: 'default', opacity: 0.8 }}>
                     <div
                       className="ref-card-image"
                       style={{
-                        backgroundImage: `url('${product.image}')`,
-                        ...(product.containImage ? { backgroundSize: 'contain', backgroundColor: '#f4f5f7' } : {})
+                        backgroundColor: '#e2e8f0',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
                       }}
-                    ></div>
-                  )}
-                  <div className="ref-card-title">{product.name}</div>
-                  <div className="ref-card-arrow">View Products</div>
-                </div>
-              </Link>
+                    >
+                      <i className="fas fa-microchip" style={{ fontSize: '40px', color: '#94a3b8' }}></i>
+                    </div>
+                    <div className="ref-card-title">{product.name}</div>
+                    <div className="ref-card-arrow" style={{ color: '#94a3b8' }}>Coming Soon</div>
+                  </div>
+                ) : (
+                  <Link href={`/products/${product.slug}`} style={{ textDecoration: 'none' }}>
+                    <div className={`ref-card ${product.type === 'solid' ? 'solid-blue' : ''} ${product.centerImage ? 'center-image' : ''}`}>
+                      {product.type === 'image' && (
+                        <div
+                          className="ref-card-image"
+                          style={{
+                            backgroundImage: `url('${product.image}')`,
+                            ...(product.containImage ? { backgroundSize: 'contain', backgroundColor: '#f4f5f7' } : {})
+                          }}
+                        ></div>
+                      )}
+                      <div className="ref-card-title">{product.name}</div>
+                      <div className="ref-card-arrow">View Products</div>
+                    </div>
+                  </Link>
+                )}
+              </div>
             ))}
           </div>
         </section>
