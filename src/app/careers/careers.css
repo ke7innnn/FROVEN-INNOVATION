@@ -1,0 +1,40 @@
+/* Custom File Upload Styling for Careers Page */
+.file-upload-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.custom-file-upload {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 14px 20px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.custom-file-upload:hover {
+  background: #ffffff !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+}
+
+.custom-file-upload i {
+  font-size: 18px;
+  color: #3b82f6;
+}
+
+.custom-file-upload span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
