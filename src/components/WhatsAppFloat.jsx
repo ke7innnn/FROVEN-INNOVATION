@@ -2,9 +2,18 @@
 import React from 'react';
 
 const WhatsAppFloat = () => {
+  const [waLink, setWaLink] = React.useState("https://wa.me/919702273180");
+
+  React.useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) {
+      setWaLink("https://web.whatsapp.com/send?phone=919702273180");
+    }
+  }, []);
+
   return (
     <a 
-      href="https://wa.me/919702273180" 
+      href={waLink} 
       target="_blank" 
       rel="noopener noreferrer"
       className="whatsapp-float"
