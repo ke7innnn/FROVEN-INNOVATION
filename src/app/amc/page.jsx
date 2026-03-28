@@ -31,7 +31,7 @@ export default function AmcPage() {
             minHeight: '85vh',
             display: 'flex',
             alignItems: 'center',
-            backgroundImage: "url('https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=2000&auto=format&fit=crop')",
+            backgroundImage: "url('/3 slides/slide 3comp.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'relative'
@@ -105,7 +105,7 @@ export default function AmcPage() {
             >
               <div style={{ position: 'absolute', inset: '-20px', backgroundColor: 'rgba(56, 189, 248, 0.1)', borderRadius: '24px', zIndex: 0, transform: 'rotate(3deg)' }}></div>
               <img 
-                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200&auto=format&fit=crop" 
+                src="/products/ICE MACHINE.jpg" 
                 alt="Technical maintenance and gauges" 
                 style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '24px', position: 'relative', zIndex: 1, boxShadow: '0 30px 60px rgba(0,0,0,0.15)' }} 
               />
@@ -193,7 +193,7 @@ export default function AmcPage() {
         <section 
           style={{ 
             padding: '120px 20px', 
-            backgroundImage: "url('https://images.unsplash.com/photo-1590483864115-385db480ebf7?q=80&w=2000&auto=format&fit=crop')",
+            backgroundImage: "url('/products/Back Bars.jpg')",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundAttachment: 'fixed',

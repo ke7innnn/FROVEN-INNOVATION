@@ -37,7 +37,7 @@ export default function ProductsPage() {
           className="products-hero" 
           style={{ 
             paddingBottom: '60px',
-            backgroundImage: "url('https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=2000&auto=format&fit=crop')",
+            backgroundImage: "url('/3 slides/slide 1new.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'relative'
