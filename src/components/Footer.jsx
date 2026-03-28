@@ -36,6 +36,7 @@ const Footer = () => {
               <li><Link href="/rental">Rental Solutions</Link></li>
               <li><Link href="/amc">AMC Services</Link></li>
               <li><Link href="/sales">Sales & Equipment</Link></li>
+              <li><Link href="/warranty-activation">Warranty Activation</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
@@ -46,6 +47,7 @@ const Footer = () => {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/products">Catalog</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
               <li><Link href="/contact">Get a Quote</Link></li>
             </ul>
           </div>
@@ -56,6 +58,7 @@ const Footer = () => {
           <div className="bottom-links">
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/terms-of-use">Terms of Use</Link>
+            <Link href="/refund-policy">Refund Policy</Link>
             <Link href="/sitemap">Sitemap</Link>
           </div>
         </div>
