@@ -58,9 +58,9 @@ export const catalog = [
             { icon: 'fas fa-temperature-high', text: 'Tropicalized @ 50°C' }
           ],
           table: {
-            headers: ['Model Number', 'FGF120F', 'FGF230F', 'FGF330F', 'FGF430F', 'FGF540F'],
+            headers: ['Model Number', 'FGF120F', 'FGF230F', 'FGF330F', 'FGF420F', 'FGF540F'],
             rows: [
-              ['Capacity (Litres)', '100', '200', '320', '430', '540'],
+              ['Capacity (Litres)', '100', '225', '325', '425', '525'],
               ['External Dimension (WxDxH) (MM)', '940 X 630 X 835', '940 X 630 X 835', '1100 X 740 X 800', '1390 X 740 X 800', '1680 X 740 X 800'],
               ['Internal Dimension (WxDxH) (MM)', '790 X 440 X 632', '790 X 440 X 632', '960 X 550 X 632', '1250 X 550 X 632', '1540 X 550 X 632'],
               ['Baskets', '2', '2', '3', '4', '5'],
