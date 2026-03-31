@@ -18,15 +18,20 @@ export const catalog = [
             { icon: 'fas fa-temperature-high', text: 'Tropicalized @ 50°C' }
           ],
           table: {
-            headers: ['Capacity (Litres)', '200', '300', '400', '500', '166C + 130F', '218C + 183F'],
+            headers: ['Model Details', '100', '200', '300', '400', '500', '166C + 130F', '218C + 183F'],
             rows: [
-              ['External Dimension in mm (WxDxH)', '815 x 720 x 825', '1105 x 720 x 845', '1395 x 720 x 845', '1685 x 720 x 845', '1115 x 720 x 845', '1395 x 720 x 845'],
-              ['Packaging Dimension in mm (WxDxH)', '885 x 760 x 900', '1175 x 760 x 900', '1465 x 760 x 900', '1755 x 760 x 900', '1180 x 770 x 885', '1475 x 770 x 885'],
-              ['Baskets', '1', '1', '1', '2', '2', '2'],
-              ['No Of Doors', '1', '1', '2', '2', '2', '2'],
-              ['Temperature Range - °C', '+5°C to -27°C', '+5°C to -27°C', '+5°C to -27°C', '+5°C to -27°C', '+2°C to +8°C / -16°C to -24°C', '+2°C to +8°C / -16°C to -24°C'],
-              ['Castors (Wheels)', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes'],
-              ['Lock & Key', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes']
+              ['Capacity (Litres)', '100', '200', '300', '400', '500', '166C + 130F', '218C + 183F'],
+              ['Refrigerant Used', 'R134a', '-', '-', '-', '-', '-', '-'],
+              ['External Dimension in mm (WxDxH)', '554 x 576 x 832', '815 x 720 x 825', '1105 x 720 x 845', '1395 x 720 x 845', '1685 x 720 x 845', '1115 x 720 x 845', '1395 x 720 x 845'],
+              ['Packaging Dimension in mm (WxDxH)', '-', '885 x 760 x 900', '1175 x 760 x 900', '1465 x 760 x 900', '1755 x 760 x 900', '1180 x 770 x 885', '1475 x 770 x 885'],
+              ['Baskets', '1', '1', '1', '1', '2', '2', '2'],
+              ['No Of Doors', '1', '1', '1', '2', '2', '2', '2'],
+              ['Temperature Range - °C', '8 ~ -25', '+5°C to -27°C', '+5°C to -27°C', '+5°C to -27°C', '+5°C to -27°C', '+2°C to +8°C / -16°C to -24°C', '+2°C to +8°C / -16°C to -24°C'],
+              ['Door Type', 'Solid', '-', '-', '-', '-', '-', '-'],
+              ['Compressor Type', 'ZEL', '-', '-', '-', '-', '-', '-'],
+              ['Ambient Temperature', '32 Deg C', '-', '-', '-', '-', '-', '-'],
+              ['Castors (Wheels)', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes'],
+              ['Lock & Key / Door Lock', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes']
             ]
           }
         },
