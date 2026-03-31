@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-import { productsData } from '../app/products/[slug]/page';
+import { catalog } from '../data/catalog';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,20 +26,23 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  // Automatically catalog all categories and sub-models into a searchable array
+  // Automatically catalog all categories, products, and sub-models into a searchable array
   const allSearchableItems = React.useMemo(() => {
     let items = [];
-    if (!productsData) return items;
+    if (!catalog) return items;
     
-    Object.keys(productsData).forEach(slug => {
-      const product = productsData[slug];
-      items.push({ title: product.name, type: 'Category', url: `/products/${slug}` });
-      if (product.models) {
-        product.models.forEach(model => {
-          items.push({ title: model.name, type: `Model (${product.name})`, url: `/products/${slug}/${model.id}` });
+    catalog.forEach(category => {
+      items.push({ title: category.name, type: 'Category', url: `/products/${category.slug}` });
+      
+      category.products?.forEach(product => {
+        items.push({ title: product.name, type: `Product (${category.name})`, url: `/products/${category.slug}/${product.slug}` });
+        
+        product.models?.forEach(model => {
+          items.push({ title: `${model.name} (${model.id})`, type: `Model (${product.name})`, url: `/products/${category.slug}/${product.slug}` });
         });
-      }
+      });
     });
+    
     return items;
   }, []);
 

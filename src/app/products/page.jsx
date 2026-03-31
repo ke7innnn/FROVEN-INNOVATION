@@ -3,38 +3,15 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-
 import Link from 'next/link';
+import { catalog } from '../../data/catalog';
 
-export const productsList = [
-  { id: 1, name: 'Visicooler', slug: 'visicooler', image: '/product thumbnail/visi cooler.jpeg', type: 'image', centerImage: true },
-  { id: 7, name: 'Mini Bar', slug: 'minibars', image: '/product thumbnail/mini bar.jpeg', type: 'image', centerImage: true },
-  { id: 10, name: 'Reach-In Static', slug: 'reach-in-static', image: '/product thumbnail/reach in static.jpeg', type: 'image', centerImage: true },
-  { id: 11, name: 'Under Counter Static', slug: 'under-counter-static', image: '/product thumbnail/under counter static.jpeg', type: 'image', centerImage: true },
-  { id: 12, name: 'Reach-In Ventilated', slug: 'reach-in-ventilated', image: '/product thumbnail/reach in ventilated].jpeg', type: 'image', centerImage: true },
-  { id: 13, name: 'Under Counter Ventilated', slug: 'under-counter-ventilated', image: '/product thumbnail/static ventilated.jpeg', type: 'image', centerImage: true },
-  { id: 14, name: 'Saladatte With Prep Table', slug: 'saladatte', image: '/product thumbnail/saladette.jpeg', type: 'image', centerImage: true },
-  { id: 15, name: 'Refrigerated Topping Unit', slug: 'topping-unit', image: '/product thumbnail/refrigerated topping unit.jpeg', type: 'image', centerImage: true },
-  { id: 16, name: 'Blast Freezer', slug: 'blast-freezer', image: '/product thumbnail/blast freezer.jpeg', type: 'image', centerImage: true },
-  { id: 17, name: 'Back Bar', slug: 'back-bar', image: '/product thumbnail/back bar .jpeg', type: 'image', centerImage: true },
-  { id: 18, name: 'Wine Chiller', slug: 'wine-chiller', image: '/product thumbnail/eine chiller.jpeg', type: 'image', centerImage: true },
-  { id: 19, name: 'Ice Machine', slug: 'ice-machine', image: '/product thumbnail/water dispenser.png', type: 'image', centerImage: true },
-  { id: 20, name: 'Mini Bar With Absorption', slug: 'minibar-absorption', image: '/product thumbnail/mini bar with absorbtion.jpeg', type: 'image', centerImage: true },
-  { id: 21, name: 'Cake Display Cabinets', slug: 'cake-display', image: '/product thumbnail/cake.jpeg', type: 'image', centerImage: true },
-  { id: 22, name: 'Water Dispenser', slug: 'water-dispenser', image: '/product thumbnail/ water dispenser new.jpeg', type: 'image', centerImage: true, containImage: true },
-  { id: 23, name: 'Hard Top Chest Freezer', slug: 'hard-top-selection', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', type: 'image', centerImage: true },
-  { id: 24, name: 'Glass Top Chest Freezer', slug: 'glass-top-chest-freezer', image: '/product thumbnail/GLASS TOP CHEST FREEZER.png', type: 'image', centerImage: true },
-  { id: 25, name: 'Hard Top Chest Freezer 70mm', slug: 'hard-top-chest-freezer-70mm', image: '/product thumbnail/HARD TOP CHEST FREEZER70MM.png', type: 'image', centerImage: true },
-  { id: 26, name: 'Water Cooler', slug: '#', image: '', type: 'image', centerImage: true, comingSoon: true },
-  { id: 27, name: 'Pharma', slug: '#', image: '', type: 'image', centerImage: true, comingSoon: true },
-];
-
-export default function ProductsPage() {
+export default function ProductsCategoriesPage() {
   return (
     <div className="app-container">
       <Header />
       
-      <main className="products-main" style={{ backgroundColor: '#ffffff' }}>
+      <main className="products-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh' }}>
         <section 
           className="products-hero" 
           style={{ 
@@ -52,95 +29,52 @@ export default function ProductsPage() {
             zIndex: 1
           }}></div>
           <div className="products-hero-content" style={{ position: 'relative', zIndex: 2 }}>
-            <h1 className="meet-heading">OUR <span className="highlight">PRODUCTS</span></h1>
+            <h1 className="meet-heading">OUR <span className="highlight">CATEGORIES</span></h1>
             <p className="meet-description">
-              Discover our premium range of commercial refrigeration solutions tailored for your business needs. Clean, efficient, and reliable.
+              Select an industry sector to explore our specialized commercial cooling solutions.
             </p>
           </div>
         </section>
 
-        <section className="ref-grid-container" style={{ paddingTop: '40px' }}>
-          <p className="ref-grid-header">CATALOG</p>
-          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#0f2a47', marginBottom: '12px', letterSpacing: '-0.5px' }}>Our Products</h2>
-          <p style={{ fontSize: '16px', color: '#64748b', marginBottom: '40px' }}>
-            {productsList.length} products across commercial refrigeration, HORECA, and dispensing solutions.
-          </p>
+        <section style={{ maxWidth: '1300px', margin: '80px auto', padding: '0 40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '30px' }}>
+            {catalog.map((category) => (
+              <Link key={category.slug} href={`/products/${category.slug}`} style={{ textDecoration: 'none' }}>
+                <div 
+                  className="sales-category-card"
+                  style={{
+                    height: '350px',
+                    backgroundColor: 'var(--froven-dark-blue)',
+                    position: 'relative', cursor: 'pointer', borderRadius: '16px', overflow: 'hidden', 
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                    transition: 'transform 0.4s ease, box-shadow 0.4s ease'
+                  }}
+                  onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 30px 60px rgba(5,64,120,0.2)'; }}
+                  onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)'; }}
+                >
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(3,41,77,0.95) 0%, rgba(3,41,77,0.4) 100%)' }}></div>
+                  
+                  {/* Hexagon Pattern Overlay for premium tech feel since no bg images are provided yet */}
+                  <div style={{ 
+                    position: 'absolute', inset: 0, 
+                    backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M54.627 0l.83.6c-1.427 1.954-3.033 4.549-4.8 7.554-1.637 2.783-3.037 5.176-4.008 6.852l-1.04-.6c1.116-1.928 2.62-4.507 4.398-7.532 1.558-2.651 3.235-5.367 4.62-6.874zM45.69 13.923l1.04.6c-2.457 4.225-5.26 8.788-7.962 12.834l-1.04-.6c2.812-4.214 5.76-9.015 7.962-12.834zM32.895 33.195l1.04.6c-3.13 5.37-6.236 10.155-8.525 13.064l-1.039-.6c2.39-3.041 5.626-8.056 8.524-13.064zM18.81 51.527l1.04.6c-1.744 2.992-3.693 5.92-5.452 8.355l-1.04-.6c1.884-2.607 3.905-5.655 5.452-8.355z\' fill=\'%23ffffff\' fill-opacity=\'0.03\' fill-rule=\'evenodd\'/%3E%3C/svg%3E")',
+                    zIndex: 0
+                  }}></div>
 
-          {/* Quick Nav Buttons */}
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'flex-start', marginBottom: '40px', flexWrap: 'wrap' }}>
-            <Link href="/sales" style={{ textDecoration: 'none' }}>
-              <div style={{
-                display: 'flex', alignItems: 'center', gap: '10px',
-                padding: '12px 28px', backgroundColor: 'var(--froven-dark-blue)',
-                color: 'white', borderRadius: '50px', fontSize: '13px', fontWeight: 700,
-                letterSpacing: '1.5px', textTransform: 'uppercase',
-                boxShadow: '0 8px 20px rgba(5,64,120,0.25)',
-                transition: 'all 0.3s ease', cursor: 'pointer'
-              }}
-              onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 15px 30px rgba(5,64,120,0.35)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(5,64,120,0.25)'; }}
-              >
-                <i className="fas fa-tag"></i> Sales
-              </div>
-            </Link>
-            <Link href="/rental" style={{ textDecoration: 'none' }}>
-              <div style={{
-                display: 'flex', alignItems: 'center', gap: '10px',
-                padding: '12px 28px', backgroundColor: 'white',
-                color: 'var(--froven-dark-blue)', borderRadius: '50px', fontSize: '13px', fontWeight: 700,
-                letterSpacing: '1.5px', textTransform: 'uppercase', border: '2px solid #bdd4f0',
-                transition: 'all 0.3s ease', cursor: 'pointer'
-              }}
-              onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 10px 24px rgba(5,64,120,0.12)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
-              >
-                <i className="fas fa-boxes-stacked"></i> Rental
-              </div>
-            </Link>
-          </div>
-
-          <div className="ref-grid">
-            {productsList.map((product) => (
-              <div key={product.id} style={{ position: 'relative' }}>
-                {product.slug === '#' ? (
-                  <div className={`ref-card ${product.type === 'solid' ? 'solid-blue' : ''} ${product.centerImage ? 'center-image' : ''}`} style={{ cursor: 'default', opacity: 0.8 }}>
-                    <div
-                      className="ref-card-image"
-                      style={{
-                        backgroundColor: '#e2e8f0',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
-                    >
-                      <i className="fas fa-microchip" style={{ fontSize: '40px', color: '#94a3b8' }}></i>
+                  <div style={{ position: 'absolute', bottom: '40px', left: '40px', right: '40px', color: 'white', zIndex: 1 }}>
+                    <h2 style={{ fontSize: '32px', marginBottom: '12px', fontWeight: '800', lineHeight: '1.2' }}>{category.name}</h2>
+                    <p style={{ fontSize: '16px', opacity: 0.9, marginBottom: '25px', lineHeight: '1.5' }}>{category.description}</p>
+                    <div style={{ display: 'inline-block', padding: '12px 28px', backgroundColor: 'var(--froven-yellow)', color: 'var(--froven-dark-blue)', borderRadius: '30px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>
+                      View Products &rarr;
                     </div>
-                    <div className="ref-card-title">{product.name}</div>
-                    <div className="ref-card-arrow" style={{ color: '#94a3b8' }}>Coming Soon</div>
                   </div>
-                ) : (
-                  <Link href={`/products/${product.slug}`} style={{ textDecoration: 'none' }}>
-                    <div className={`ref-card ${product.type === 'solid' ? 'solid-blue' : ''} ${product.centerImage ? 'center-image' : ''}`}>
-                      {product.type === 'image' && (
-                        <div
-                          className="ref-card-image"
-                          style={{
-                            backgroundImage: `url('${product.image}')`,
-                            ...(product.containImage ? { backgroundSize: 'contain', backgroundColor: '#f4f5f7' } : {})
-                          }}
-                        ></div>
-                      )}
-                      <div className="ref-card-title">{product.name}</div>
-                      <div className="ref-card-arrow">View Products</div>
-                    </div>
-                  </Link>
-                )}
-              </div>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
       </main>
-
+      
       <Footer />
     </div>
   );
