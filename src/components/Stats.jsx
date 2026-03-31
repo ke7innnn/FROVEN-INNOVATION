@@ -5,7 +5,7 @@ import Counter from './Counter';
 
 const statsData = [
   { num: <Counter to={200} />, label: 'PRODUCTS' },
-  { num: <Counter to={21} />, label: 'YEARS OF TRUST' }
+  { num: <Counter to={21} />, label: 'YEARS OF EXPERIENCE' }
 ];
 
 const Stats = () => {

@@ -44,41 +44,32 @@ export default function CategoryProductsPage({ params }) {
           </div>
         </section>
 
-        <section style={{ maxWidth: '1300px', margin: '80px auto', padding: '0 40px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '30px' }}>
-            {categoryContext.products.map((product) => (
-              <Link key={product.slug} href={`/products/${categorySlug}/${product.slug}`} style={{ textDecoration: 'none' }}>
-                <div 
-                  className="sales-category-card"
-                  style={{
-                    height: '350px',
-                    backgroundColor: 'var(--froven-blue)',
-                    position: 'relative', cursor: 'pointer', borderRadius: '16px', overflow: 'hidden', 
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-                    transition: 'transform 0.4s ease, box-shadow 0.4s ease'
-                  }}
-                  onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 30px 60px rgba(5,64,120,0.2)'; }}
-                  onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)'; }}
-                >
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(3,41,77,0.95) 0%, rgba(3,41,77,0.2) 100%)' }}></div>
-                  
-                  {/* Diagonal Line Tech Pattern Overlay */}
-                  <div style={{ 
-                    position: 'absolute', inset: 0, 
-                    backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h40v40H0V0zm20 20h20v20H20V20zM0 20h20v20H0V20z\' fill=\'%23ffffff\' fill-opacity=\'0.03\' fill-rule=\'evenodd\'/%3E%3C/svg%3E")',
-                    zIndex: 0
-                  }}></div>
+        <section className="ref-grid-container" style={{ paddingTop: '20px', margin: '40px auto 80px' }}>
+          <p className="ref-grid-header">PRODUCTS</p>
+          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#0f2a47', marginBottom: '12px', letterSpacing: '-0.5px' }}>{categoryContext.name} Range</h2>
+          <p style={{ fontSize: '16px', color: '#64748b', marginBottom: '40px' }}>
+            {categoryContext.products.length} product line(s) available in this category.
+          </p>
 
-                  <div style={{ position: 'absolute', bottom: '40px', left: '40px', right: '40px', color: 'white', zIndex: 1 }}>
-                    <h2 style={{ fontSize: '28px', marginBottom: '12px', fontWeight: '800', lineHeight: '1.2' }}>{product.name}</h2>
-                    <p style={{ fontSize: '15px', opacity: 0.9, marginBottom: '25px', lineHeight: '1.5', color: '#e2e8f0' }}>
-                      {product.models.length} {product.models.length === 1 ? 'Model Available' : 'Models Available'}
-                    </p>
-                    <div style={{ display: 'inline-block', padding: '10px 24px', border: '2px solid rgba(255,255,255,0.4)', color: 'white', borderRadius: '30px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', transition: 'all 0.3s ease' }}
-                         onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'var(--froven-dark-blue)'; e.currentTarget.style.borderColor = 'white'; }}
-                         onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'white'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)'; }}>
-                      View Models &rarr;
-                    </div>
+          <div className="ref-grid">
+            {categoryContext.products.map((product) => (
+              <Link key={product.slug} href={`/products/${categorySlug}/${product.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="ref-card center-image" style={{ cursor: 'pointer' }}>
+                  <div
+                    className="ref-card-image"
+                    style={{
+                      backgroundColor: '#f8fafc',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderBottom: '1px solid #e8edf3'
+                    }}
+                  >
+                    <i className="fas fa-cube" style={{ fontSize: '48px', color: '#cbd5e1' }}></i>
+                  </div>
+                  <div className="ref-card-title">{product.name}</div>
+                  <div className="ref-card-arrow" style={{ color: 'var(--text-gray)', backgroundColor: '#fff' }}>
+                    <span style={{ color: 'var(--froven-blue)', fontWeight: 800 }}>{product.models.length}</span> {product.models.length === 1 ? 'Model Available' : 'Models Available'}
                   </div>
                 </div>
               </Link>

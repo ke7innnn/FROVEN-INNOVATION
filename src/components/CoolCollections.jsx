@@ -27,7 +27,7 @@ const CoolCollections = () => {
       <div className="cc-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', maxWidth: '1200px', margin: '0 auto', gap: '30px', padding: '0 20px' }}>
         {services.map((item, i) => (
           <motion.div 
-            className="service-card-square" 
+            className="service-card-square glow-on-hover" 
             key={i}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

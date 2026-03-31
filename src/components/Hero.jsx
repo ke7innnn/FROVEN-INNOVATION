@@ -12,7 +12,7 @@ const slideImages = [
 const slidesContent = [
   {
     small: "HORECA Solutions",
-    main: <>BUILT FOR<br/>THE KITCHEN.<br/><span className="highlight-yellow">PROVEN.</span></>,
+    main: <>BUILT FOR<br/>THE KITCHEN.<br/><span className="highlight-blue">PROVEN.</span></>,
     desc: "From ice cubers to walk-in cold rooms — professional-grade refrigeration for hotels, restaurants, and catering operations.",
     buttons: [
       { text: "HORECA Range", primary: true, link: "/products" },
@@ -21,7 +21,7 @@ const slidesContent = [
     align: 'left'
   },
   {
-    small: "21+ Years of Expertise",
+    small: "21+ Years of Experience",
     main: <>RELIABLE<br/><span className="highlight-blue">AMC &</span><br/>SERVICE.</>,
     desc: "Annual Maintenance Contracts designed to keep your refrigeration running flawlessly — comprehensive or non-comprehensive.",
     buttons: [{ text: "Contact Service", primary: true, link: "/amc" }],
@@ -54,7 +54,7 @@ const Hero = () => {
             key={currentSlide}
             src={slideImages[currentSlide]}
             alt={`Slide ${currentSlide}`}
-            className="hero-slide-img"
+            className="hero-slide-img animate-float"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

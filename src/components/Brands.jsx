@@ -23,7 +23,7 @@ const Brands = () => {
         <div className="brands-stats">
           <div className="b-stat">
             <h3><Counter to={21} /></h3>
-            <p>Years Trust</p>
+            <p>Years Experience</p>
           </div>
           <div className="b-stat">
             <h3><Counter to={500000} suffix="+" /></h3>

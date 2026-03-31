@@ -74,15 +74,32 @@ export default function ProductModelsPage({ params }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {productContext.pageData.table.rows.map((row, rowIdx) => (
-                    <tr key={rowIdx} style={{ borderBottom: '1px solid #ddd' }}>
-                      {row.map((cell, cellIdx) => (
-                        <td key={cellIdx} style={{ padding: '16px 12px', borderRight: cellIdx === 0 ? '2px solid #ddd' : '1px solid #ddd', fontWeight: cellIdx === 0 ? 'bold' : 'normal' }}>
-                          {cell}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
+                  {productContext.pageData.table.rows.map((row, rowIdx) => {
+                    const isModelRow = row[0]?.toLowerCase().includes('model');
+                    return (
+                      <tr 
+                        key={rowIdx} 
+                        style={{ 
+                          borderBottom: '1px solid #ddd',
+                          backgroundColor: isModelRow ? '#f8fafc' : 'transparent'
+                        }}
+                      >
+                        {row.map((cell, cellIdx) => (
+                          <td 
+                            key={cellIdx} 
+                            style={{ 
+                              padding: '16px 12px', 
+                              borderRight: cellIdx === 0 ? '2px solid #ddd' : '1px solid #ddd', 
+                              fontWeight: cellIdx === 0 || isModelRow ? 'bold' : 'normal',
+                              color: 'inherit'
+                            }}
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
               <p style={{ marginTop: '10px', fontSize: '14px', color: '#666' }}>Note : Specifications, features, and color are subject to change without intimation.</p>
