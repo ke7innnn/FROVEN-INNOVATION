@@ -18,7 +18,7 @@ export const catalog = [
             { icon: 'fas fa-temperature-high', text: 'Tropicalized @ 50°C' }
           ],
           table: {
-            headers: ['Model Details', '100', '200', '300', '400', '500', '166C + 130F', '218C + 183F'],
+            headers: ['Model Number', 'FHF120SD', 'FHF240SD', 'FHF330SD', 'FHF420DD', 'FHF540DD', 'FCHT330G', 'FCHT420G'],
             rows: [
               ['Capacity (Litres)', '100', '200', '300', '400', '500', '166C + 130F', '218C + 183F'],
               ['Refrigerant Used', 'R134a', '-', '-', '-', '-', '-', '-'],
@@ -58,15 +58,16 @@ export const catalog = [
             { icon: 'fas fa-temperature-high', text: 'Tropicalized @ 50°C' }
           ],
           table: {
-            headers: ['Capacity (Litres)', '200', '320', '430', '540'],
+            headers: ['Model Number', 'FGF120F', 'FGF230F', 'FGF330F', 'FGF430F', 'FGF540F'],
             rows: [
-              ['External Dimension (WxDxH) (MM)', '940 X 630 X 835', '1100 X 740 X 800', '1390 X 740 X 800', '1680 X 740 X 800'],
-              ['Internal Dimension (WxDxH) (MM)', '790 X 440 X 632', '960 X 550 X 632', '1250 X 550 X 632', '1540 X 550 X 632'],
-              ['Baskets', '2', '3', '4', '5'],
-              ['No Of Doors (Sliding)', '2', '2', '2', '2'],
-              ['Temperature Range - °C', '-17°C ~ -31°C', '-17°C ~ -31°C', '-17°C ~ -31°C', '-17°C ~ -31°C'],
-              ['Castors', 'Yes', 'Yes', 'Yes', 'Yes'],
-              ['Inbuilt Lock', 'Yes', 'Yes', 'Yes', 'Yes']
+              ['Capacity (Litres)', '100', '200', '320', '430', '540'],
+              ['External Dimension (WxDxH) (MM)', '940 X 630 X 835', '940 X 630 X 835', '1100 X 740 X 800', '1390 X 740 X 800', '1680 X 740 X 800'],
+              ['Internal Dimension (WxDxH) (MM)', '790 X 440 X 632', '790 X 440 X 632', '960 X 550 X 632', '1250 X 550 X 632', '1540 X 550 X 632'],
+              ['Baskets', '2', '2', '3', '4', '5'],
+              ['No Of Doors (Sliding)', '2', '2', '2', '2', '2'],
+              ['Temperature Range - °C', '-17°C ~ -31°C', '-17°C ~ -31°C', '-17°C ~ -31°C', '-17°C ~ -31°C', '-17°C ~ -31°C'],
+              ['Castors', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes'],
+              ['Inbuilt Lock', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes']
             ]
           }
         },
