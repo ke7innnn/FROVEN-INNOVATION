@@ -7,6 +7,7 @@ export const catalog = [
       {
         name: 'Hard Top Chest Freezer',
         slug: 'hard-top-chest-freezer',
+        image: '/new product images/commercial-refrigeration/hard-top-chest-freezer.jpg',
         pageData: {
           description: "Introducing the MarkEn Hard Top Chest Freezer — a durable, high-capacity deep-freezing solution built for powerful cooling and long-term reliability. Designed for commercial and home use, it offers fast cooling, superior insulation, and energy-efficient performance, ensuring your stored items stay fresh and protected. Built with a robust hard-top lid, it guarantees excellent temperature retention. A perfect choice for businesses and households that demand dependable freezing every day.",
           features: [
@@ -47,6 +48,7 @@ export const catalog = [
       {
         name: 'Glass Top Chest Freezer',
         slug: 'glass-top-chest-freezer',
+        image: '/new product images/commercial-refrigeration/glass-top-chest-freezer.jpg',
         pageData: {
           description: "The Deep Freezer is expertly engineered to cater to the cold storage requirements of businesses engaged in the distribution and retail of food items, including ice cream, milk products, and other dairy-based goods. Combining high-performance cooling with energy efficiency, this freezer ensures reliable temperature control and extended holdover time. Its robust design, user-friendly features, and compliance with industry standards make it an ideal solution for commercial food storage environments where product preservation and operational reliability are paramount.",
           features: [
@@ -82,6 +84,7 @@ export const catalog = [
       {
         name: 'Visi Cooler',
         slug: 'visi-cooler',
+        image: '/new product images/commercial-refrigeration/visi-cooler.jpg',
         pageData: {
           description: "MarkEn Visi Coolers are designed to deliver superior product visibility, reliable cooling performance, and energy efficiency — all in one sleek package. Built with advanced refrigeration technology and modern design aesthetics, MarkEn coolers ensure that your beverages and perishables stay perfectly chilled while attracting customer attention through crystal-clear visibility and bright LED illumination. Whether for retail outlets, supermarkets, restaurants, or beverage brands, MarkEn Visi Coolers combine durability, style, and performance to enhance your product presentation and boost sales With a range of capacities and custom branding options, MarkEn stands as a trusted partner for businesses that demand quality and reliability.",
           features: [
@@ -125,11 +128,36 @@ export const catalog = [
       {
         name: 'Vertical Freezer',
         slug: 'vertical-freezer',
+        image: '/new product images/commercial-refrigeration/vertical-freezer.jpg',
+        pageData: {
+          description: "The MarkEn Vertical Freezer is a high-performance upright storage solution designed for commercial environments that demand absolute reliability and space efficiency. With a substantial 516-liter capacity and a powerful 641-watt cooling system, it provides consistent deep-freezing for ice creams, biologicals, and frozen foods. Its sleek vertical footprint makes it an ideal choice for busy kitchens, biotech labs, and retail spaces where floor space is at a premium.",
+          features: [
+            { icon: 'fas fa-thermometer-low', text: 'Steady Temp Range: Maintains consistent -18°C to -15°C for reliable food safety.' },
+            { icon: 'fas fa-bolt', text: 'Powerful 641W System: High-performance cooling for rapid pull-down and recovery.' },
+            { icon: 'fas fa-box', text: 'Massive 516L Capacity: Optimized internal volume for bulk professional storage.' },
+            { icon: 'fas fa-ruler-combined', text: 'Space-Saving Verticality: Slim 680x760mm footprint with 1995mm height.' },
+            { icon: 'fas fa-layer-group', text: 'Adjustable Heavy-Duty Shelves: Versatile storage configurations built for high loads.' },
+            { icon: 'fas fa-shield-alt', text: 'Tough Commercial Build: Durable exterior and high-density insulation for maximum efficiency.' }
+          ],
+          table: {
+            headers: ['Specifications', 'FVF342SD', 'FVF460SD', 'FVF516SD'],
+            rows: [
+              ['External Dimensions (WxDxH)', '680 x 760 x 1995 mm', '680 x 760 x 1995 mm', '680 x 760 x 1995 mm'],
+              ['Gross Capacity', '342 Litres', '460 Litres', '516 Litres'],
+              ['Rated Power input', '641 Watts', '641 Watts', '641 Watts'],
+              ['Temperature Range', '-18°C to -15°C', '-18°C to -15°C', '-18°C to -15°C'],
+              ['Cabinet Type', 'Vertical / Upright', 'Vertical / Upright', 'Vertical / Upright'],
+              ['No. of Shelves', '04 Nos', '04 Nos', '04 Nos'],
+              ['Cooling Type', 'Ventilated', 'Ventilated', 'Ventilated'],
+              ['Refrigerant', 'CFC-Free', 'CFC-Free', 'CFC-Free'],
+              ['Lock & Key', 'Yes', 'Yes', 'Yes']
+            ]
+          }
+        },
         models: [
-          { name: 'Vertical Freezer without canopy - 342 ltrs Single Door', id: 'FVF342SD' },
-          { name: 'Vertical Freezer with canopy - 342 ltrs Single Door', id: 'FVF342SDC' },
-          { name: 'Vertical Freezer without canopy - 460 ltrs Single Door', id: 'FVF460SD' },
-          { name: 'Visi Freezer with canopy - 460 ltrs Single Door', id: 'FVF460SDC' }
+          { name: 'Vertical Freezer - 516 ltrs Single Door', id: 'FVF516SD' },
+          { name: 'Vertical Freezer - 342 ltrs Single Door', id: 'FVF342SD' },
+          { name: 'Vertical Freezer - 460 ltrs Single Door', id: 'FVF460SD' }
         ]
       }
 
