@@ -6,7 +6,8 @@ import Link from 'next/link';
 const slideImages = [
   '/3 slides/slide 2new.png',
   '/3 slides/slide 3comp.png',
-  '/3 slides/slide 1new.png'
+  '/3rd slide replacement.jpeg',
+  '/4th slide addon.jpeg'
 ];
 
 const slidesContent = [
@@ -32,7 +33,14 @@ const slidesContent = [
     main: <>KEEPING<br/>YOUR BUSINESS<br/><span className="highlight-blue">COLD.</span></>,
     desc: "End-to-end refrigeration solutions for hospitality, retail, healthcare, and food & beverage industries.",
     buttons: [{ text: "Explore Products", primary: true, link: "/products" }],
-    align: 'right'
+    align: 'left'
+  },
+  {
+    small: "Industrial Cold Storage",
+    main: <>ADVANCED<br/>COLD ROOM<br/><span className="highlight-blue">STORAGE.</span></>,
+    desc: "Custom-engineered walk-in freezers and chillers for pharmaceutical, food processing, and large-scale distribution.",
+    buttons: [{ text: "Cold Room Range", primary: true, link: "/products/cold-room" }],
+    align: 'left'
   }
 ];
 
@@ -63,7 +71,10 @@ const Hero = () => {
             loading="eager"
           />
         </AnimatePresence>
-        <div className="hero-overlay"></div>
+        <div className="hero-overlay" style={{
+          backgroundColor: currentSlide === 3 ? 'rgba(5, 64, 120, 0.25)' : 'transparent',
+          transition: 'background-color 0.8s ease'
+        }}></div>
       </div>
       
       <div className="hero-content">
