@@ -6,6 +6,7 @@ import Footer from '../../../../components/Footer';
 import Link from 'next/link';
 import { catalog } from '../../../../data/catalog';
 import { notFound } from 'next/navigation';
+import SnowParticles from '../../../../components/SnowParticles';
 
 export default function ProductModelsPage({ params }) {
   const { category: categorySlug, product: productSlug } = React.use(params);
@@ -31,6 +32,7 @@ export default function ProductModelsPage({ params }) {
         >
           {/* Dot Matrix Pattern */}
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'16\' height=\'16\' viewBox=\'0 0 16 16\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'2\' cy=\'2\' r=\'1\' fill=\'%23ffffff\' fill-opacity=\'0.1\'/%3E%3C/svg%3E")', zIndex: 0 }}></div>
+          <SnowParticles />
           <div className="products-hero-content" style={{ position: 'relative', zIndex: 2, paddingTop: '160px', paddingLeft: '40px', paddingRight: '40px', textAlign: 'center' }}>
             <div style={{ display: 'inline-block', padding: '8px 20px', backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '30px', color: '#fff', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '20px', fontWeight: 700 }}>
               <Link href="/products" style={{ color: 'var(--froven-light)', textDecoration: 'none' }}>Categories</Link> /{' '}
@@ -65,9 +67,26 @@ export default function ProductModelsPage({ params }) {
             <section style={{ maxWidth: '1200px', margin: '80px auto', padding: '0 20px', overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #ddd', minWidth: '800px' }}>
                 <thead>
-                  <tr style={{ backgroundColor: '#f8fafc', borderBottom: '2px solid #ddd' }}>
+                  <tr>
+                    <th 
+                      colSpan={productContext.pageData.table.headers.length}
+                      style={{ 
+                        padding: '16px 20px', 
+                        background: 'linear-gradient(135deg, #054078 0%, #0ea5e9 100%)', 
+                        color: 'white', 
+                        fontWeight: 900, 
+                        fontSize: '15px',
+                        letterSpacing: '3px',
+                        textTransform: 'uppercase',
+                        textAlign: 'center'
+                      }}
+                    >
+                      📋 SPECIFICATIONS
+                    </th>
+                  </tr>
+                  <tr style={{ backgroundColor: '#f0f7ff', borderBottom: '2px solid #0ea5e9' }}>
                     {productContext.pageData.table.headers.map((header, idx) => (
-                      <th key={idx} style={{ padding: '16px 12px', textAlign: 'left', fontWeight: 'bold', borderRight: idx === 0 ? '2px solid #ddd' : '1px solid #ddd' }}>
+                      <th key={idx} style={{ padding: '16px 12px', textAlign: 'left', fontWeight: 'bold', borderRight: idx === 0 ? '2px solid #ddd' : '1px solid #ddd', color: '#054078', fontSize: '13px', letterSpacing: '0.5px' }}>
                         {header}
                       </th>
                     ))}

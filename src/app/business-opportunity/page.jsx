@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import '../careers/careers.css'; // Reuse file upload if needed, but not for this form
 import { motion } from 'framer-motion';
+import SnowParticles from '../../components/SnowParticles';
 
 const BusinessOpportunityPage = () => {
   const handleSubmit = (e) => {
@@ -41,6 +42,7 @@ ${data.message}
       <main className="contact-main">
         {/* Business Hero */}
         <section className="contact-hero">
+          <SnowParticles />
           <div className="contact-hero-content">
             <h1 className="meet-heading">BUSINESS <span className="highlight">OPPORTUNITY</span></h1>
             <p className="meet-description">

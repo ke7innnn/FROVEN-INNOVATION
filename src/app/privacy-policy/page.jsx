@@ -2,12 +2,14 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import './policy.css';
+import SnowParticles from '../../components/SnowParticles';
 
 export default function PrivacyPolicy() {
   return (
     <div className="app-container policy-page">
       <Header />
       <section className="policy-hero">
+        <SnowParticles />
         <div className="policy-hero-content">
           <p className="policy-eyebrow">Legal</p>
           <h1>Privacy Policy</h1>

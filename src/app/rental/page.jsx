@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import SnowParticles from '../../components/SnowParticles';
 
 export default function RentalPage() {
   
@@ -38,6 +39,7 @@ export default function RentalPage() {
             background: 'linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(5,64,120,0.80) 100%)',
             zIndex: 1
           }}></div>
+          <SnowParticles />
           <div className="products-hero-content" style={{ position: 'relative', zIndex: 2 }}>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <h1 className="meet-heading">EQUIPMENT <span className="highlight">RENTALS</span></h1>

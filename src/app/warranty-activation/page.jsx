@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SnowParticles from '../../components/SnowParticles';
 import './warranty.css';
 import { motion } from 'framer-motion';
 
@@ -65,6 +66,7 @@ Note: Please attach the supporting documents and warranty proof manually to this
       <main className="contact-main">
         {/* Warranty Hero */}
         <section className="contact-hero">
+          <SnowParticles />
           <div className="contact-hero-content">
             <h1 className="meet-heading">WARRANTY <span className="highlight">ACTIVATION</span></h1>
             <p className="meet-description">

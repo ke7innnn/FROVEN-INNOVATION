@@ -95,7 +95,7 @@
    letter-spacing: 0.5px;
  }
  .top-header {
-   padding: 25px 80px;
+   padding: 12px 45px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -110,7 +110,7 @@
  }
  
  .top-header.scrolled {
-   padding: 15px 80px;
+   padding: 6px 45px;
    background: rgba(255, 255, 255, 0.85);
    backdrop-filter: blur(25px);
    -webkit-backdrop-filter: blur(25px);
@@ -120,7 +120,7 @@
  
  .header-nav {
    display: flex;
-   gap: 40px;
+   gap: 45px;
  }
  
  .header-nav a {

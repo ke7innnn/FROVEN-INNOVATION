@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import './careers.css';
 import { motion } from 'framer-motion';
+import SnowParticles from '../../components/SnowParticles';
 
 const CareersPage = () => {
   const [fileName, setFileName] = useState('No file chosen');
@@ -46,6 +47,7 @@ Note: Resume "${fileName}" is selected for upload. (Please attach the file to th
       <main className="contact-main">
         {/* Careers Hero */}
         <section className="contact-hero">
+          <SnowParticles />
           <div className="contact-hero-content">
             <h1 className="meet-heading">JOIN OUR <span className="highlight">TEAM</span></h1>
             <p className="meet-description">

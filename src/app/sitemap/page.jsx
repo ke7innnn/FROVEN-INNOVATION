@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import '../privacy-policy/policy.css';
+import SnowParticles from '../../components/SnowParticles';
 
 const sitemapData = [
   {
@@ -64,6 +65,7 @@ export default function Sitemap() {
     <div className="app-container policy-page">
       <Header />
       <section className="policy-hero">
+        <SnowParticles />
         <div className="policy-hero-content">
           <p className="policy-eyebrow">Navigation</p>
           <h1>Sitemap</h1>

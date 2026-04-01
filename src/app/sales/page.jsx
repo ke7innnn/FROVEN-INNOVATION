@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import SnowParticles from '../../components/SnowParticles';
 
 const products = [
   { id: 1, name: 'Visicooler', slug: 'visicooler', image: '/product thumbnail/visi cooler.jpeg', type: 'image', centerImage: true, category: 'commercial' },
@@ -48,6 +49,7 @@ export default function SalesPage() {
             background: 'linear-gradient(to right, rgba(5,64,120,0.95), rgba(5,64,120,0.8))',
             zIndex: 1
           }}></div>
+          <SnowParticles />
           <div className="products-hero-content" style={{ position: 'relative', zIndex: 2 }}>
             <h1 className="meet-heading">OUR <span className="highlight">SALES DIVISION</span></h1>
             <p className="meet-description">

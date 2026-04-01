@@ -6,44 +6,60 @@ import Footer from '../../../components/Footer';
 import Link from 'next/link';
 import { catalog } from '../../../data/catalog';
 import { notFound } from 'next/navigation';
+import SnowParticles from '../../../components/SnowParticles';
+
+const categoryImages = {
+  'commercial-refrigeration': '/calegory images/commercial refrigeration.png',
+  'horeca': '/calegory images/horeca.png',
+  'lab': '/calegory images/LAB.png',
+  'confectionery-showcase': '/calegory images/confectionary.png',
+  'super-market-refrigeration': '/calegory images/supermarket refrigeration.png',
+  'cold-room': '/calegory images/coldroom.png',
+};
 
 export default function CategoryProductsPage({ params }) {
   const { category: categorySlug } = React.use(params);
-  
   const categoryContext = catalog.find(c => c.slug === categorySlug);
-  
-  if (!categoryContext) {
-    notFound();
-  }
+  if (!categoryContext) notFound();
+
+  const heroBg = categoryImages[categorySlug];
 
   return (
     <div className="app-container">
       <Header />
       
       <main className="products-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh' }}>
-        <section 
-          className="products-hero" 
-          style={{ 
-            paddingBottom: '80px',
-            backgroundColor: 'var(--froven-dark-blue)',
-            position: 'relative'
-          }}
-        >
-          {/* Subtle tech background for hero */}
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E")', zIndex: 0 }}></div>
-          <div className="products-hero-content" style={{ position: 'relative', zIndex: 2, paddingTop: '160px', paddingLeft: '40px', paddingRight: '40px', textAlign: 'center' }}>
-            <div style={{ display: 'inline-block', padding: '8px 20px', backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '30px', color: '#fff', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '20px', fontWeight: 700 }}>
-              <Link href="/products" style={{ color: 'var(--froven-yellow)', textDecoration: 'none' }}>Categories</Link> / {categoryContext.name}
+
+        {/* HERO with category image */}
+        <section style={{ position: 'relative', minHeight: '480px', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+          {heroBg && (
+            <img
+              src={heroBg}
+              alt={categoryContext.name}
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
+            />
+          )}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(3,20,60,0.92) 0%, rgba(5,64,120,0.78) 100%)', zIndex: 1 }} />
+          <SnowParticles />
+
+          <div style={{ position: 'relative', zIndex: 2, width: '100%', padding: '140px 40px 80px', textAlign: 'center' }}>
+            <div style={{ display: 'inline-block', padding: '8px 20px', backgroundColor: 'rgba(56,189,248,0.12)', border: '1px solid rgba(56,189,248,0.3)', borderRadius: '30px', color: '#38bdf8', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px', fontWeight: 700 }}>
+              <Link href="/products" style={{ color: '#38bdf8', textDecoration: 'none' }}>Categories</Link>
+              <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 8px' }}>/</span>
+              {categoryContext.name}
             </div>
-            <h1 className="meet-heading" style={{ margin: '0 auto 20px', fontSize: '56px' }}>
-              <span className="highlight" style={{ color: '#fff' }}>{categoryContext.name.toUpperCase()}</span>
+            <h1 style={{ fontSize: '60px', fontWeight: 900, lineHeight: 1.05, margin: '0 auto 20px', letterSpacing: '-1.5px', textShadow: '0 4px 30px rgba(0,0,0,0.4)' }}>
+              <span style={{ background: 'linear-gradient(90deg, #bae6fd, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                {categoryContext.name.toUpperCase()}
+              </span>
             </h1>
-            <p className="meet-description" style={{ margin: '0 auto', fontSize: '18px', maxWidth: '700px' }}>
+            <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.85)', lineHeight: 1.7, maxWidth: '700px', margin: '0 auto' }}>
               {categoryContext.description} Select a product type below to view available models and specifications.
             </p>
           </div>
         </section>
 
+        {/* PRODUCTS GRID */}
         <section className="ref-grid-container" style={{ paddingTop: '20px', margin: '40px auto 80px' }}>
           <p className="ref-grid-header">PRODUCTS</p>
           <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#0f2a47', marginBottom: '12px', letterSpacing: '-0.5px' }}>{categoryContext.name} Range</h2>
@@ -57,13 +73,7 @@ export default function CategoryProductsPage({ params }) {
                 <div className="ref-card center-image" style={{ cursor: 'pointer' }}>
                   <div
                     className="ref-card-image"
-                    style={{
-                      backgroundColor: '#f8fafc',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderBottom: '1px solid #e8edf3'
-                    }}
+                    style={{ backgroundColor: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid #e8edf3' }}
                   >
                     <i className="fas fa-cube" style={{ fontSize: '48px', color: '#cbd5e1' }}></i>
                   </div>

@@ -5,72 +5,201 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 import { catalog } from '../../data/catalog';
+import SnowParticles from '../../components/SnowParticles';
+
+const categoryImages = {
+  'commercial-refrigeration': '/calegory images/commercial refrigeration.png',
+  'horeca': '/calegory images/horeca.png',
+  'lab': '/calegory images/LAB.png',
+  'confectionery-showcase': '/calegory images/confectionary.png',
+  'super-market-refrigeration': '/calegory images/supermarket refrigeration.png',
+  'cold-room': '/calegory images/coldroom.png',
+};
 
 export default function ProductsCategoriesPage() {
   return (
     <div className="app-container">
       <Header />
       
-      <main className="products-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh' }}>
-        <section 
-          className="products-hero" 
-          style={{ 
-            paddingBottom: '60px',
-            backgroundImage: "url('/3 slides/slide 1new.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            position: 'relative'
+      <main className="products-main" style={{ backgroundColor: '#f0f4f8', minHeight: '80vh' }}>
+
+        {/* HERO — full horeca image as background */}
+        <section
+          style={{
+            position: 'relative',
+            minHeight: '480px',
+            display: 'flex',
+            alignItems: 'center',
+            overflow: 'hidden',
           }}
         >
-          <div className="hero-overlay" style={{
+          <img
+            src="/calegory images/horeca.png"
+            alt="Hero Background"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              zIndex: 0,
+            }}
+          />
+          {/* Strong dark overlay so text is always readable */}
+          <div style={{
             position: 'absolute',
-            top: 0, left: 0, right: 0, bottom: 0,
-            background: 'linear-gradient(to right, rgba(5,64,120,0.9), rgba(5,64,120,0.7))',
-            zIndex: 1
-          }}></div>
-          <div className="products-hero-content" style={{ position: 'relative', zIndex: 2 }}>
-            <h1 className="meet-heading">OUR <span className="highlight">CATEGORIES</span></h1>
-            <p className="meet-description">
+            inset: 0,
+            background: 'linear-gradient(135deg, rgba(3,20,60,0.92) 0%, rgba(5,64,120,0.75) 100%)',
+            zIndex: 1,
+          }} />
+          <SnowParticles />
+          <div style={{
+            position: 'relative',
+            zIndex: 2,
+            width: '100%',
+            maxWidth: '900px',
+            margin: '0 auto',
+            padding: '120px 40px 80px',
+            textAlign: 'center',
+          }}>
+            <div style={{
+              display: 'inline-block',
+              padding: '8px 24px',
+              backgroundColor: 'rgba(56,189,248,0.15)',
+              border: '1px solid rgba(56,189,248,0.4)',
+              borderRadius: '30px',
+              color: '#38bdf8',
+              fontSize: '12px',
+              letterSpacing: '3px',
+              textTransform: 'uppercase',
+              fontWeight: 700,
+              marginBottom: '24px',
+            }}>
+              Product Range
+            </div>
+            <h1 style={{
+              fontSize: '64px',
+              fontWeight: 900,
+              color: '#ffffff',
+              lineHeight: 1.05,
+              marginBottom: '20px',
+              letterSpacing: '-1.5px',
+              textShadow: '0 4px 30px rgba(0,0,0,0.4)',
+            }}>
+              OUR <span style={{
+                background: 'linear-gradient(90deg, #bae6fd, #38bdf8)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}>CATEGORIES</span>
+            </h1>
+            <p style={{
+              fontSize: '18px',
+              color: 'rgba(255,255,255,0.85)',
+              lineHeight: 1.7,
+              maxWidth: '600px',
+              margin: '0 auto',
+            }}>
               Select an industry sector to explore our specialized commercial cooling solutions.
             </p>
           </div>
         </section>
 
-        <section style={{ maxWidth: '1300px', margin: '80px auto', padding: '0 40px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '30px' }}>
-            {catalog.map((category) => (
-              <Link key={category.slug} href={`/products/${category.slug}`} style={{ textDecoration: 'none' }}>
-                <div 
-                  className="sales-category-card"
-                  style={{
-                    height: '350px',
-                    backgroundColor: 'var(--froven-dark-blue)',
-                    position: 'relative', cursor: 'pointer', borderRadius: '16px', overflow: 'hidden', 
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-                    transition: 'transform 0.4s ease, box-shadow 0.4s ease'
-                  }}
-                  onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = '0 30px 60px rgba(5,64,120,0.2)'; }}
-                  onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)'; }}
-                >
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(3,41,77,0.95) 0%, rgba(3,41,77,0.4) 100%)' }}></div>
-                  
-                  {/* Hexagon Pattern Overlay for premium tech feel since no bg images are provided yet */}
-                  <div style={{ 
-                    position: 'absolute', inset: 0, 
-                    backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M54.627 0l.83.6c-1.427 1.954-3.033 4.549-4.8 7.554-1.637 2.783-3.037 5.176-4.008 6.852l-1.04-.6c1.116-1.928 2.62-4.507 4.398-7.532 1.558-2.651 3.235-5.367 4.62-6.874zM45.69 13.923l1.04.6c-2.457 4.225-5.26 8.788-7.962 12.834l-1.04-.6c2.812-4.214 5.76-9.015 7.962-12.834zM32.895 33.195l1.04.6c-3.13 5.37-6.236 10.155-8.525 13.064l-1.039-.6c2.39-3.041 5.626-8.056 8.524-13.064zM18.81 51.527l1.04.6c-1.744 2.992-3.693 5.92-5.452 8.355l-1.04-.6c1.884-2.607 3.905-5.655 5.452-8.355z\' fill=\'%23ffffff\' fill-opacity=\'0.03\' fill-rule=\'evenodd\'/%3E%3C/svg%3E")',
-                    zIndex: 0
-                  }}></div>
+        {/* CATEGORY CARDS */}
+        <section style={{ maxWidth: '1400px', margin: '80px auto 120px', padding: '0 40px' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))',
+            gap: '36px',
+          }}>
+            {catalog.map((category) => {
+              const imgSrc = categoryImages[category.slug];
+              return (
+                <Link key={category.slug} href={`/products/${category.slug}`} style={{ textDecoration: 'none' }}>
+                  <div
+                    style={{
+                      background: '#ffffff',
+                      borderRadius: '24px',
+                      overflow: 'hidden',
+                      boxShadow: '0 15px 50px rgba(5,64,120,0.12)',
+                      transition: 'transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s ease',
+                      cursor: 'pointer',
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-10px)';
+                      e.currentTarget.style.boxShadow = '0 35px 70px rgba(5,64,120,0.2), 0 0 25px rgba(56,189,248,0.15)';
+                      const img = e.currentTarget.querySelector('.cat-img');
+                      if (img) img.style.transform = 'scale(1.06)';
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0 15px 50px rgba(5,64,120,0.12)';
+                      const img = e.currentTarget.querySelector('.cat-img');
+                      if (img) img.style.transform = 'scale(1)';
+                    }}
+                  >
+                    {/* Full landscape image — no cropping */}
+                    <div style={{ overflow: 'hidden', lineHeight: 0 }}>
+                      {imgSrc && (
+                        <img
+                          className="cat-img"
+                          src={imgSrc}
+                          alt={category.name}
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                            display: 'block',
+                            transition: 'transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1)',
+                          }}
+                        />
+                      )}
+                    </div>
 
-                  <div style={{ position: 'absolute', bottom: '40px', left: '40px', right: '40px', color: 'white', zIndex: 1 }}>
-                    <h2 style={{ fontSize: '32px', marginBottom: '12px', fontWeight: '800', lineHeight: '1.2' }}>{category.name}</h2>
-                    <p style={{ fontSize: '16px', opacity: 0.9, marginBottom: '25px', lineHeight: '1.5' }}>{category.description}</p>
-                    <div style={{ display: 'inline-block', padding: '12px 28px', backgroundColor: 'var(--froven-yellow)', color: 'var(--froven-dark-blue)', borderRadius: '30px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>
-                      View Products &rarr;
+                    {/* Text panel — solid background for max readability */}
+                    <div style={{
+                      padding: '28px 32px 30px',
+                      background: 'linear-gradient(180deg, #ffffff 0%, #f8faff 100%)',
+                      borderTop: '3px solid #e8f4ff',
+                    }}>
+                      <h2 style={{
+                        fontSize: '22px',
+                        fontWeight: 900,
+                        color: '#0f2a47',
+                        lineHeight: 1.2,
+                        marginBottom: '10px',
+                        letterSpacing: '-0.3px',
+                      }}>
+                        {category.name}
+                      </h2>
+                      <p style={{
+                        fontSize: '14px',
+                        color: '#64748b',
+                        lineHeight: 1.7,
+                        marginBottom: '20px',
+                      }}>
+                        {category.description}
+                      </p>
+                      <div style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        color: '#054078',
+                        fontWeight: 800,
+                        fontSize: '12px',
+                        letterSpacing: '2px',
+                        textTransform: 'uppercase',
+                        borderBottom: '2px solid #38bdf8',
+                        paddingBottom: '2px',
+                      }}>
+                        <span>VIEW PRODUCTS</span>
+                        <span style={{ color: '#38bdf8' }}>→</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </section>
       </main>

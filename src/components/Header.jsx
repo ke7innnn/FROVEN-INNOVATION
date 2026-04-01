@@ -66,7 +66,7 @@ const Header = () => {
     <header className={`top-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-logo">
         <a href="/">
-          <img src="/logo/d1cf21trk9rmy0cwntfb9cvtq8_preview_0-ezremove.png" alt="Froven Innovations Logo" style={{ height: '60px' }} fetchPriority="high" loading="eager" />
+          <img src="/logo/d1cf21trk9rmy0cwntfb9cvtq8_preview_0-ezremove.png" alt="Froven Innovations Logo" style={{ height: '55px' }} fetchPriority="high" loading="eager" />
         </a>
       </div>
       <nav className="header-nav">

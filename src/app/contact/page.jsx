@@ -3,6 +3,7 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SnowParticles from '../../components/SnowParticles';
 
 export default function ContactPage() {
   const handleSubmit = (e) => {
@@ -26,6 +27,7 @@ ${form.message.value}`;
       <main className="contact-main">
         {/* Contact Hero */}
         <section className="contact-hero">
+          <SnowParticles />
           <div className="contact-hero-content">
             <h1 className="meet-heading">GET IN <span className="highlight">TOUCH</span></h1>
             <p className="meet-description">

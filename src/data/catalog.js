@@ -707,7 +707,7 @@ export const catalog = [
             { icon: 'fas fa-ruler-horizontal', text: 'Available in different sizes (in feet): 3, 4, 6 & 8.' }
           ],
           table: {
-            headers: ['Features', 'KORAL12CGDP', 'KORALISCGDP', 'KORAL12FGDP', 'KORAL18FGOP'],
+            headers: ['Specification (All Customizable)', 'Variant 1 (Chiller 4ft)', 'Variant 2 (Chiller 6ft)', 'Variant 3 (Freezer 4ft)', 'Variant 4 (Freezer 6ft)'],
             rows: [
               ['Function', 'Chiller', 'Chiller', 'Freezer', 'Freezer'],
               ['Size in ft', '4', '6', '4', '6'],
@@ -726,10 +726,7 @@ export const catalog = [
           }
         },
         models: [
-          { name: 'KORAL12CGDP', id: 'KORAL12CGDP' },
-          { name: 'KORALISCGDP', id: 'KORALISCGDP' },
-          { name: 'KORAL12FGDP', id: 'KORAL12FGDP' },
-          { name: 'KORAL18FGOP', id: 'KORAL18FGOP' }
+          { name: 'Customizable', id: 'customizable' }
         ]
       },
       {
@@ -749,7 +746,7 @@ export const catalog = [
             { icon: 'fas fa-ruler-horizontal', text: 'Available in different sizes (in feet): 2, 4 & 6.' }
           ],
           table: {
-            headers: ['Features', 'KORAL12CFV/DL/MT', 'KORAL18CFV/DL/MT', 'KORAL25CFV/DL/MT'],
+            headers: ['Specification (All Customizable)', 'Variant 1 (4ft)', 'Variant 2 (6ft)', 'Variant 3 (8ft)'],
             rows: [
               ['Function', 'Chiller', 'Chiller', 'Chiller'],
               ['Size in ft', '428', '632', '835'],
@@ -768,9 +765,7 @@ export const catalog = [
           }
         },
         models: [
-          { name: 'KORAL12CFV/DL/MT', id: 'KORAL12CFV/DL/MT' },
-          { name: 'KORAL18CFV/DL/MT', id: 'KORAL18CFV/DL/MT' },
-          { name: 'KORAL25CFV/DL/MT', id: 'KORAL25CFV/DL/MT' }
+          { name: 'Customizable', id: 'customizable' }
         ]
       },
       {
@@ -789,7 +784,7 @@ export const catalog = [
             { icon: 'fas fa-moon', text: 'Energy saving night blind.' }
           ],
           table: {
-            headers: ['Features', 'KORAL12CFV/DL/MTR', 'KORALIBCFV/DL/MTR', 'KORAL24CFV/DL/MTS', 'KORALSHCFV/DL/MTR'],
+            headers: ['Specification (All Customizable)', 'Variant 1 (4ft)', 'Variant 2 (6ft)', 'Variant 3 (8ft)', 'Variant 4 (12ft)'],
             rows: [
               ['Function', 'Remote', 'Remote', 'Remote', 'Remote'],
               ['Size in ft', '4', '629', '833', '125'],
@@ -814,10 +809,7 @@ export const catalog = [
           }
         },
         models: [
-          { name: 'KORAL12CFV/DL/MTR', id: 'KORAL12CFV/DL/MTR' },
-          { name: 'KORALIBCFV/DL/MTR', id: 'KORALIBCFV/DL/MTR' },
-          { name: 'KORAL24CFV/DL/MTS', id: 'KORAL24CFV/DL/MTS' },
-          { name: 'KORALSHCFV/DL/MTR', id: 'KORALSHCFV/DL/MTR' }
+          { name: 'Customizable', id: 'customizable' }
         ]
       },
       {
@@ -836,7 +828,7 @@ export const catalog = [
             { icon: 'fas fa-gem', text: 'Elegant finish.' }
           ],
           table: {
-            headers: ['Description', 'KORAL 09C5QP', 'KORAL 12C5QP', 'KORAL16CSQP', 'KORAL 18C5QP'],
+            headers: ['Specification (All Customizable)', 'Variant 1 (3ft)', 'Variant 2 (4ft)', 'Variant 3 (5ft)', 'Variant 4 (6ft)'],
             rows: [
               ['Function', 'Chiller', 'Chiller', 'Chiller', 'Chiller'],
               ['Structure', 'Square', 'Square', 'Square', 'Square'],
@@ -856,10 +848,7 @@ export const catalog = [
           }
         },
         models: [
-          { name: 'KORAL 09C5QP', id: 'KORAL 09C5QP' },
-          { name: 'KORAL 12C5QP', id: 'KORAL 12C5QP' },
-          { name: 'KORAL16CSQP', id: 'KORAL16CSQP' },
-          { name: 'KORAL 18C5QP', id: 'KORAL 18C5QP' }
+          { name: 'Customizable', id: 'customizable' }
         ]
       },
       {
@@ -880,7 +869,7 @@ export const catalog = [
             { icon: 'fas fa-ruler-horizontal', text: 'Available in different sizes (in feet): 4, 6, 8 & 12.' }
           ],
           table: {
-            headers: ['Features', '50C4WC', 'KORAL36CSECP'],
+            headers: ['Specification (All Customizable)', 'Variant 1 (4.5ft)', 'Variant 2 (12.8ft)'],
             rows: [
               ['Function', 'Chiller', 'Chiller'],
               ['Size in ft', '4.5', '12.8'],
@@ -897,8 +886,7 @@ export const catalog = [
           }
         },
         models: [
-          { name: '50C4WC', id: '50C4WC' },
-          { name: 'KORAL36CSECP', id: 'KORAL36CSECP' }
+          { name: 'Customizable', id: 'customizable' }
         ]
       },
       {
@@ -919,7 +907,7 @@ export const catalog = [
             { icon: 'fas fa-palette', text: 'Available in different colours and sizes.' }
           ],
           table: {
-            headers: ['Features', 'BILF 19AEN', 'BILF 20AEN', 'BILF500D'],
+            headers: ['Specification (All Customizable)', 'Variant 1 (6.3ft)', 'Variant 2 (6.6ft)', 'Variant 3 (4.1ft)'],
             rows: [
               ['Function', 'Freezer', 'Freezer', 'Freezer'],
               ['Size in ft', '6.3', '6.6', '4.1'],
@@ -941,9 +929,7 @@ export const catalog = [
           }
         },
         models: [
-          { name: 'BILF 19AEN', id: 'BILF 19AEN' },
-          { name: 'BILF 20AEN', id: 'BILF 20AEN' },
-          { name: 'BILF500D', id: 'BILF500D' }
+          { name: 'Customizable', id: 'customizable' }
         ]
       }
     ]

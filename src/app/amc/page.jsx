@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { motion } from 'framer-motion';
+import SnowParticles from '../../components/SnowParticles';
 
 export default function AmcPage() {
   const [hoveredPlan, setHoveredPlan] = useState(null);
@@ -342,6 +343,7 @@ export default function AmcPage() {
             background: 'radial-gradient(circle at 70% 50%, rgba(5,64,120,0.7) 0%, rgba(5,64,120,0.95) 100%)',
             zIndex: 1
           }}></div>
+          <SnowParticles />
           
           <div style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: '1200px', margin: '0 auto', padding: '0 40px' }}>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} style={{ maxWidth: '800px' }}>
