@@ -7,8 +7,7 @@ import Link from 'next/link';
 const CoolCollections = () => {
   const services = [
     { title: 'SALES', category: 'Premium Equipment', img: '/services/sales.png', link: '/sales' },
-    { title: 'RENTALS', category: 'Flexible Plans', img: '/services/rental.png', link: '/rental' },
-    { title: 'AMC', category: 'Annual Maintenance', img: '/services/amc.png', link: '/amc' }
+    { title: 'RENTALS', category: 'Flexible Plans', img: '/services/rental.png', link: '/rental' }
   ];
 
   return (
@@ -24,7 +23,15 @@ const CoolCollections = () => {
         <h2>CORE BUSINESS SERVICES</h2>
         <p>Explore our carefully curated business services, designed to bring you the best in quality, reliability, and peace of mind.</p>
       </motion.div>
-      <div className="cc-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', maxWidth: '1200px', margin: '0 auto', gap: '30px', padding: '0 20px' }}>
+      <div className="cc-grid" style={{ 
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 420px))', 
+        justifyContent: 'center',
+        maxWidth: '1200px', 
+        margin: '0 auto', 
+        gap: '40px', 
+        padding: '0 20px' 
+      }}>
         {services.map((item, i) => (
           <motion.div 
             className="service-card-square glow-on-hover" 

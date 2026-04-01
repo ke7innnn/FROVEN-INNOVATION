@@ -377,6 +377,7 @@ export const catalog = [
       {
         name: 'ULT Deep Freezer -86 °C Vertical',
         slug: 'ult-deep-freezer-86c-vertical',
+        image: '/new product images/LAB/ult-deep-freezer-86c-vertical.jpg',
         pageData: {
           description: "Ultra Low Temperature (-86°C) Deep Freezer is engineered for the critical preservation of high-value biological specimens, including vaccines, plasma, and cell cultures. Its precision-controlled refrigeration, robust insulation, and advanced safety systems ensure ultra-stable temperatures—even under extreme ambient conditions making it a trusted solution in biomedical research, pharmaceutical, and clinical applications.",
           features: [
@@ -423,6 +424,7 @@ export const catalog = [
       {
         name: 'Deep Freezer -40 °C Horizontal',
         slug: 'deep-freezer-40c-horizontal',
+        image: '/new product images/LAB/deep-freezer-40c-horizontal.jpg',
         pageData: {
           description: "-40°C Deep Freezer is purpose-built for secure storage of temperature-sensitive biological materials, including stem cells, plasma, and viruses. Designed for reliability, efficiency, and compliance, it delivers stable sub-zero performance with a robust, corrosion-resistant build and advanced temperature recovery technology, ideal for healthcare, diagnostics, and biotech environments.",
           features: [
@@ -470,6 +472,7 @@ export const catalog = [
       {
         name: 'Deep Freezer -25 °C Vertical',
         slug: 'deep-freezer-25c-vertical',
+        image: '/new product images/LAB/deep-freezer-25c-vertical.jpg',
         pageData: {
           description: "Deep Freezer -25°C is a high-precision cold storage unit crafted for the secure preservation of sensitive biologicals, including plasma, vaccines, and lab reagents. Its robust vertical design, user-centric interface, and intelligent temperature management system make it a trusted choice for laboratories, hospitals, and biotech facilities. Built to excel in demanding conditions, it seamlessly combines technical performance, energy efficiency, and global safety compliance.",
           features: [
@@ -516,6 +519,7 @@ export const catalog = [
       {
         name: 'Ice Lined Refrigerator (Horizontal)',
         slug: 'ice-lined-refrigerator-horizontal',
+        image: '/new product images/LAB/ice-lined-refrigerator-horizontal.jpg',
         pageData: {
           description: "Ice Lined Refrigerator (Horizantal) is designed to ensure precise temperature control, eliminating the risk of freezing vaccines. With energy-efficient technology, it maintains a temperature holdover of 24 hours and requires just 8 hours of daily power to operate. The high-tech energy management system and optimized refrigeration design ensure superior temperature stability, even in challenging conditions.",
           features: [
@@ -567,6 +571,7 @@ export const catalog = [
       {
         name: 'Ice Lined Refrigerator (Vertical)',
         slug: 'ice-lined-refrigerator-vertical',
+        image: '/new product images/LAB/ice-lined-refrigerator-vertical.jpg',
         models: [
           { name: 'Ice Lined Refrigerator (Vertical)', id: 'FICRV' }
         ]
@@ -574,6 +579,7 @@ export const catalog = [
       {
         name: 'Laboratory Refrigerator (Vertical)',
         slug: 'laboratory-refrigerator-vertical',
+        image: '/new product images/LAB/laboratory-refrigerator-vertical.jpg',
         pageData: {
           description: "Laboratory Refrigerators provide reliable, uniform temperature control for safe storage of pharmaceuticals, vaccines, medicines, and other sensitive products — trusted by research labs, hospitals, and pharmaceutical industries.",
           features: [
@@ -629,6 +635,7 @@ export const catalog = [
       {
         name: 'Cake Display',
         slug: 'cake-display',
+        image: '/new product images/confectionery/cake-display.png',
         pageData: {
           description: "Showcase your cakes in the most sophisticated and professional manner with our Cake Display Counter, specifically tailored for bakery stores. Made of high-quality glass and engineered for performance, this counter is perfect for keeping cakes fresh while exposing them to maximum visibility.",
           features: [
@@ -656,6 +663,7 @@ export const catalog = [
       {
         name: 'Sweet Display Counter',
         slug: 'sweet-display-counter',
+        image: '/new product images/confectionery/sweet-display-counter.png',
         pageData: {
           description: "Our Sweet Display Counters are carefully created to provide long-lasting durability, hygiene as well as appearance, so that your food showpiece is equally appealing and hygienic. Made from tempered glass and top-grade stainless steel, this counter is a robust solution to the display of your sweets and desserts in a hygienic and easy-to-access fashion. Its sleek rectangular design, spacious shelving and top-quality finish mean it is a must-have for any commercial food establishment.",
           features: [
@@ -693,6 +701,7 @@ export const catalog = [
       {
         name: 'Multi-Deck Chillers With Glass Door - Plug In',
         slug: 'multi-deck-chillers-with-glass-door-plug-in',
+        image: '/new product images/super market refrigeration/multi-deck-chillers-with-glass-door-plug-in.jpg',
         pageData: {
           description: "These cabinets are designed to be a perfect fit for small, medium, and large stores. This refrigeration product reduces energy costs as it is equipped with energy-efficient technology.",
           features: [
@@ -732,6 +741,7 @@ export const catalog = [
       {
         name: 'Multi-Deck Chillers Without Glass Door - Plug In',
         slug: 'multi-deck-chillers-without-glass-door-plug-in',
+        image: '/new product images/super market refrigeration/multi-deck-chillers-without-glass-door-plug-in.jpg',
         pageData: {
           description: "These multi-deck chillers are designed for keeping delicate products fresh while providing customizable storage and digital temperature control.",
           features: [
@@ -771,6 +781,7 @@ export const catalog = [
       {
         name: 'Multi-Deck Chiller Without Glass Door - Remote',
         slug: 'multi-deck-chiller-without-glass-door-remote',
+        image: '/new product images/super market refrigeration/multi-deck-chiller-without-glass-door-remote.jpg',
         pageData: {
           description: "Designed with uniform cooling capabilities to maintain the freshness of food for extended periods.",
           features: [
@@ -815,6 +826,7 @@ export const catalog = [
       {
         name: 'Pastry Showcase',
         slug: 'pastry-showcase',
+        image: '/new product images/super market refrigeration/pastry-showcase.jpg',
         pageData: {
           description: "Blue Star's Pastry Showcase suits any environment without compromising on style and display area. Its unique design enhances the appearance of cookies, cakes, brownies and more items, and attracts the eyes of everyone who pass by. The showcase is also incorporated with advanced technology and comes with low emissivity tempered glass that offers greater display and a truly enviable product visibility with no frost formation on the glass.",
           features: [
@@ -854,6 +866,7 @@ export const catalog = [
       {
         name: 'Serve Over Counter',
         slug: 'serve-over-counter',
+        image: '/new product images/super market refrigeration/serve-over-counter.jpg',
         pageData: {
           description: "Blue Star's serve over counters are versatile and perfect for the presentation of fast-moving items like dairy products, meat and fish. Its inner cabinet is made of food grade steel to preserve the food material for a longer time. It also has an LED light to enhance the look of the products and comes with different temperature settings for different storage applications. It's a fully-customised refrigerated cabinet technology that minimises the structural measures through heat recovery and reduces operating costs to a previously unachievable minimum, making these counters a sure bet to increase sales.",
           features: [
@@ -892,6 +905,7 @@ export const catalog = [
       {
         name: 'Island Freezer',
         slug: 'island-freezer',
+        image: '/new product images/super market refrigeration/island-freezer.jpg',
         pageData: {
           description: "Blue Star's Island Freezer is an ideal choice for retail applications where high-end product display is essential for better presentation, impulse buying or simply to complement the aesthetics of the interiors. In all its different arrangement variants, the Blue Star Island model range offers elegant styling, and thanks to its innovatively designed glass side panels, it is sure to get your customers even more in the mood to buy. With the smooth sliding lid offering the maximum view of the products inside, there's nothing to stand in the way of good sales figures.",
           features: [
@@ -942,6 +956,7 @@ export const catalog = [
       {
         name: 'Walk In Cooler',
         slug: 'walk-in-cooler',
+        image: '/new product images/cold room/walk-in-cooler.jpg',
         pageData: {
           description: "The Walk-In Cooler is a large-capacity, temperature-controlled cold storage solution designed for safe preservation of pharmaceuticals, vaccines, biological samples, food products, and other temperature-sensitive materials. Built with high-density insulated panels and an advanced refrigeration system, this walk-in cooler maintains stable temperatures to ensure product integrity and long-term storage reliability.",
           features: [
@@ -972,6 +987,7 @@ export const catalog = [
       {
         name: 'Walk In Freezer',
         slug: 'walk-in-freezer',
+        image: '/new product images/cold room/walk-in-freezer.jpg',
         pageData: {
           description: "Walk-In Freezer is a high-performance, modular cold storage solution engineered for temperature-sensitive pharmaceuticals, vaccines, and perishables. Designed to operate flawlessly in harsh ambient conditions, it combines industrial-grade durability, precision temperature control, and smart automation—making it a trusted choice for healthcare, research, and logistics operations worldwide.",
           features: [

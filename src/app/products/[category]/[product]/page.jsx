@@ -143,10 +143,14 @@ export default function ProductModelsPage({ params }) {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    borderBottom: '1px solid #e8edf3'
+                    borderBottom: '1px solid #e8edf3',
+                    backgroundImage: productContext.image ? `url('${productContext.image}')` : 'none',
+                    backgroundSize: productContext.image ? (categorySlug === 'confectionery-showcase' ? 'contain' : '130%') : 'contain', /* Zoomed out for confectionery */
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
                   }}
                 >
-                  <i className="fas fa-cube" style={{ fontSize: '48px', color: '#cbd5e1' }}></i>
+                  {!productContext.image && <i className="fas fa-cube" style={{ fontSize: '48px', color: '#cbd5e1' }}></i>}
                 </div>
                 <div className="ref-card-title">{model.name}</div>
                 <div className="ref-card-arrow" style={{ color: 'var(--text-gray)', backgroundColor: '#fff' }}>

@@ -729,8 +729,8 @@
 /* New unified auto-fill grid */
 .ref-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
 }
 .ref-grid > a {
   display: block;
@@ -777,7 +777,7 @@
 }
 .ref-card-image {
   width: 100%;
-  height: 200px;
+  height: 280px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

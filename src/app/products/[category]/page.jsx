@@ -73,9 +73,17 @@ export default function CategoryProductsPage({ params }) {
                 <div className="ref-card center-image" style={{ cursor: 'pointer' }}>
                   <div
                     className="ref-card-image"
-                    style={{ backgroundColor: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid #e8edf3' }}
+                    style={{ 
+                      backgroundColor: '#f8fafc', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      borderBottom: '1px solid #e8edf3',
+                      backgroundImage: product.image ? `url('${product.image}')` : 'none',
+                      backgroundSize: product.image ? (categorySlug === 'confectionery-showcase' ? 'contain' : '130%') : 'contain', /* Zoomed out for confectionery */
+                    }}
                   >
-                    <i className="fas fa-cube" style={{ fontSize: '48px', color: '#cbd5e1' }}></i>
+                    {!product.image && <i className="fas fa-cube" style={{ fontSize: '48px', color: '#cbd5e1' }}></i>}
                   </div>
                   <div className="ref-card-title">{product.name}</div>
                   <div className="ref-card-arrow" style={{ color: 'var(--text-gray)', backgroundColor: '#fff' }}>
