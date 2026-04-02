@@ -76,8 +76,8 @@ export default function ProductModelsPage({ params }) {
                     style={{ 
                       transformOrigin: isZooming ? `${zoomPos.x}% ${zoomPos.y}%` : 'center center',
                       transform: isZooming 
-                        ? (categorySlug === 'confectionery-showcase' ? 'scale(2.2)' : 'scale(2.8)') 
-                        : (categorySlug === 'confectionery-showcase' ? 'scale(1.1)' : 'scale(1.5)'),
+                        ? (categorySlug === 'confectionery-showcase' ? 'scale(2.2)' : productSlug === 'visi-cooler' ? 'scale(2.0)' : 'scale(2.8)') 
+                        : (categorySlug === 'confectionery-showcase' ? 'scale(1.1)' : productSlug === 'visi-cooler' ? 'scale(0.95)' : 'scale(1.5)'),
                       transition: isZooming ? 'transform 0.1s ease-out' : 'transform 0.5s ease, transform-origin 0.5s ease',
                       width: '100%',
                       height: '100%',
