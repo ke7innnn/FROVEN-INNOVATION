@@ -314,10 +314,11 @@ export default function AmcPage() {
         .service-content-block h4 { font-size: 20px !important; font-weight: 800 !important; color: #38bdf8 !important; margin-bottom: 12px !important; text-transform: uppercase; letter-spacing: 1px; }
         .service-content-block p { font-size: 18px !important; color: #475569 !important; line-height: 1.9 !important; margin-bottom: 24px !important; }
         .service-content-block ul { list-style: none !important; padding-left: 0 !important; display: grid; gap: 16px; margin-bottom: 35px !important; }
-        .service-content-block ul:not([style*="display: grid"]) { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-        .service-content-block li { background: #f8fafc; padding: 16px 20px; border-radius: 12px; border-left: 4px solid #38bdf8; font-size: 17px !important; color: #334155 !important; font-weight: 500; display: flex; align-items: flex-start; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-        .service-content-block li::before { font-family: "Font Awesome 6 Free"; content: "\\f00c"; font-weight: 900; color: #38bdf8; margin-right: 12px; font-size: 18px; margin-top: 2px; }
-        .service-content-block strong { color: #0f172a; font-weight: 800; }
+        .service-content-block ul:not([style*="display: grid"]) { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+        .service-content-block li { background: #f8fafc; padding: 20px 24px 20px 54px; border-radius: 16px; border-left: 4px solid #38bdf8; font-size: 17px !important; color: #334155 !important; font-weight: 500; position: relative; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; display: block; line-height: 1.6; }
+        .service-content-block li:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); background: #ffffff; }
+        .service-content-block li::before { font-family: "Font Awesome 6 Free"; content: "\\f00c"; font-weight: 900; color: #38bdf8; position: absolute; left: 20px; top: 22px; font-size: 18px; margin: 0; }
+        .service-content-block strong { color: #0f172a; font-weight: 800; display: inline; margin-right: 4px; }
         .glass-btn { position: relative; overflow: hidden; transition: all 0.3s ease; }
         .glass-btn::after { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%); transform: skewX(-25deg); animation: shine 6s infinite; }
         @keyframes shine { 0% { left: -100%; } 20% { left: 200%; } 100% { left: 200%; } }
