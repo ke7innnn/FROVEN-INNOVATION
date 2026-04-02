@@ -9,13 +9,6 @@ import SnowParticles from '../../components/SnowParticles';
 
 export default function RentalPage() {
   
-  const rentalEquipment = [
-    { name: 'Hard Top Chest Freezer', image: '/product thumbnail/HARD TOP CHEST FREEZER.png', link: '/products/hard-top-chest-freezer' },
-    { name: 'Hard Top Chest Freezer 70mm', image: '/product thumbnail/HARD TOP CHEST FREEZER70MM.png', link: '/products/hard-top-chest-freezer-70mm' },
-    { name: 'Glass Top Chest Freezer', image: '/product thumbnail/GLASS TOP CHEST FREEZER.png', link: '/products/glass-top-chest-freezer' },
-    { name: 'Visi Cooler', image: '/product thumbnail/visi cooler.jpeg', link: '/products/visicooler' }
-  ];
-
   return (
     <div className="app-container">
       <Header />
@@ -49,42 +42,33 @@ export default function RentalPage() {
             </motion.div>
           </div>
         </section>
-
-        {/* Commercial Refrigeration Rental Category */}
-        <section style={{ maxWidth: '1200px', margin: '80px auto', padding: '0 40px' }}>
-          
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <span style={{ color: '#ea580c', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>Our Fleet</span>
+        {/* Rental Info Section */}
+        <section style={{ maxWidth: '1200px', margin: '80px auto', padding: '0 40px', textAlign: 'center' }}>
+          <div style={{ marginBottom: '60px' }}>
+            <span style={{ color: '#ea580c', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>Our Services</span>
             <h2 style={{ fontSize: '42px', color: 'var(--froven-dark-blue)', fontWeight: 900, marginTop: '16px' }}>
-              Commercial Refrigeration
+              Sales & Rental Solutions
             </h2>
             <div style={{ width: '80px', height: '4px', backgroundColor: '#ea580c', margin: '20px auto 30px' }}></div>
-            <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '700px', margin: '0 auto' }}>
-              Whether you need to instantly scale cold storage for a massive catering event or substitute a broken unit during repairs, our heavy-duty commercial rental fleet guarantees your inventory stays perfectly chilled.
+            <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '800px', margin: '0 auto', lineHeight: '1.8' }}>
+              Froven Innovations provides premium refrigeration solutions for both long-term sales and short-term rentals. Whether you're looking to purchase high-performance equipment or need temporary cold storage for an event, our team is ready to assist you with the perfect setup.
             </p>
-          </div>
-
-          <div className="ref-grid" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 40px' }}>
-            {rentalEquipment.map((equipment, idx) => (
-              <Link href={equipment.link} key={idx} style={{ textDecoration: 'none' }}>
-                <motion.div
-                  className="ref-card center-image"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.15 }}
-                >
-                  <div
-                    className="ref-card-image"
-                    style={{ backgroundImage: `url('${equipment.image}')` }}
-                  />
-                  <div className="ref-card-title">{equipment.name}</div>
-                  <div className="ref-card-arrow">View Details</div>
-                </motion.div>
+            <div style={{ marginTop: '40px' }}>
+              <Link href="/contact" style={{ 
+                display: 'inline-block',
+                padding: '16px 32px',
+                backgroundColor: 'var(--froven-blue)',
+                color: 'white',
+                borderRadius: '50px',
+                fontWeight: 700,
+                textDecoration: 'none',
+                boxShadow: '0 10px 20px rgba(5,64,120,0.15)',
+                transition: 'all 0.3s ease'
+              }}>
+                Enquire for Availability
               </Link>
-            ))}
+            </div>
           </div>
-          
         </section>
         
         {/* Rental Benefits Strip */}
