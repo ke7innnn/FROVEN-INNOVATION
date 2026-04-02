@@ -23,10 +23,10 @@ const Footer = () => {
             <h3>Products</h3>
             <ul>
               <li><Link href="/products">All Products</Link></li>
-              <li><Link href="/products/visicooler">Visi Cooler</Link></li>
-              <li><Link href="/products/hard-top-chest-freezer">Chest Freezers</Link></li>
-              <li><Link href="/products/blast-freezer">Blast Freezer</Link></li>
-              <li><Link href="/products/water-dispenser">Water Dispenser</Link></li>
+              <li><Link href="/products/commercial-refrigeration/visi-cooler">Visi Cooler</Link></li>
+              <li><Link href="/products/commercial-refrigeration/hard-top-chest-freezer">Chest Freezers</Link></li>
+              <li><Link href="/products/horeca/blast-chillers-freezers">Blast Freezer</Link></li>
+              <li><Link href="/products/horeca/water-dispenser">Water Dispenser</Link></li>
             </ul>
           </div>
           
