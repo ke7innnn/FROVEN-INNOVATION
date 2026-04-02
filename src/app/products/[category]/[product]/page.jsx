@@ -163,13 +163,23 @@ export default function ProductModelsPage({ params }) {
               {relatedProducts.map(related => (
                 <Link key={related.slug} href={`/products/${categorySlug}/${related.slug}`} style={{ textDecoration: 'none' }}>
                   <div className="related-card" style={{ height: '100%' }}>
-                    <div className="related-image-wrapper">
+                    <div 
+                      className="related-image-wrapper"
+                      style={{ 
+                        padding: categorySlug === 'horeca' ? '0' : '24px',
+                        overflow: 'hidden'
+                      }}
+                    >
                       {related.image ? (
                         <img 
                           src={related.image} 
                           alt={related.name} 
                           style={{ 
-                            transform: categorySlug === 'confectionery-showcase' ? 'scale(1)' : 'scale(1.15)' 
+                            transform: categorySlug === 'confectionery-showcase' ? 'scale(1)' : 
+                                       categorySlug === 'horeca' ? 'scale(1.5)' : 'scale(1.15)',
+                            width: categorySlug === 'horeca' ? '100%' : 'auto',
+                            height: categorySlug === 'horeca' ? '100%' : 'auto',
+                            objectFit: categorySlug === 'horeca' ? 'cover' : 'contain'
                           }} 
                         />
                       ) : (

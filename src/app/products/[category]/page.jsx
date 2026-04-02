@@ -80,7 +80,12 @@ export default function CategoryProductsPage({ params }) {
                       justifyContent: 'center', 
                       borderBottom: '1px solid #e8edf3',
                       backgroundImage: product.image ? `url('${product.image}')` : 'none',
-                      backgroundSize: product.image ? (categorySlug === 'confectionery-showcase' ? 'contain' : '130%') : 'contain', /* Zoomed out for confectionery */
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: product.image ? (
+                        categorySlug === 'horeca' ? '160%' :
+                        categorySlug === 'confectionery-showcase' ? 'contain' : '130%'
+                      ) : 'contain', 
                     }}
                   >
                     {!product.image && <i className="fas fa-cube" style={{ fontSize: '48px', color: '#cbd5e1' }}></i>}

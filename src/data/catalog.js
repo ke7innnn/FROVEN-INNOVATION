@@ -9,7 +9,7 @@ export const catalog = [
         slug: 'hard-top-chest-freezer',
         image: '/new product images/commercial-refrigeration/hard-top-chest-freezer.jpg',
         pageData: {
-          description: "Introducing the MarkEn Hard Top Chest Freezer — a durable, high-capacity deep-freezing solution built for powerful cooling and long-term reliability. Designed for commercial and home use, it offers fast cooling, superior insulation, and energy-efficient performance, ensuring your stored items stay fresh and protected. Built with a robust hard-top lid, it guarantees excellent temperature retention. A perfect choice for businesses and households that demand dependable freezing every day.",
+          description: "Introducing the Froven Innovations Hard Top Chest Freezer — a durable, high-capacity deep-freezing solution built for powerful cooling and long-term reliability. Designed for commercial and home use, it offers fast cooling, superior insulation, and energy-efficient performance, ensuring your stored items stay fresh and protected. Built with a robust hard-top lid, it guarantees excellent temperature retention. A perfect choice for businesses and households that demand dependable freezing every day.",
           features: [
             { icon: 'fas fa-leaf', text: 'Eco-Friendly Refrigerant' },
             { icon: 'fas fa-bolt', text: 'Low Power Consumption' },
@@ -86,7 +86,7 @@ export const catalog = [
         slug: 'visi-cooler',
         image: '/new product images/commercial-refrigeration/visi-cooler.jpg',
         pageData: {
-          description: "MarkEn Visi Coolers are designed to deliver superior product visibility, reliable cooling performance, and energy efficiency — all in one sleek package. Built with advanced refrigeration technology and modern design aesthetics, MarkEn coolers ensure that your beverages and perishables stay perfectly chilled while attracting customer attention through crystal-clear visibility and bright LED illumination. Whether for retail outlets, supermarkets, restaurants, or beverage brands, MarkEn Visi Coolers combine durability, style, and performance to enhance your product presentation and boost sales With a range of capacities and custom branding options, MarkEn stands as a trusted partner for businesses that demand quality and reliability.",
+          description: "Froven Innovations Visi Coolers are designed to deliver superior product visibility, reliable cooling performance, and energy efficiency — all in one sleek package. Built with advanced refrigeration technology and modern design aesthetics, Froven coolers ensure that your beverages and perishables stay perfectly chilled while attracting customer attention through crystal-clear visibility and bright LED illumination. Whether for retail outlets, supermarkets, restaurants, or beverage brands, Froven Innovations Visi Coolers combine durability, style, and performance to enhance your product presentation and boost sales With a range of capacities and custom branding options, Froven Innovations stands as a trusted partner for businesses that demand quality and reliability.",
           features: [
             { icon: 'far fa-lightbulb', text: 'LED Lighting – Bright and long' },
             { icon: 'fas fa-palette', text: 'Custom Branding Space' },
@@ -130,7 +130,7 @@ export const catalog = [
         slug: 'vertical-freezer',
         image: '/new product images/commercial-refrigeration/vertical-freezer.jpg',
         pageData: {
-          description: "The MarkEn Vertical Freezer is a high-performance upright storage solution designed for commercial environments that demand absolute reliability and space efficiency. With a substantial 516-liter capacity and a powerful 641-watt cooling system, it provides consistent deep-freezing for ice creams, biologicals, and frozen foods. Its sleek vertical footprint makes it an ideal choice for busy kitchens, biotech labs, and retail spaces where floor space is at a premium.",
+          description: "The Froven Innovations Vertical Freezer is a high-performance upright storage solution designed for commercial environments that demand absolute reliability and space efficiency. With a substantial 516-liter capacity and a powerful 641-watt cooling system, it provides consistent deep-freezing for ice creams, biologicals, and frozen foods. Its sleek vertical footprint makes it an ideal choice for busy kitchens, biotech labs, and retail spaces where floor space is at a premium.",
           features: [
             { icon: 'fas fa-thermometer-low', text: 'Steady Temp Range: Maintains consistent -18°C to -15°C for reliable food safety.' },
             { icon: 'fas fa-bolt', text: 'Powerful 641W System: High-performance cooling for rapid pull-down and recovery.' },
@@ -171,8 +171,9 @@ export const catalog = [
       {
         name: 'Minibar',
         slug: 'minibar',
+        image: '/new product images/horeca/minibar.jpg',
         pageData: {
-          description: "MarkEn Mini Bars are compact, efficient, and elegantly designed cooling solutions—perfect for hotels, offices, guest rooms, and personal spaces. Built with advanced cooling technology, they deliver silent operation, low power consumption, and reliable performance. Engineered for convenience and style, MarkEn Mini Bars offer optimal temperature control, adjustable shelves, and sleek interiors to store beverages and snacks in the ideal condition. With their energy-efficient design and eco-friendly refrigerants, they provide both comfort and sustainability in every environment. Whether for hospitality, corporate, or home use, MarkEn Mini Bars combine functionality and sophistication to enhance user experience and add a touch of modern luxury.",
+          description: "Froven Innovations Mini Bars are compact, efficient, and elegantly designed cooling solutions—perfect for hotels, offices, guest rooms, and personal spaces. Built with advanced cooling technology, they deliver silent operation, low power consumption, and reliable performance. Engineered for convenience and style, Froven Innovations Mini Bars offer optimal temperature control, adjustable shelves, and sleek interiors to store beverages and snacks in the ideal condition. With their energy-efficient design and eco-friendly refrigerants, they provide both comfort and sustainability in every environment. Whether for hospitality, corporate, or home use, Froven Innovations Mini Bars combine functionality and sophistication to enhance user experience and add a touch of modern luxury.",
           features: [
             { icon: 'fas fa-leaf', text: 'Eco-Friendly Refrigerant' },
             { icon: 'fas fa-thermometer-half', text: 'Exact Temperature Regulation' },
@@ -203,8 +204,9 @@ export const catalog = [
       {
         name: 'Water Dispenser',
         slug: 'water-dispenser',
+        image: '/new product images/horeca/water-dispenser.jpg',
         pageData: {
-          description: "MarkEn Hot & Cold Water Dispensers are crafted to deliver more than just water — they bring hygiene, comfort, efficiency, and elegance into every space. Designed with advanced technology, they instantly provide hot, cold, and room temperature water, ensuring convenience for diverse needs throughout the day.",
+          description: "Froven Innovations Hot & Cold Water Dispensers are crafted to deliver more than just water — they bring hygiene, comfort, efficiency, and elegance into every space. Designed with advanced technology, they instantly provide hot, cold, and room temperature water, ensuring convenience for diverse needs throughout the day.",
           features: [
             { icon: 'fas fa-thermometer-three-quarters', text: 'Multi-Temperature Options' },
             { icon: 'fas fa-cube', text: 'Refrigerated Cabinet' },
@@ -237,8 +239,9 @@ export const catalog = [
       {
         name: 'Blast Chillers / Freezers',
         slug: 'blast-chillers-freezers',
+        image: '/new product images/horeca/blast-freezer.jpg',
         pageData: {
-          description: "MarkEn Blast Freezer is a high-performance rapid-freezing solution designed to preserve the freshness, texture, and nutritional quality of food products. Using powerful forced-air cooling technology, it quickly reduces the temperature of cooked or raw items, minimizing bacterial growth and extending shelf life. Built with durable stainless-steel construction and advanced digital controls, the Blast Freezer ensures precise temperature management and consistent performance. It is an essential appliance for commercial kitchens, bakeries, hotels, and food production units that require fast, safe, and efficient deep freezing.",
+          description: "Froven Innovations Blast Freezer is a high-performance rapid-freezing solution designed to preserve the freshness, texture, and nutritional quality of food products. Using powerful forced-air cooling technology, it quickly reduces the temperature of cooked or raw items, minimizing bacterial growth and extending shelf life. Built with durable stainless-steel construction and advanced digital controls, the Blast Freezer ensures precise temperature management and consistent performance. It is an essential appliance for commercial kitchens, bakeries, hotels, and food production units that require fast, safe, and efficient deep freezing.",
           features: [
             { icon: 'fas fa-shield-alt', text: 'Insulation: 120 mm polyurethane foam' },
             { icon: 'fas fa-check-circle', text: 'Stainless Steel 304 Construction' },
@@ -269,8 +272,9 @@ export const catalog = [
       {
         name: 'Back Bar',
         slug: 'back-bar',
+        image: '/new product images/horeca/backbar.jpg',
         pageData: {
-          description: "MarkEn Back Bars are designed for elegant display and efficient cooling of beverages in bars, restaurants, and hotels. Featuring high-performance refrigeration with rapid temperature recovery, these units ensure drinks remain perfectly chilled even during peak hours. With stylish glass doors, LED illumination, and a compact yet durable stainless-steel design, they offer both visual appeal and dependable performance—ideal for professional hospitality environments.",
+          description: "Froven Innovations Back Bars are designed for elegant display and efficient cooling of beverages in bars, restaurants, and hotels. Featuring high-performance refrigeration with rapid temperature recovery, these units ensure drinks remain perfectly chilled even during peak hours. With stylish glass doors, LED illumination, and a compact yet durable stainless-steel design, they offer both visual appeal and dependable performance—ideal for professional hospitality environments.",
           features: [
             { icon: 'fas fa-layer-group', text: 'Double layers tempered glass' },
             { icon: 'fas fa-thermometer-half', text: 'Digital Thermostat' },
@@ -301,8 +305,9 @@ export const catalog = [
       {
         name: 'Wine cooler',
         slug: 'wine-cooler',
+        image: '/new product images/horeca/wine-cooler.jpg',
         pageData: {
-          description: "MarkEn Wine Chiller is a premium temperature-controlled storage unit designed to preserve the flavor, aroma, and quality of wines. Engineered with precise cooling technology, it maintains the ideal serving and aging temperature for both red and white varieties. Its sleek stainless-steel design, adjustable shelving, and low-vibration operation protect the wine's natural character while offering an elegant display. Perfect for homes, restaurants, bars, and lounges, the Wine Chiller ensures every bottle is stored in optimal conditions for a perfect pour every time.",
+          description: "Froven Innovations Wine Chiller is a premium temperature-controlled storage unit designed to preserve the flavor, aroma, and quality of wines. Engineered with precise cooling technology, it maintains the ideal serving and aging temperature for both red and white varieties. Its sleek stainless-steel design, adjustable shelving, and low-vibration operation protect the wine's natural character while offering an elegant display. Perfect for homes, restaurants, bars, and lounges, the Wine Chiller ensures every bottle is stored in optimal conditions for a perfect pour every time.",
           features: [
             { icon: 'fas fa-layer-group', text: 'Double layers tempered glass' },
             { icon: 'fas fa-thermometer-half', text: 'Dual temperature zone for red & white wine storage' },
@@ -333,6 +338,7 @@ export const catalog = [
       {
         name: 'Water Cooler',
         slug: 'water-cooler',
+        image: '/new product images/horeca/water-cooler.jpg',
         pageData: {
           description: "Keep yourself cool and hydrated with our heavy-duty and dependable Water Coolers which is designed to provide uninterrupted chilled water in high-demanding conditions. Whether you have a restaurant, school, office, hospital, factory or any commercial establishment, our water coolers are designed for efficiency, hygiene and long-term performance.",
           features: [
@@ -364,8 +370,9 @@ export const catalog = [
       {
         name: 'Ice Machine',
         slug: 'ice-machine',
+        image: '/new product images/horeca/ice-machine.jpg',
         pageData: {
-          description: "MarkEn Ice Machines are engineered to deliver a consistent supply of clean, crystal-clear ice for hotels, restaurants, hospitals, and laboratories. Featuring advanced refrigeration technology and stainless-steel construction, they ensure hygiene, durability, and energy-efficient performance. Designed for continuous operation, these machines produce ice rapidly while maintaining low noise and easy maintenance—making them a reliable choice for both commercial and healthcare environments.",
+          description: "Froven Innovations Ice Machines are engineered to deliver a consistent supply of clean, crystal-clear ice for hotels, restaurants, hospitals, and laboratories. Featuring advanced refrigeration technology and stainless-steel construction, they ensure hygiene, durability, and energy-efficient performance. Designed for continuous operation, these machines produce ice rapidly while maintaining low noise and easy maintenance—making them a reliable choice for both commercial and healthcare environments.",
           features: [
             { icon: 'fas fa-bolt', text: 'Low Energy Consumption to reduce operating cost' },
             { icon: 'fas fa-tint', text: 'Low Water Consumption without compromising performance' },
@@ -466,7 +473,7 @@ export const catalog = [
           table: {
             headers: ['Specifications', 'Values'],
             rows: [
-              ['Make', 'MarkEn'],
+              ['Make', 'Froven Innovations'],
               ['Type of Cabinet', 'Horizontal/Chest'],
               ['Color', 'White'],
               ['Outer Material', 'Corrosion resistance CRCA/GI powder steel (18swg)'],
@@ -514,7 +521,7 @@ export const catalog = [
           table: {
             headers: ['Specifications', 'Values'],
             rows: [
-              ['Make', 'MarkEn'],
+              ['Make', 'Froven Innovations'],
               ['Type of Cabinet', 'Vertical/Upright'],
               ['Color', 'White'],
               ['Outer Material', 'Corrosion resistance CRCA/GI powder steel (18swg)'],
@@ -856,7 +863,7 @@ export const catalog = [
         slug: 'pastry-showcase',
         image: '/new product images/super market refrigeration/pastry-showcase.jpg',
         pageData: {
-          description: "Blue Star's Pastry Showcase suits any environment without compromising on style and display area. Its unique design enhances the appearance of cookies, cakes, brownies and more items, and attracts the eyes of everyone who pass by. The showcase is also incorporated with advanced technology and comes with low emissivity tempered glass that offers greater display and a truly enviable product visibility with no frost formation on the glass.",
+          description: "Froven Innovations's Pastry Showcase suits any environment without compromising on style and display area. Its unique design enhances the appearance of cookies, cakes, brownies and more items, and attracts the eyes of everyone who pass by. The showcase is also incorporated with advanced technology and comes with low emissivity tempered glass that offers greater display and a truly enviable product visibility with no frost formation on the glass.",
           features: [
             { icon: 'fas fa-eye', text: 'Tempered & low emissivity glass for unlimited visibility.' },
             { icon: 'fas fa-layer-group', text: '3 Nos: glass shelves.' },
@@ -896,7 +903,7 @@ export const catalog = [
         slug: 'serve-over-counter',
         image: '/new product images/super market refrigeration/serve-over-counter.jpg',
         pageData: {
-          description: "Blue Star's serve over counters are versatile and perfect for the presentation of fast-moving items like dairy products, meat and fish. Its inner cabinet is made of food grade steel to preserve the food material for a longer time. It also has an LED light to enhance the look of the products and comes with different temperature settings for different storage applications. It's a fully-customised refrigerated cabinet technology that minimises the structural measures through heat recovery and reduces operating costs to a previously unachievable minimum, making these counters a sure bet to increase sales.",
+          description: "Froven Innovations's serve over counters are versatile and perfect for the presentation of fast-moving items like dairy products, meat and fish. Its inner cabinet is made of food grade steel to preserve the food material for a longer time. It also has an LED light to enhance the look of the products and comes with different temperature settings for different storage applications. It's a fully-customised refrigerated cabinet technology that minimises the structural measures through heat recovery and reduces operating costs to a previously unachievable minimum, making these counters a sure bet to increase sales.",
           features: [
             { icon: 'fas fa-snowflake', text: 'Uniform cooling across the display area.' },
             { icon: 'fas fa-sliders-h', text: 'Adjustable temperature setting for assorted products.' },
@@ -935,7 +942,7 @@ export const catalog = [
         slug: 'island-freezer',
         image: '/new product images/super market refrigeration/island-freezer.jpg',
         pageData: {
-          description: "Blue Star's Island Freezer is an ideal choice for retail applications where high-end product display is essential for better presentation, impulse buying or simply to complement the aesthetics of the interiors. In all its different arrangement variants, the Blue Star Island model range offers elegant styling, and thanks to its innovatively designed glass side panels, it is sure to get your customers even more in the mood to buy. With the smooth sliding lid offering the maximum view of the products inside, there's nothing to stand in the way of good sales figures.",
+          description: "Froven Innovations's Island Freezer is an ideal choice for retail applications where high-end product display is essential for better presentation, impulse buying or simply to complement the aesthetics of the interiors. In all its different arrangement variants, the Froven Innovations Island model range offers elegant styling, and thanks to its innovatively designed glass side panels, it is sure to get your customers even more in the mood to buy. With the smooth sliding lid offering the maximum view of the products inside, there's nothing to stand in the way of good sales figures.",
           features: [
             { icon: 'fas fa-window-maximize', text: 'Overhead glass cover & sliding door.' },
             { icon: 'fas fa-desktop', text: 'LED display.' },
