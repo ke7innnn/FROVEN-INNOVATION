@@ -12,9 +12,9 @@ const BusinessOpportunityPage = () => {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     
-    const subject = `Business Inquiry: ${data.interestType} - ${data.companyName}`;
+    const subject = `Business Enquiry: ${data.interestType} - ${data.companyName}`;
     const body = `
-BUSINESS OPPORTUNITY INQUIRY
+BUSINESS OPPORTUNITY ENQUIRY
 ----------------------------
 INVESTOR INFORMATION:
 Full Name: ${data.fullName}
@@ -25,7 +25,7 @@ COMPANY DETAILS:
 Company/Organization: ${data.companyName}
 Website: ${data.website || 'N/A'}
 
-INQUIRY DETAILS:
+ENQUIRY DETAILS:
 Type of Interest: ${data.interestType}
 
 PROPOSAL / MESSAGE:
@@ -94,7 +94,7 @@ ${data.message}
 
             {/* Right Box: Form */}
             <div className="contact-form-panel">
-              <h2 className="contact-form-title">Business Inquiry Form</h2>
+              <h2 className="contact-form-title">Business Enquiry Form</h2>
               <p className="contact-form-subtitle">Tell us about your interest. Our management team will get back to you.</p>
               
               <form className="premium-contact-form" onSubmit={handleSubmit}>
@@ -143,7 +143,7 @@ ${data.message}
                   <textarea name="message" rows="5" placeholder="Briefly describe your proposal or business query..." required></textarea>
                 </div>
                 
-                <button type="submit" className="contact-submit-btn">Send Inquiry <i className="fas fa-paper-plane"></i></button>
+                <button type="submit" className="contact-submit-btn">Send Enquiry <i className="fas fa-paper-plane"></i></button>
               </form>
             </div>
           </div>

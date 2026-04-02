@@ -115,8 +115,8 @@ export default function ProductModelsPage({ params }) {
             )}
             
             <div className="pd-actions" style={{ marginTop: '40px' }}>
-              <a href="#inquiry-form" className="pd-enquire-btn">
-                Inquire Now <i className="fas fa-arrow-right"></i>
+              <a href="#enquiry-form" className="pd-enquire-btn">
+                Enquire Now <i className="fas fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -199,10 +199,10 @@ export default function ProductModelsPage({ params }) {
       )}
 
       {/* SECTION 4: Query Form */}
-      <section className="pd-contact-section" id="inquiry-form">
+      <section className="pd-contact-section" id="enquiry-form">
         <div className="pd-contact-container">
           <div className="pd-contact-info">
-            <h2>Product Inquiry</h2>
+            <h2>Product Enquiry</h2>
             <p>Interested in the <strong>{productContext.name}</strong>? Fill out the form below, and our sales team will reach out with pricing, availability, and an official quotation.</p>
             
             <div className="pd-contact-links">
@@ -218,7 +218,7 @@ export default function ProductModelsPage({ params }) {
               const name = e.target.elements[0].value;
               const phone = e.target.elements[1].value;
               const msg = e.target.elements[2].value;
-              const subject = `Inquiry regarding ${productContext.name} (${productContext.models && productContext.models[0] ? productContext.models[0].id : 'General Form'})`;
+              const subject = `Enquiry regarding ${productContext.name} (${productContext.models && productContext.models[0] ? productContext.models[0].id : 'General Form'})`;
               const body = `Customer Name: ${name}\nPhone Number: ${phone}\n\nProduct Profile: ${productContext.name}\n\nClient Message:\n${msg}`;
               window.location.href = `mailto:froveninnovations@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             }}
@@ -226,7 +226,7 @@ export default function ProductModelsPage({ params }) {
             <input type="text" placeholder="Your Name or Company Name" required />
             <input type="tel" placeholder="Your Phone Number" required />
             <textarea placeholder="Tell us about your requirement (e.g., bulk order, customized dimensions, shipping to specific state)..." required></textarea>
-            <button type="submit">Submit Inquiry</button>
+            <button type="submit">Submit Enquiry</button>
           </form>
         </div>
       </section>
