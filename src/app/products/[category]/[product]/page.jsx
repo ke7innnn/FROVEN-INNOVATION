@@ -98,15 +98,6 @@ export default function ProductModelsPage({ params }) {
                       >
                         <i className="fas fa-chevron-right" style={{ color: '#0a1628', fontSize: '16px' }}></i>
                       </button>
-                      <div style={{ position: 'absolute', bottom: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px', zIndex: 10 }}>
-                        {productContext.images.map((_, idx) => (
-                          <div 
-                            key={idx} 
-                            onClick={(e) => { e.stopPropagation(); setActiveImageIdx(idx); }}
-                            style={{ width: '8px', height: '8px', borderRadius: '50%', background: activeImageIdx === idx ? '#0a1628' : 'rgba(10,22,40,0.3)', cursor: 'pointer', transition: 'background 0.2s' }}
-                          />
-                        ))}
-                      </div>
                     </>
                   )}
                 </>
@@ -114,6 +105,39 @@ export default function ProductModelsPage({ params }) {
                 <i className="fas fa-image" style={{ fontSize: '120px', color: '#cbd5e1' }}></i>
               )}
             </div>
+            
+            {/* Thumbnail navigation below image if multiple images */}
+            {hasMultipleImages && (
+              <div style={{ display: 'flex', gap: '10px', marginTop: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                {productContext.images.map((imgSrc, idx) => (
+                  <div 
+                    key={idx}
+                    onClick={() => setActiveImageIdx(idx)}
+                    style={{ 
+                      width: '60px', 
+                      height: '60px', 
+                      borderRadius: '8px', 
+                      border: activeImageIdx === idx ? '2px solid #0a1628' : '1px solid #cbd5e1',
+                      overflow: 'hidden',
+                      cursor: 'pointer',
+                      opacity: activeImageIdx === idx ? 1 : 0.6,
+                      transition: 'all 0.2s ease',
+                      backgroundColor: '#f8fafc',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <img 
+                      src={imgSrc} 
+                      alt={`${productContext.name} thumbnail ${idx + 1}`} 
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+            
             {/* Model Pills below image if available */}
             {productContext.models && productContext.models.length > 0 && (
               <div style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center' }}>

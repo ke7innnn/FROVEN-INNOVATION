@@ -83,9 +83,10 @@ export default function CategoryProductsPage({ params }) {
                       backgroundPosition: 'center',
                       backgroundRepeat: 'no-repeat',
                       backgroundSize: product.image ? (
+                        product.slug === 'visi-cooler' ? 'contain' :
                         categorySlug === 'horeca' ? '160%' :
                         categorySlug === 'confectionery-showcase' ? 'contain' : '130%'
-                      ) : 'contain', 
+                      ) : 'contain',
                     }}
                   >
                     {!product.image && <i className="fas fa-cube" style={{ fontSize: '48px', color: '#cbd5e1' }}></i>}
