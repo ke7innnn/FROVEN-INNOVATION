@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { catalog } from '../data/catalog';
 
@@ -89,10 +90,17 @@ const Header = () => {
     </header>
 
     {/* Full Screen Search Modal Overlay */}
+    <AnimatePresence>
     {isSearchOpen && (
-      <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(5, 64, 120, 0.95)', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '100px' }}>
+      <motion.div 
+        initial={{ opacity: 0, backdropFilter: 'blur(0px)' }}
+        animate={{ opacity: 1, backdropFilter: 'blur(15px)' }}
+        exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
+        transition={{ duration: 0.3 }}
+        style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(5, 64, 120, 0.92)', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '100px' }}
+      >
         <button 
-          onClick={() => { setIsSearchOpen(false); setSearchQuery(''); setSearchResults([]); }} 
+          onClick={() => { setIsSearchOpen(false); setTimeout(() => { setSearchQuery(''); setSearchResults([]); }, 300); }} 
           style={{ position: 'absolute', top: '40px', right: '50px', background: 'none', border: 'none', color: 'white', fontSize: '50px', cursor: 'pointer', transition: 'transform 0.2s' }}
           onMouseOver={(e) => e.target.style.transform = 'scale(1.2)'}
           onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
@@ -100,7 +108,13 @@ const Header = () => {
           &times;
         </button>
         
-        <div style={{ width: '100%', maxWidth: '800px', padding: '0 20px', animation: 'fadeInDown 0.4s ease' }}>
+        <motion.div 
+          initial={{ y: -30, opacity: 0, scale: 0.95 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          exit={{ y: -20, opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.4, delay: 0.1, type: 'spring', stiffness: 200, damping: 20 }}
+          style={{ width: '100%', maxWidth: '800px', padding: '0 20px' }}
+        >
           <div style={{ position: 'relative' }}>
             <i className="fas fa-search" style={{ position: 'absolute', left: '30px', top: '24px', fontSize: '24px', color: '#94a3b8' }}></i>
             <input 
@@ -109,7 +123,7 @@ const Header = () => {
               placeholder="Search for a product, category, or specific model (e.g., FVC200G)..." 
               value={searchQuery}
               onChange={handleSearch}
-              style={{ width: '100%', padding: '22px 30px 22px 70px', fontSize: '20px', borderRadius: '50px', border: 'none', outline: 'none', boxShadow: '0 20px 40px rgba(0,0,0,0.3)', fontFamily: 'inherit' }}
+              style={{ width: '100%', padding: '22px 30px 22px 70px', fontSize: '20px', borderRadius: '50px', border: 'none', outline: 'none', boxShadow: '0 20px 40px rgba(0,0,0,0.3)', fontFamily: 'var(--font-inter), sans-serif' }}
             />
           </div>
           
@@ -120,8 +134,10 @@ const Header = () => {
                   <Link 
                     href={item.url} 
                     key={idx}
-                    onClick={() => { setIsSearchOpen(false); setSearchQuery(''); setSearchResults([]); }}
-                    style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 30px', borderBottom: '1px solid #f1f5f9', textDecoration: 'none', color: 'var(--froven-dark)' }}
+                    onClick={() => { setIsSearchOpen(false); setTimeout(() => { setSearchQuery(''); setSearchResults([]); }, 300); }}
+                    style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 30px', borderBottom: '1px solid #f1f5f9', textDecoration: 'none', color: 'var(--text-main)', transition: 'background-color 0.2s' }}
+                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#f8fafc'}
+                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                   >
                     <span style={{ fontSize: '18px', fontWeight: 600 }}>{item.title}</span>
                     <span style={{ color: '#64748b', fontSize: '12px', backgroundColor: '#f1f5f9', padding: '6px 14px', borderRadius: '20px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.type}</span>
@@ -135,9 +151,10 @@ const Header = () => {
               )}
             </div>
           )}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     )}
+    </AnimatePresence>
     </>
   );
 };
