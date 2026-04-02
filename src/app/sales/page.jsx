@@ -16,7 +16,7 @@ export default function SalesPage() {
           className="products-hero" 
           style={{ 
             paddingBottom: '60px',
-            backgroundImage: "url('https://images.unsplash.com/photo-1581428982868-e410dd047a90?q=80&w=2000&auto=format&fit=crop')",
+            backgroundImage: "url('/calegory images/horeca.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'relative'
