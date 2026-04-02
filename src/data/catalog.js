@@ -84,7 +84,13 @@ export const catalog = [
       {
         name: 'Visi Cooler',
         slug: 'visi-cooler',
-        image: '/new product images/commercial-refrigeration/visi-cooler.jpg',
+        image: '/new visicooler images/Gemini_Generated_Image_1eqfbw1eqfbw1eqf.png',
+        images: [
+          '/new visicooler images/Gemini_Generated_Image_1eqfbw1eqfbw1eqf.png',
+          '/new visicooler images/Gemini_Generated_Image_4qsv8q4qsv8q4qsv.png',
+          '/new visicooler images/Whisk_11eafbc606cd41e87464333b3f623bd6dr.png',
+          '/new visicooler images/Whisk_aa2046b18cdd7de9ad142bb5fde688ffdr.png'
+        ],
         pageData: {
           description: "Froven Innovations Visi Coolers are designed to deliver superior product visibility, reliable cooling performance, and energy efficiency — all in one sleek package. Built with advanced refrigeration technology and modern design aesthetics, Froven coolers ensure that your beverages and perishables stay perfectly chilled while attracting customer attention through crystal-clear visibility and bright LED illumination. Whether for retail outlets, supermarkets, restaurants, or beverage brands, Froven Innovations Visi Coolers combine durability, style, and performance to enhance your product presentation and boost sales With a range of capacities and custom branding options, Froven Innovations stands as a trusted partner for businesses that demand quality and reliability.",
           features: [

@@ -14,6 +14,7 @@ export default function ProductModelsPage({ params }) {
   // Hover Zoom State
   const [isZooming, setIsZooming] = React.useState(false);
   const [zoomPos, setZoomPos] = React.useState({ x: 50, y: 50 });
+  const [activeImageIdx, setActiveImageIdx] = React.useState(0);
 
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
@@ -30,6 +31,21 @@ export default function ProductModelsPage({ params }) {
 
   // Find related products (exclude current)
   const relatedProducts = categoryContext.products.filter(p => p.slug !== productSlug).slice(0, 4);
+
+  const hasMultipleImages = productContext.images && productContext.images.length > 1;
+  const currentImage = hasMultipleImages ? productContext.images[activeImageIdx] : (productContext.images?.[0] || productContext.image);
+
+  const handlePrevImage = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setActiveImageIdx(prev => (prev === 0 ? productContext.images.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setActiveImageIdx(prev => (prev === productContext.images.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <div className="pd-page">
@@ -50,23 +66,50 @@ export default function ProductModelsPage({ params }) {
               onMouseEnter={() => setIsZooming(true)}
               onMouseMove={handleMouseMove}
               onMouseLeave={() => setIsZooming(false)}
-              style={{ cursor: isZooming ? 'crosshair' : 'zoom-in' }}
+              style={{ cursor: isZooming ? 'crosshair' : 'zoom-in', position: 'relative' }}
             >
-              {productContext.image ? (
-                <img 
-                  src={productContext.image} 
-                  alt={productContext.name} 
-                  style={{ 
-                    transformOrigin: isZooming ? `${zoomPos.x}% ${zoomPos.y}%` : 'center center',
-                    transform: isZooming 
-                      ? (categorySlug === 'confectionery-showcase' ? 'scale(2.2)' : 'scale(2.8)') 
-                      : (categorySlug === 'confectionery-showcase' ? 'scale(1.1)' : 'scale(1.5)'),
-                    transition: isZooming ? 'transform 0.1s ease-out' : 'transform 0.5s ease, transform-origin 0.5s ease',
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'contain'
-                  }}
-                />
+              {currentImage ? (
+                <>
+                  <img 
+                    src={currentImage} 
+                    alt={productContext.name} 
+                    style={{ 
+                      transformOrigin: isZooming ? `${zoomPos.x}% ${zoomPos.y}%` : 'center center',
+                      transform: isZooming 
+                        ? (categorySlug === 'confectionery-showcase' ? 'scale(2.2)' : 'scale(2.8)') 
+                        : (categorySlug === 'confectionery-showcase' ? 'scale(1.1)' : 'scale(1.5)'),
+                      transition: isZooming ? 'transform 0.1s ease-out' : 'transform 0.5s ease, transform-origin 0.5s ease',
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain'
+                    }}
+                  />
+                  {hasMultipleImages && !isZooming && (
+                    <>
+                      <button 
+                        onClick={handlePrevImage} 
+                        style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer', zIndex: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}
+                      >
+                        <i className="fas fa-chevron-left" style={{ color: '#0a1628', fontSize: '16px' }}></i>
+                      </button>
+                      <button 
+                        onClick={handleNextImage} 
+                        style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: '50%', width: '40px', height: '40px', cursor: 'pointer', zIndex: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}
+                      >
+                        <i className="fas fa-chevron-right" style={{ color: '#0a1628', fontSize: '16px' }}></i>
+                      </button>
+                      <div style={{ position: 'absolute', bottom: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px', zIndex: 10 }}>
+                        {productContext.images.map((_, idx) => (
+                          <div 
+                            key={idx} 
+                            onClick={(e) => { e.stopPropagation(); setActiveImageIdx(idx); }}
+                            style={{ width: '8px', height: '8px', borderRadius: '50%', background: activeImageIdx === idx ? '#0a1628' : 'rgba(10,22,40,0.3)', cursor: 'pointer', transition: 'background 0.2s' }}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </>
               ) : (
                 <i className="fas fa-image" style={{ fontSize: '120px', color: '#cbd5e1' }}></i>
               )}
