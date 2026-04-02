@@ -293,7 +293,8 @@ export const catalog = [
               ['Temperature', '2°C ~ 8°C', '2°C ~ 8°C'],
               ['Capacity (Litre)', '208', '330'],
               ['Type Of Cooling', 'Static'],
-              ['No Of Shelves', '4', '6']
+              ['No Of Shelves', '4', '6'],
+              ['Door Type', 'Glass Door', 'Glass Door']
             ]
           }
         },
@@ -349,15 +350,15 @@ export const catalog = [
             { icon: 'fas fa-hand-sparkles', text: 'Low Maintenance: Smooth SS finish makes cleaning effortless while ensuring minimal wear and tear.' }
           ],
           table: {
-            headers: ['Specifications', 'Values'],
+            headers: ['Specifications', 'FSWC20', 'FSWC40', 'FSWC60'],
             rows: [
-              ['Material', 'Stainless Steel'],
-              ['Cooling Capacity', 'Varies (20L, 40L, 60L, etc.)'],
-              ['Refrigeration', 'Yes'],
-              ['No. of Taps', 'Single / Dual / Triple (Customizable)'],
-              ['Application', 'Commercial / Industrial Use'],
-              ['Power Source', 'Electric'],
-              ['Installation Type', 'Floor Standing']
+              ['Description', 'Water Cooler - 20 Ltrs', 'Water Cooler - 40 Ltrs', 'Water Cooler - 60 Ltrs'],
+              ['Material', 'Stainless Steel', 'Stainless Steel', 'Stainless Steel'],
+              ['Cooling Capacity (Ltrs/Hr)', '20', '40', '60'],
+              ['Storage Capacity (Ltrs)', '20', '40', '60'],
+              ['No. of Taps', '1', '1', '2'],
+              ['Refrigerant', 'R-134a', 'R-134a', 'R-134a'],
+              ['Power Supply', '230V / 50Hz / 1 Ph', '230V / 50Hz / 1 Ph', '230V / 50Hz / 1 Ph']
             ]
           }
         },
@@ -426,6 +427,7 @@ export const catalog = [
           table: {
             headers: ['Specifications', 'Values'],
             rows: [
+              ['Model Number', 'FUDF-86V'],
               ['Cabinet Type', 'Vertical / Upright'],
               ['Exterior Cabinet', 'Corrosion resistance CRCA/GI powder coated steel'],
               ['Inner Cabinet', 'High grade corrosion-resistant SS 304 (Stainless Steel)'],
@@ -473,6 +475,7 @@ export const catalog = [
           table: {
             headers: ['Specifications', 'Values'],
             rows: [
+              ['Model Number', 'FDF-40H'],
               ['Make', 'Froven Innovations'],
               ['Type of Cabinet', 'Horizontal/Chest'],
               ['Color', 'White'],
@@ -521,6 +524,7 @@ export const catalog = [
           table: {
             headers: ['Specifications', 'Values'],
             rows: [
+              ['Model Number', 'FDF-25V'],
               ['Make', 'Froven Innovations'],
               ['Type of Cabinet', 'Vertical/Upright'],
               ['Color', 'White'],
@@ -566,49 +570,93 @@ export const catalog = [
             { icon: 'fas fa-satellite-dish', text: 'Remote Monitoring & GPS: Real-time temperature alerts and compliance tracking via SMS/App.' }
           ],
           table: {
-            headers: ['Specifications', 'MILR-01', 'MILR-02', 'MILR-03', 'MILR-04'],
+            headers: ['Specifications', 'FICRH'],
             rows: [
-              ['Gross Capacity', '80 L', '155 L', '301 L', '301 L'],
-              ['Net Capacity', '30 Bags', '100 L', '245 L', '248 L'],
-              ['Outer Dimensions (WxDxH) mm', '800 x 450 x 600', '900 x 500 x 700', '1200 x 650 x 850', '1100 x 600 x 800'],
-              ['Inner Dimensions (WxDxH) mm', '650 x 350 x 450', '750 x 400 x 550', '1000 x 500 x 650', '900 x 450 x 600'],
-              ['Net Weight', '60 kg', '105 kg', '150 kg', '115 kg'],
-              ['Type of Cabinet', 'Horizontal/Vertical'],
-              ['Outer Body Material', 'Corrosion-resistant CRCA/GI powder steel / Rotomolded'],
-              ['Inner Chamber Material', 'Stainless Steel 304 / Rotomolded Rust-Free'],
+              ['Model Number', 'FICRH'],
+              ['Gross Capacity', '301 L'],
+              ['Net Capacity', '248 L'],
+              ['Outer Dimensions (WxDxH) mm', '1100 x 600 x 800'],
+              ['Inner Dimensions (WxDxH) mm', '900 x 450 x 600'],
+              ['Net Weight', '115 kg'],
+              ['Type of Cabinet', 'Horizontal'],
+              ['Outer Body Material', 'Corrosion-resistant CRCA/GI powder steel'],
+              ['Inner Chamber Material', 'Stainless Steel 304'],
               ['Insulation', 'CFC-free PUFF (Cabinet & Door: 80-100 mm)'],
-              ['Ground Clearance', '100 mm (Optional uneven floor support)'],
+              ['Ground Clearance', '100 mm'],
               ['Door', 'Ballast box-type solid door with lock-key'],
               ['Castor Wheels', '4 castor wheels (2 lockable)'],
-              ['Baskets', '02 - 05 Nos.'],
+              ['Baskets', '05 Nos.'],
               ['Compressor', 'Hermetically sealed'],
               ['Refrigerants', 'CFC-HCFC-free (R-134a)'],
-              ['Temperature Sensor', 'PT 100 (25–50mm above base chamber)'],
+              ['Temperature Sensor', 'PT 100'],
               ['Holdover time (Full Load)', '24 Hours'],
-              ['Temperature Range', '+2°C to +8°C (Accuracy +0.1°C)'],
+              ['Temperature Range', '+2°C to +8°C'],
               ['Temperature Uniformity', '±1°C'],
-              ['Control System', 'Microprocessor-controlled with membrane keypad & Child Lock'],
-              ['Monitoring System', 'IoT Cloud Manage Support (Optional)'],
-              ['Display', '3-digit digital temperature display (0.1˚ Res)'],
+              ['Control System', 'Microprocessor-controlled'],
+              ['Display', 'Digital temperature display'],
               ['Alarms', 'Audible & Visual (Over/Under Temp, Power Failure, Low Battery)'],
-              ['Battery Backup', '12-hour for Display, Alarms, and Recording'],
-              ['Power Supply', '220-240V AC, 50 Hz +22%']
+              ['Power Supply', '220-240V AC, 50 Hz']
             ]
           }
         },
         models: [
-          { name: 'Ice Lined Refrigerator (MILR-01)', id: 'MILR-01' },
-          { name: 'Ice Lined Refrigerator (MILR-02)', id: 'MILR-02' },
-          { name: 'Ice Lined Refrigerator (MILR-03)', id: 'MILR-03' },
-          { name: 'Ice Lined Refrigerator (MILR-04)', id: 'MILR-04' }
+          { name: 'Ice Lined Refrigerator (Horizontal)', id: 'FICRH' }
         ]
       },
       {
         name: 'Ice Lined Refrigerator (Vertical)',
         slug: 'ice-lined-refrigerator-vertical',
         image: '/new product images/LAB/ice-lined-refrigerator-vertical.jpg',
+        pageData: {
+          description: "Ice Lined Refrigerator (Vertical) is designed to ensure precise temperature control, eliminating the risk of freezing vaccines. With energy-efficient technology, it maintains a temperature holdover of 24 hours and requires just 8 hours of daily power to operate. The high-tech energy management system and optimized refrigeration design ensure superior temperature stability, even in challenging conditions.",
+          features: [
+            { icon: 'fas fa-thermometer-half', text: 'Optimal Temperature Control: Maintains a consistent +2°C to +8°C range even in extreme environments from -10°C to +43°C.' },
+            { icon: 'fas fa-bolt', text: 'Reliable Operation in Unstable Power Conditions: Ideal for regions with inconsistent electricity, ensuring continuous cooling without needing standby power.' },
+            { icon: 'fas fa-sun', text: 'Tropical Climate Ready: Green-based technology ensures efficient and consistent cooling performance in warm and humid climates.' },
+            { icon: 'fas fa-droplet-slash', text: 'Anti-Condensation Hot Line: Prevents moisture buildup around the cabinet opening, maintaining hygienic and efficient storage.' },
+            { icon: 'fas fa-leaf', text: 'Energy-Efficient Refrigeration: Compression cycle cooling system delivers consistent temperature regulation while minimizing power consumption.' },
+            { icon: 'fas fa-satellite-dish', text: 'Remote Temperature Monitoring & GPS Tracking: GPS system ensures 24/7 real-time temperature alerts and compliance via SMS, email, and app-based QR tracking.' }
+          ],
+          table: {
+            headers: ['Specifications', 'FLRV'],
+            rows: [
+              ['Model Number', 'FLRV'],
+              ['Gross Capacity (L)', '301 L'],
+              ['Net Capacity', '248 L'],
+              ['Outer Dimensions (W×D×H mm)', '1100 × 600 × 800'],
+              ['Inner Dimensions (W×D×H mm)', '900 × 450 × 600'],
+              ['Door (H×W mm)', '600 × 800'],
+              ['Net Weight', '115 kg'],
+              ['Type of Cabinet', 'Vertical'],
+              ['Color', 'White'],
+              ['Outer Body Material', 'Corrosion-resistant CRCA/GI powder-coated steel, Galvanized Steel (18 SWG)'],
+              ['Inner Chamber Material', 'SS-304 / Rotomolded Rust-Free'],
+              ['Insulation Material', 'CFC-free PUFF insulation'],
+              ['Insulation Thickness', 'Cabinet: 80–100 mm; Door: 80–100 mm'],
+              ['Ground Clearance', '100 mm'],
+              ['Door Type', 'Solid door with lock & handle'],
+              ['Castor Wheels', '4 (2 lockable)'],
+              ['Basket', '02–05'],
+              ['Compressor', 'Hermetically sealed'],
+              ['Refrigerant', 'R-134a (CFC/HCFC-free, non-flammable)'],
+              ['Temperature Sensor', 'PT-100 (25–50 mm above base)'],
+              ['Condensing Type', 'Skin condensing + inner & air-cooled grooved aluminum fins'],
+              ['Pull-Down Time', '12 hr empty'],
+              ['Holdover Time (Full Load)', '24 hr'],
+              ['Operating Temp. Range', '+2°C to +8°C (±0.1°C accuracy)'],
+              ['Temperature Uniformity', '±1°C'],
+              ['Control System', 'Microprocessor-controlled, password protected, membrane keypad'],
+              ['Temperature Monitoring (Optional)', 'IoT (Cloud Managed)'],
+              ['Display', '3-digit digital, 0.1°C resolution'],
+              ['Alarms', 'Over/under-temp, power failure, low battery (audible/visual)'],
+              ['Battery Backup', '12-hour for display, alarms & recording'],
+              ['Noise Level', '<55 dB'],
+              ['Power Supply', '220–240V AC, 50 Hz +22%']
+            ]
+          }
+        },
         models: [
-          { name: 'Ice Lined Refrigerator (Vertical)', id: 'FICRV' }
+          { name: 'Ice Lined Refrigerator (Vertical)', id: 'FLRV' }
         ]
       },
       {
@@ -628,6 +676,7 @@ export const catalog = [
           table: {
             headers: ['Specifications', 'Values'],
             rows: [
+              ['Model Number', 'FLRV'],
               ['Cabinet Type', 'Vertical / Upright'],
               ['Outer Body', 'Mild steel /GI powder coated steel (18swg)'],
               ['Inner Chamber', 'Stainless Steel 304 for Durable unbreakable construct'],
@@ -683,6 +732,7 @@ export const catalog = [
           table: {
             headers: ['Specifications', 'Values'],
             rows: [
+              ['Model Number', 'FSCDG'],
               ['Usage/Application', 'Bakery Shop'],
               ['Material', 'Glass'],
               ['Counter Shape', 'Rectangular'],
@@ -712,6 +762,7 @@ export const catalog = [
           table: {
             headers: ['Specifications', 'Values'],
             rows: [
+              ['Model Number', 'FSSDCG'],
               ['Details', 'Stainless Steel & Tempered Glass'],
               ['Application', 'Restaurant, Café, Bakery, Sweet Shop'],
               ['Shape', 'Rectangular'],
@@ -993,30 +1044,39 @@ export const catalog = [
         slug: 'walk-in-cooler',
         image: '/new product images/cold room/walk-in-cooler.jpg',
         pageData: {
-          description: "The Walk-In Cooler is a large-capacity, temperature-controlled cold storage solution designed for safe preservation of pharmaceuticals, vaccines, biological samples, food products, and other temperature-sensitive materials. Built with high-density insulated panels and an advanced refrigeration system, this walk-in cooler maintains stable temperatures to ensure product integrity and long-term storage reliability.",
+          description: "Froven Innovations Walk-in-Coolers are used for bulk storage of various vaccines, food, and other perishable items. These walk-ins are enclosed refrigerated storage spaces and are totally customizable according to the user's needs. They can maintain a temperature anywhere in the range of +2⁰C to +8⁰C, available in capacities such as 8CuM, 16.05CuM, 25CuM, 32CuM, and 40CuM.",
           features: [
-            { icon: 'fas fa-thermometer-half', text: 'Precise Temperature Control (+2°C to +8°C): Reliable operation in ambient conditions from -10°C to +43°C.' },
+            { icon: 'fas fa-thermometer-half', text: 'Precise Temperature Control (+2°C to +8°C): Reliable operation in diverse ambient conditions.' },
             { icon: 'fas fa-satellite-dish', text: 'Remote Monitoring System: Programmable system with real-time alerts for temperature deviations.' },
             { icon: 'fas fa-shield-alt', text: 'Stainless Steel Construction: Hygienic, corrosion-resistant SS panels with eco-friendly insulation.' },
-            { icon: 'fas fa-globe', text: 'Global Standards Compliance: WHO-qualified, meeting medical storage and cold chain regulations.' },
-            { icon: 'fas fa-bell', text: 'Built in Safety Alarms: Visual and audible alarms with battery backup for power failures.' },
+            { icon: 'fas fa-globe', text: 'Global Standards Compliance: Fulfills USFDA, European CE, and ISO standards for medical storage.' },
+            { icon: 'fas fa-bell', text: 'Built-in Safety Alarms: Acoustic alarm units complying with WHO/PQS specifications.' },
             { icon: 'fas fa-th-large', text: 'Modular & Scalable Design: Easily expandable to suit varying storage needs with minimal on-site installation.' }
           ],
           table: {
-            headers: ['Model', 'Inner Dimension'],
+            headers: ['Specifications', 'Details'],
             rows: [
-              ['MWIC-01 Size 16.5CuM', '(W)2700mm x (D)2700mm x (H)2300mm'],
-              ['MWIC-02 Size 20.0CuM', '(W)3300mm x (D)3300mm x (H)2300mm'],
-              ['MWIC-03 Size 32.0CuM', '(W)3800mm x (D)3800mm x (H)2300mm'],
-              ['MWIC-04 Size 40.0CuM', '(W)4300mm x (D)4300mm x (H)2300mm']
+              ['Model Number', 'FWIC'],
+              ['Product Type', 'Walk in Cold Room'],
+              ['Storage Capacity', '5 MT'],
+              ['Brand', 'Froven Innovations'],
+              ['Temperature Range', '+2°C to +8°C'],
+              ['Capacity (Litres)', 'Customised (8CuM, 16.05CuM, 25CuM, 32CuM, 40CuM)'],
+              ['Automation Grade', 'Automatic'],
+              ['Vaccine Storage Compatible', 'Yes'],
+              ['Dial Thermometer', 'Vapour Pressure Dial Thermo Meter (PQS/E006/TH02 compliant)'],
+              ['Shelves', 'Stainless Steel 304 (Non-corrosive, load min 0.075Kg/cm2)'],
+              ['Evaporator', 'Forced Air cooling with Auto Defrosting System'],
+              ['Alarm', 'Hutter Acoustic Alarm (WHO/PQS/E06/AL01-01 or E006/TR03 compliant)'],
+              ['Temperature Display', 'Glow sign Temp display (EVM norms compliant)'],
+              ['Door', 'Heavy duty self-closing with lock & Plastic curtains'],
+              ['Chucker Plate', 'Insulated Concrete Base with checker platform'],
+              ['Country of Origin', 'Made in India']
             ]
           }
         },
         models: [
-          { name: 'Walk In Cooler - 16.5 CuM', id: 'MWIC-01' },
-          { name: 'Walk In Cooler - 20.0 CuM', id: 'MWIC-02' },
-          { name: 'Walk In Cooler - 32.0 CuM', id: 'MWIC-03' },
-          { name: 'Walk In Cooler - 40.0 CuM', id: 'MWIC-04' }
+          { name: 'Walk In Cooler Series', id: 'FWIC' }
         ]
       },
       {
@@ -1024,7 +1084,7 @@ export const catalog = [
         slug: 'walk-in-freezer',
         image: '/new product images/cold room/walk-in-freezer.jpg',
         pageData: {
-          description: "Walk-In Freezer is a high-performance, modular cold storage solution engineered for temperature-sensitive pharmaceuticals, vaccines, and perishables. Designed to operate flawlessly in harsh ambient conditions, it combines industrial-grade durability, precision temperature control, and smart automation—making it a trusted choice for healthcare, research, and logistics operations worldwide.",
+          description: "Froven Innovations Walk-in-Freezers are high-performance modular cold storage solution specifically engineered for sensitive biological samples, vaccines and perishables. These walk-ins are totally customizable according to the user's needs. They can maintain a stable temperature anywhere in the range of -10°C to -20°C.",
           features: [
             { icon: 'fas fa-thermometer-low', text: 'Ultra-Precise Cooling (–10°C to –20°C): Stable temperature with ±0.1°C accuracy for sensitive inventory.' },
             { icon: 'fas fa-mobile-alt', text: 'Smart IoT Monitoring System: Remote programmable interface for live tracking and alert notifications.' },
@@ -1034,20 +1094,29 @@ export const catalog = [
             { icon: 'fas fa-tools', text: 'Rugged, Modular Construction: Weather-resistant design, operational in –10°C to +43°C ambient.' }
           ],
           table: {
-            headers: ['Model', 'Inner Dimension'],
+            headers: ['Specifications', 'Details'],
             rows: [
-              ['MWIF-01 Size 16.5CuM', '(W)2700mm x (D)2700mm x (H)2300mm'],
-              ['MWIF-02 Size 20.0CuM', '(W)3300mm x (D)3300mm x (H)2300mm'],
-              ['MWIF-03 Size 32.0CuM', '(W)3800mm x (D)3800mm x (H)2300mm'],
-              ['MWIF-04 Size 40.0CuM', '(W)4300mm x (D)4300mm x (H)2300mm']
+              ['Model Number', 'FWIF'],
+              ['Product Type', 'Walk-in Cold Room'],
+              ['Storage Capacity', '5 MT'],
+              ['Brand', 'Froven Innovations'],
+              ['Temperature Range', '–10°C to –20°C'],
+              ['Capacity (Litres)', 'Customised'],
+              ['Automation Grade', 'Automatic'],
+              ['Suitable for Vaccine Storage', 'Yes'],
+              ['Dial Thermometer', 'Vapour Pressure Dial Thermometer (PQS/E006/TH02 compliant)'],
+              ['Shelves', 'Non-corrosive 304 SS (Load capacity min. 0.075 Kg/cm²)'],
+              ['Evaporator', 'Forced-air cooling evaporators with auto-defrost system'],
+              ['Alarm System', 'Hutter acoustic alarm (WHO/PQS/E06/AL01-01 or E006/TR03 compliant)'],
+              ['Temperature Display', 'Glow-sign temperature display (EVM norms compliant)'],
+              ['Door', 'Heavy-duty, self-closing, lockable; plastic curtains on doorway'],
+              ['Chucker Plate', 'Insulated concrete base with checker platform'],
+              ['Country of Origin', 'Made in India']
             ]
           }
         },
         models: [
-          { name: 'Walk In Freezer - 16.5 CuM', id: 'MWIF-01' },
-          { name: 'Walk In Freezer - 20.0 CuM', id: 'MWIF-02' },
-          { name: 'Walk In Freezer - 32.0 CuM', id: 'MWIF-03' },
-          { name: 'Walk In Freezer - 40.0 CuM', id: 'MWIF-04' }
+          { name: 'Walk In Freezer Series', id: 'FWIF' }
         ]
       }
     ]
