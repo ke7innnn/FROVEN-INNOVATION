@@ -512,25 +512,78 @@
   .related-image-wrapper { height: 140px; padding: 16px; }
   .related-name { font-size: 13px; }
 
-  /* Contact section at bottom */
+  /* ---- ENQUIRY / CONTACT FORM SECTION ---- */
   .pd-contact-section { 
-    padding: 60px 0; 
-    border-radius: 40px 40px 0 0; 
-    margin-top: -40px;
+    padding: 56px 0 60px; 
+    border-radius: 32px 32px 0 0; 
+    margin-top: -20px;
+    overflow: hidden;
   }
   .pd-contact-container { 
     flex-direction: column; 
-    gap: 40px; 
+    gap: 36px; 
     padding: 0 20px;
+    box-sizing: border-box;
   }
-  .pd-contact-info h2 { font-size: 34px; }
+
+  /* Info panel: title, description, links */
+  .pd-contact-info { width: 100%; box-sizing: border-box; overflow: hidden; }
+  .pd-contact-info h2 { 
+    font-size: 28px !important; 
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    word-break: break-word;
+  }
+  .pd-contact-info p { 
+    font-size: 15px !important; 
+    line-height: 1.65;
+    margin-bottom: 24px;
+    opacity: 0.9;
+  }
+
+  /* Contact links: stack vertically on mobile */
+  .pd-contact-links {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .pd-contact-links span {
+    font-size: 15px !important;
+    gap: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  /* Form card */
   .pd-contact-form { 
-    padding: 32px 24px; 
+    padding: 28px 20px; 
     grid-template-columns: 1fr; 
-    border-radius: 24px;
+    border-radius: 20px;
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
   }
-  .pd-contact-form textarea { grid-column: span 1; }
-  .pd-contact-form button { grid-column: span 1; }
+  .pd-contact-form input,
+  .pd-contact-form textarea {
+    font-size: 15px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .pd-contact-form textarea { 
+    grid-column: span 1; 
+    height: 120px;
+  }
+  .pd-contact-form button { 
+    grid-column: span 1;
+    padding: 18px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    border-radius: 10px;
+  }
 
   /* Container padding */
   .pd-container { padding: 0 16px; }

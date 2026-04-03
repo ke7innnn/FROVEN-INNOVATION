@@ -1318,7 +1318,22 @@
   /* ---- GENERAL ---- */
   body { overflow-x: hidden; }
 
-  /* ---- HERO SECTION ---- */
+  /* ---- REDUCE SECTION GAPS — home page sections on mobile ---- */
+  /* Stats section */
+  .stats-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Meet The Pro */
+  .meet-the-pro {
+    background-attachment: scroll !important;
+    padding: 60px 0 !important;
+    min-height: unset;
+  }
   .hero-section { min-height: 100svh; }
 
   .hero-content {

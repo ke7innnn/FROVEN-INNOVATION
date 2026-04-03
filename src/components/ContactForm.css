@@ -123,3 +123,37 @@
     gap: 50px;
   }
 }
+
+@media (max-width: 768px) {
+  /* Trim the huge top padding that creates the gap */
+  .contact-section {
+    padding: 48px 0 60px;
+  }
+
+  .contact-info h2 {
+    font-size: 30px;
+  }
+
+  .contact-info h4 {
+    font-size: 13px;
+  }
+
+  .contact-info p {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .info-items {
+    gap: 20px;
+  }
+
+  .contact-form-container {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+
+  .contact-grid {
+    gap: 32px;
+  }
+}
+

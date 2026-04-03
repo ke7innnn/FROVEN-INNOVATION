@@ -30,8 +30,77 @@ export default function CategoryProductsPage({ params }) {
       
       <main className="products-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh' }}>
 
+      <style>{`
+        .cat-page-hero { position: relative; min-height: 480px; display: flex; align-items: center; overflow: hidden; }
+        .cat-page-hero-inner {
+          position: relative;
+          zIndex: 2;
+          width: 100%;
+          padding: 140px 40px 80px;
+          text-align: center;
+          box-sizing: border-box;
+        }
+        .cat-page-breadcrumb {
+          display: inline-block;
+          padding: 8px 20px;
+          background-color: rgba(56,189,248,0.12);
+          border: 1px solid rgba(56,189,248,0.3);
+          border-radius: 30px;
+          color: #38bdf8;
+          font-size: 12px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 24px;
+          font-weight: 700;
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .cat-page-title {
+          font-size: 60px;
+          font-weight: 900;
+          line-height: 1.05;
+          margin: 0 auto 20px;
+          letter-spacing: -1.5px;
+          text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+          word-break: break-word;
+          overflow-wrap: break-word;
+          hyphens: auto;
+        }
+        .cat-page-desc {
+          font-size: 18px;
+          color: rgba(255,255,255,0.85);
+          line-height: 1.7;
+          max-width: 700px;
+          margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+          .cat-page-hero { min-height: 360px; }
+          .cat-page-hero-inner { padding: 100px 20px 60px; }
+          .cat-page-breadcrumb {
+            font-size: 10px;
+            letter-spacing: 1px;
+            padding: 6px 14px;
+            max-width: calc(100% - 40px);
+          }
+          .cat-page-title {
+            font-size: 36px;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+          }
+          .cat-page-desc {
+            font-size: 15px;
+            line-height: 1.65;
+          }
+        }
+        @media (max-width: 390px) {
+          .cat-page-title { font-size: 28px; }
+        }
+      `}</style>
+
         {/* HERO with category image */}
-        <section style={{ position: 'relative', minHeight: '480px', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+        <section className="cat-page-hero">
           {heroBg && (
             <img
               src={heroBg}
@@ -42,22 +111,23 @@ export default function CategoryProductsPage({ params }) {
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(3,20,60,0.92) 0%, rgba(5,64,120,0.78) 100%)', zIndex: 1 }} />
           <SnowParticles />
 
-          <div style={{ position: 'relative', zIndex: 2, width: '100%', padding: '140px 40px 80px', textAlign: 'center' }}>
-            <div style={{ display: 'inline-block', padding: '8px 20px', backgroundColor: 'rgba(56,189,248,0.12)', border: '1px solid rgba(56,189,248,0.3)', borderRadius: '30px', color: '#38bdf8', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px', fontWeight: 700 }}>
+          <div className="cat-page-hero-inner" style={{ position: 'relative', zIndex: 2 }}>
+            <div className="cat-page-breadcrumb">
               <Link href="/products" style={{ color: '#38bdf8', textDecoration: 'none' }}>Categories</Link>
               <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 8px' }}>/</span>
               {categoryContext.name}
             </div>
-            <h1 style={{ fontSize: '60px', fontWeight: 900, lineHeight: 1.05, margin: '0 auto 20px', letterSpacing: '-1.5px', textShadow: '0 4px 30px rgba(0,0,0,0.4)' }}>
+            <h1 className="cat-page-title">
               <span style={{ background: 'linear-gradient(90deg, #bae6fd, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 {categoryContext.name.toUpperCase()}
               </span>
             </h1>
-            <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.85)', lineHeight: 1.7, maxWidth: '700px', margin: '0 auto' }}>
+            <p className="cat-page-desc">
               {categoryContext.description} Select a product type below to view available models and specifications.
             </p>
           </div>
         </section>
+
 
         {/* PRODUCTS GRID */}
         <section className="ref-grid-container" style={{ paddingTop: '20px', margin: '40px auto 80px' }}>

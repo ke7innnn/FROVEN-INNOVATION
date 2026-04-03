@@ -292,6 +292,14 @@
   justify-items: center;
 }
 
+@keyframes border-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.0),  0 10px 40px rgba(0,0,0,0.05); outline: 2px solid rgba(56,189,248,0); }
+  30%  { box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.55), 0 10px 40px rgba(0,0,0,0.05); outline: 2px solid rgba(56,189,248,0.8); }
+  60%  { box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25), 0 10px 40px rgba(0,0,0,0.05); outline: 2px solid rgba(56,189,248,0.3); }
+  80%  { box-shadow: 0 0 0 7px rgba(56, 189, 248, 0.45), 0 10px 40px rgba(0,0,0,0.05); outline: 2px solid rgba(56,189,248,0.6); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.0),  0 10px 40px rgba(0,0,0,0.05); outline: 2px solid rgba(56,189,248,0); }
+}
+
 .service-card-square {
    border-radius: 24px;
    position: relative;
@@ -304,7 +312,9 @@
    min-height: 400px;
    width: 100%;
    overflow: hidden;
-   border: 1px solid rgba(255,255,255,0.1);
+   border: 2px solid rgba(56, 189, 248, 0.15);
+   animation: border-pulse 2.8s ease-in-out infinite;
+   cursor: pointer;
  }
  
  .service-card-image {
@@ -332,7 +342,9 @@
  
  .service-card-square:hover {
    transform: translateY(-15px) scale(1.03);
-   box-shadow: 0 30px 60px rgba(5, 64, 120, 0.25), 0 0 20px rgba(56, 189, 248, 0.3);
+   box-shadow: 0 30px 60px rgba(5, 64, 120, 0.25), 0 0 0 3px rgba(56, 189, 248, 0.9), 0 0 30px rgba(56, 189, 248, 0.4);
+   border-color: rgba(56, 189, 248, 0.9);
+   animation-play-state: paused;
  }
  
  .service-card-square:hover::after {
@@ -446,3 +458,119 @@
 .cc-link:hover {
   text-decoration: underline;
 }
+
+/* =====================================================================
+   MOBILE — Cooling Solutions & Cool Collections
+   ===================================================================== */
+
+@media (max-width: 768px) {
+
+  /* --- "OUR SMART COOLING SOLUTIONS" marquee section --- */
+  .cooling-solutions-section {
+    padding: 40px 0 40px;
+  }
+
+  .cs-header {
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .cs-header h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .cs-header h4 {
+    font-size: 13px;
+  }
+
+  .cs-marquee-container {
+    padding: 16px 0;
+  }
+
+  /* Shrink each marquee card: 320×420 → 200×260 */
+  .cs-card-item {
+    width: 200px;
+    height: 260px;
+    border-radius: 20px;
+  }
+
+  .cs-card-item h3 {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .cs-card-content {
+    padding: 16px 16px 14px;
+  }
+
+  /* Disable hover lift on touch */
+  .cs-card-item:hover {
+    transform: none !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05) !important;
+  }
+
+  /* --- "CORE BUSINESS SERVICES" sales/rental cards --- */
+  .cool-collections {
+    padding: 36px 0 40px;
+  }
+
+  .cc-header {
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .cc-header h2 {
+    font-size: 26px;
+  }
+
+  .cc-header h4 {
+    font-size: 13px;
+  }
+
+  .cc-header p {
+    font-size: 15px;
+    padding: 0 20px;
+  }
+
+  /* Side-by-side 2-column grid on mobile */
+  .cc-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+    padding: 0 16px !important;
+  }
+
+  /* Shrink service cards: min-height 400px → 240px */
+  .service-card-square {
+    min-height: 240px !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 16px;
+  }
+
+  .service-card-content {
+    padding: 20px 16px !important;
+  }
+
+  .service-card-content h2 {
+    font-size: 20px !important;
+    margin-bottom: 4px;
+  }
+
+  .service-card-content p {
+    font-size: 13px !important;
+    margin-bottom: 12px;
+  }
+
+  .service-card-content .cc-link {
+    font-size: 12px;
+  }
+
+  /* Disable heavy hover on touch — keep pulse running */
+  .service-card-square:hover {
+    transform: none !important;
+    box-shadow: 0 0 0 4px rgba(56,189,248,0.7), var(--shadow-md) !important;
+    animation-play-state: paused !important;
+  }
+}
+
