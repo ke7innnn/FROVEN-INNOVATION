@@ -1,11 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const snowflakes = Array.from({ length: 60 }, (_, i) => ({
   id: i,
   left: `${Math.random() * 100}%`,
   size: `${Math.random() * 8 + 4}px`,
-  delay: `${Math.random() * -10}s`, // Negative delay makes them start immediately at different points in the animation
+  delay: `${Math.random() * -10}s`,
   duration: `${Math.random() * 8 + 6}s`,
   opacity: Math.random() * 0.5 + 0.15,
   drift: `${(Math.random() - 0.5) * 80}px`,
@@ -13,6 +13,18 @@ const snowflakes = Array.from({ length: 60 }, (_, i) => ({
 }));
 
 export default function SnowParticles() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  // Don't render on mobile — saves GPU/CPU significantly
+  if (isMobile) return null;
+
   return (
     <>
       <style>{`

@@ -484,10 +484,73 @@
 }
 
 @media (max-width: 768px) {
-  .pd-main { flex-direction: column; }
+  /* Stack gallery and info vertically */
+  .pd-main { flex-direction: column; gap: 0; margin-bottom: 60px; }
   .pd-gallery { position: static; max-width: 100%; }
-  .pd-main-image { height: 400px; }
-  .pd-related-grid { grid-template-columns: 1fr 1fr; }
-  .pd-contact-container { flex-direction: column; gap: 60px; }
+  .pd-main-image { 
+    height: 300px; 
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  /* Title */
+  .pd-title { font-size: 30px; margin-bottom: 24px; letter-spacing: -0.5px; }
+  .pd-badge { font-size: 11px; margin-bottom: 14px; }
+
+  /* Thumbnails */
+  .pd-thumbnails { gap: 10px; margin-top: 16px; }
+  .pd-thumb { width: 64px; height: 64px; padding: 6px; border-radius: 10px; }
+
+  /* Specs table */
+  .pd-tech-specs { padding: 40px 16px; margin-bottom: 60px; border-radius: 16px; }
+  .pd-section-title { font-size: 26px; margin-bottom: 28px; }
+  .pd-table th, .pd-table td { padding: 12px 10px; font-size: 13px; }
+  .pd-table td:first-child { width: 140px; font-size: 13px; }
+
+  /* Related products */
+  .pd-related-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .related-image-wrapper { height: 140px; padding: 16px; }
+  .related-name { font-size: 13px; }
+
+  /* Contact section at bottom */
+  .pd-contact-section { 
+    padding: 60px 0; 
+    border-radius: 40px 40px 0 0; 
+    margin-top: -40px;
+  }
+  .pd-contact-container { 
+    flex-direction: column; 
+    gap: 40px; 
+    padding: 0 20px;
+  }
+  .pd-contact-info h2 { font-size: 34px; }
+  .pd-contact-form { 
+    padding: 32px 24px; 
+    grid-template-columns: 1fr; 
+    border-radius: 24px;
+  }
+  .pd-contact-form textarea { grid-column: span 1; }
+  .pd-contact-form button { grid-column: span 1; }
+
+  /* Container padding */
+  .pd-container { padding: 0 16px; }
+  .pd-breadcrumb { padding: 20px 16px; font-size: 12px; }
+
+  /* Info panel */
+  .pd-info { padding-top: 24px; }
+  .pd-features { gap: 14px; margin-bottom: 32px; }
+  .pd-feature-item { padding: 14px 16px; gap: 14px; }
+  .pd-feature-icon { width: 40px; height: 40px; font-size: 17px; }
+
+  /* Actions */
+  .pd-enquire-btn { padding: 18px 28px; font-size: 15px; width: 100%; box-sizing: border-box; }
+
+  /* Related section */
+  .pd-related { padding: 40px 0; }
 }
 
+@media (max-width: 390px) {
+  .pd-related-grid { grid-template-columns: 1fr; }
+  .pd-main-image { height: 250px; }
+  .pd-title { font-size: 26px; }
+}

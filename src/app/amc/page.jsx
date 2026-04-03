@@ -309,6 +309,21 @@ export default function AmcPage() {
       
       <style>{`
         .service-content-block h2 { font-size: 38px !important; font-weight: 900 !important; background: linear-gradient(135deg, #054078 0%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 30px !important; letter-spacing: -0.5px; }
+        @media (max-width: 768px) {
+          .service-content-block h2 { font-size: 26px !important; margin-bottom: 20px !important; }
+          .service-content-block h3 { font-size: 20px !important; margin-top: 28px !important; margin-bottom: 14px !important; }
+          .service-content-block h4 { font-size: 17px !important; }
+          .service-content-block p { font-size: 15px !important; line-height: 1.75 !important; margin-bottom: 18px !important; }
+          .service-content-block li { font-size: 14px !important; padding: 16px 18px 16px 48px; }
+          .service-content-block li::before { left: 16px; top: 18px; font-size: 15px; }
+          .amc-service-section { padding: 40px 16px !important; }
+          .amc-sidebar { position: static !important; min-width: unset !important; max-width: 100% !important; border-radius: 20px !important; padding: 20px 16px !important; }
+          .amc-sidebar ul { flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; gap: 8px !important; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+          .amc-sidebar ul::-webkit-scrollbar { display: none; }
+          .amc-sidebar li button { padding: 10px 16px !important; font-size: 13px !important; border-radius: 40px !important; white-space: nowrap; transform: none !important; }
+          .amc-sidebar-header { display: none; }
+          .amc-content { padding: 32px 20px !important; border-radius: 20px !important; min-height: unset !important; }
+        }
         .service-content-block h3 { font-size: 26px !important; font-weight: 800 !important; color: #0f172a !important; margin-top: 40px !important; margin-bottom: 20px !important; display: flex; align-items: center; }
         .service-content-block h3::before { content: ""; display: inline-block; width: 8px; height: 24px; background: #38bdf8; border-radius: 4px; margin-right: 12px; }
         .service-content-block h4 { font-size: 20px !important; font-weight: 800 !important; color: #38bdf8 !important; margin-bottom: 12px !important; text-transform: uppercase; letter-spacing: 1px; }
@@ -322,12 +337,28 @@ export default function AmcPage() {
         .glass-btn { position: relative; overflow: hidden; transition: all 0.3s ease; }
         .glass-btn::after { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%); transform: skewX(-25deg); animation: shine 6s infinite; }
         @keyframes shine { 0% { left: -100%; } 20% { left: 200%; } 100% { left: 200%; } }
+        @media (max-width: 768px) {
+          .amc-hero-section { min-height: 70vh !important; }
+          .amc-hero-title { font-size: 40px !important; margin-bottom: 20px !important; }
+          .amc-hero-content { padding: 0 20px !important; }
+          .amc-hero-desc { font-size: 16px !important; margin-bottom: 32px !important; }
+          .amc-hero-actions { flex-direction: column !important; gap: 12px !important; }
+          .amc-hero-actions a { width: 100% !important; box-sizing: border-box !important; justify-content: center !important; }
+          .amc-cta-section { padding: 60px 16px !important; }
+          .amc-cta-inner { border-radius: 24px !important; }
+          .amc-cta-content { padding: 60px 24px !important; }
+          .amc-cta-content h2 { font-size: 30px !important; }
+          .amc-cta-btns { flex-direction: column !important; align-items: stretch !important; gap: 14px !important; }
+          .amc-cta-btns a { width: 100% !important; box-sizing: border-box !important; justify-content: center !important; }
+          .service-content-block ul:not([style*="display: grid"]) { grid-template-columns: 1fr !important; }
+        }
       `}</style>
       
       <main style={{ backgroundColor: '#ffffff' }}>
         
         {/* Hero Section */}
         <section 
+          className="amc-hero-section"
           style={{ 
             minHeight: '85vh',
             display: 'flex',
@@ -346,18 +377,18 @@ export default function AmcPage() {
           }}></div>
           <SnowParticles />
           
-          <div style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: '1200px', margin: '0 auto', padding: '0 40px' }}>
+          <div className="amc-hero-content" style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: '1200px', margin: '0 auto', padding: '0 40px' }}>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} style={{ maxWidth: '800px' }}>
-              <h1 style={{ fontSize: '72px', fontWeight: 900, color: 'white', lineHeight: '1.05', marginBottom: '30px', letterSpacing: '-1.5px', textShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
+              <h1 className="amc-hero-title" style={{ fontSize: '72px', fontWeight: 900, color: 'white', lineHeight: '1.05', marginBottom: '30px', letterSpacing: '-1.5px', textShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
                 SERVICING FOR <br/>
                 <span style={{ color: 'transparent', WebkitTextStroke: '2px #bae6fd', backgroundImage: 'linear-gradient(to right, #bae6fd, #38bdf8)', WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>BEST PERFORMANCE.</span>
               </h1>
               
-              <p style={{ fontSize: '24px', color: '#e2e8f0', lineHeight: '1.6', marginBottom: '50px', maxWidth: '650px', fontWeight: 300, textShadow: '0 4px 10px rgba(0,0,0,0.2)' }}>
+              <p className="amc-hero-desc" style={{ fontSize: '24px', color: '#e2e8f0', lineHeight: '1.6', marginBottom: '50px', maxWidth: '650px', fontWeight: 300, textShadow: '0 4px 10px rgba(0,0,0,0.2)' }}>
                 An unexpected breakdown isn't just an inconvenience—it's catastrophic inventory loss. Froven's Annual Maintenance Contracts shift your strategy from reactive panic to <strong style={{color: 'white', fontWeight: 700}}>proactive security</strong>.
               </p>
               
-              <div style={{ display: 'flex', gap: '20px' }}>
+              <div className="amc-hero-actions" style={{ display: 'flex', gap: '20px' }}>
                 <a href="/contact" className="glass-btn" style={{ display: 'inline-flex', alignItems: 'center', padding: '18px 45px', background: 'linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%)', color: 'white', borderRadius: '40px', fontSize: '18px', fontWeight: 800, textDecoration: 'none', transition: 'all 0.3s ease', boxShadow: '0 15px 30px rgba(56, 189, 248, 0.4)' }} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'none'}>
                   Talk to an Expert <i className="fa-solid fa-arrow-right" style={{ marginLeft: '12px' }}></i>
                 </a>
@@ -385,12 +416,12 @@ export default function AmcPage() {
 
         
         {/* Customer Services Framework Options */}
-        <section style={{ padding: '80px 20px', backgroundColor: '#f4f7f6', backgroundImage: 'radial-gradient(#e2e8f0 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }}>
+        <section className="amc-service-section" style={{ padding: '80px 20px', backgroundColor: '#f4f7f6', backgroundImage: 'radial-gradient(#e2e8f0 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', gap: '40px', flexDirection: 'row', flexWrap: 'wrap' }}>
             
             {/* Sidebar Navigation */}
-            <div style={{ flex: '1', minWidth: '320px', maxWidth: '380px', backgroundColor: 'rgba(255, 255, 255, 0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderRadius: '30px', padding: '40px 24px', boxShadow: '0 20px 60px rgba(5,64,120,0.08)', height: 'fit-content', position: 'sticky', top: '100px', border: '1px solid rgba(255,255,255,0.8)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '30px', paddingLeft: '12px' }}>
+            <div className="amc-sidebar" style={{ flex: '1', minWidth: '320px', maxWidth: '380px', backgroundColor: 'rgba(255, 255, 255, 0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderRadius: '30px', padding: '40px 24px', boxShadow: '0 20px 60px rgba(5,64,120,0.08)', height: 'fit-content', position: 'sticky', top: '100px', border: '1px solid rgba(255,255,255,0.8)' }}>
+              <div className="amc-sidebar-header" style={{ display: 'flex', alignItems: 'center', marginBottom: '30px', paddingLeft: '12px' }}>
                 <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: 'linear-gradient(135deg, #38bdf8 0%, #054078 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '16px', boxShadow: '0 10px 20px rgba(5,64,120,0.2)' }}>
                   <i className="fa-solid fa-layer-group" style={{ color: 'white', fontSize: '18px' }}></i>
                 </div>
@@ -444,7 +475,7 @@ export default function AmcPage() {
             </div>
 
             {/* Main Content Area */}
-            <div style={{ flex: '2', minWidth: '320px', backgroundColor: 'white', borderRadius: '30px', padding: '60px 80px', boxShadow: '0 20px 60px rgba(5,64,120,0.06)', minHeight: '600px', border: '1px solid rgba(226, 232, 240, 0.8)', position: 'relative', overflow: 'hidden' }}>
+            <div className="amc-content" style={{ flex: '2', minWidth: '320px', backgroundColor: 'white', borderRadius: '30px', padding: '60px 80px', boxShadow: '0 20px 60px rgba(5,64,120,0.06)', minHeight: '600px', border: '1px solid rgba(226, 232, 240, 0.8)', position: 'relative', overflow: 'hidden' }}>
               
               {/* Decorative Accents */}
               <div style={{ position: 'absolute', top: 0, right: 0, width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(56,189,248,0.08) 0%, rgba(255,255,255,0) 70%)', transform: 'translate(30%, -30%)', borderRadius: '50%', pointerEvents: 'none' }}></div>

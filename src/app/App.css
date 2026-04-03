@@ -1307,3 +1307,200 @@
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
+
+/* =====================================================================
+   MOBILE OPTIMIZATION BLOCK — All changes are additive (max-width only)
+   Desktop view is 100% unchanged
+   ===================================================================== */
+
+@media (max-width: 768px) {
+
+  /* ---- GENERAL ---- */
+  body { overflow-x: hidden; }
+
+  /* ---- HERO SECTION ---- */
+  .hero-section { min-height: 100svh; }
+
+  .hero-content {
+    padding: 0 20px;
+    align-items: flex-end;
+    padding-bottom: 80px;
+  }
+
+  .hero-text-wrapper { max-width: 100%; }
+
+  .hero-text-row {
+    font-size: 36px !important;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .hero-small-text {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .hero-desc {
+    font-size: 16px !important;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 14px 28px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* ---- STATS ---- */
+  .stats-wrapper {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .stat-item {
+    min-width: unset;
+    max-width: 100%;
+    padding: 28px 24px;
+  }
+
+  /* Disable heavy 3D hover on mobile - no hover on touch devices */
+  .stat-item:hover {
+    transform: none !important;
+    box-shadow: 0 8px 32px 0 rgba(5, 64, 120, 0.15) !important;
+  }
+
+  .stat-num { font-size: 38px; }
+
+  /* ---- MEET THE PRO / PARALLAX SECTIONS ---- */
+  .meet-the-pro {
+    background-attachment: scroll !important;
+    padding: 80px 0;
+    min-height: unset;
+  }
+
+  .meet-container { padding: 0 20px; }
+
+  .meet-heading {
+    font-size: 36px !important;
+    letter-spacing: -0.5px;
+    margin-bottom: 18px;
+  }
+
+  .meet-description {
+    font-size: 17px !important;
+    line-height: 1.65;
+  }
+
+  /* ---- PRODUCTS HERO ---- */
+  .products-hero {
+    background-attachment: scroll !important;
+    padding: 120px 20px 60px !important;
+  }
+
+  /* ---- CONTACT HERO ---- */
+  .contact-hero {
+    background-attachment: scroll !important;
+    padding: 120px 20px 60px !important;
+  }
+
+  /* ---- PRODUCT CARDS ---- */
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-image { height: 200px; }
+
+  /* ---- E-COMMERCE PRODUCT GRIDS ---- */
+  .ref-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .ref-grid-container {
+    padding: 20px 16px 36px;
+    border-radius: 16px;
+    margin: 0 12px 60px;
+  }
+
+  .ref-card-image { height: 160px; }
+
+  .ref-card-title {
+    font-size: 13px;
+    padding: 12px 12px 8px;
+  }
+
+  .ref-card-arrow {
+    font-size: 11px;
+    padding: 10px 12px;
+  }
+
+  /* Disable card lift animations on touch */
+  .ref-card:hover {
+    transform: none !important;
+    box-shadow: 0 8px 24px rgba(5, 64, 120, 0.08) !important;
+  }
+
+  .ref-card:hover .ref-card-image { transform: none !important; }
+
+  /* ---- MODELS GRID ---- */
+  .models-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 0 16px;
+  }
+
+  .model-ec-card .ec-image { height: 130px; }
+  .model-ec-card .ec-name { font-size: 14px; }
+
+  /* ---- CONTACT PAGE ---- */
+  .contact-content-section { padding: 40px 16px 60px; }
+
+  .contact-container {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .contact-info-panel { padding: 36px 20px; }
+  .contact-form-panel { padding: 32px 20px; }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* ---- GLASS PANEL HOVER (mobile doesn't benefit) ---- */
+  .glass-panel-fx:hover {
+    transform: none !important;
+  }
+}
+
+/* Extra small — iPhone SE, older Android */
+@media (max-width: 390px) {
+  .hero-text-row { font-size: 30px !important; }
+  .meet-heading { font-size: 28px !important; }
+
+  .ref-grid { grid-template-columns: 1fr; }
+  .models-grid { grid-template-columns: 1fr; }
+}
+
