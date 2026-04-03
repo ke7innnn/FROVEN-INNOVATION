@@ -21,17 +21,55 @@ export default function ProductsCategoriesPage() {
     <div className="app-container">
       <Header />
       
+      <style>{`
+        .cat-grid-section {
+          max-width: 1400px;
+          margin: 80px auto 120px;
+          padding: 0 40px;
+          box-sizing: border-box;
+        }
+        .cat-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+          gap: 36px;
+        }
+        .cat-hero {
+          position: relative;
+          min-height: 480px;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+        }
+        @media (max-width: 768px) {
+          .cat-grid-section {
+            margin: 40px auto 60px;
+            padding: 0 16px;
+          }
+          .cat-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+          .cat-hero {
+            min-height: 340px;
+          }
+          .cat-hero h1 {
+            font-size: 42px !important;
+            letter-spacing: -1px !important;
+          }
+          .cat-hero p {
+            font-size: 15px !important;
+          }
+          .cat-hero-inner {
+            padding: 100px 20px 60px !important;
+          }
+        }
+      `}</style>
+      
       <main className="products-main" style={{ backgroundColor: '#f0f4f8', minHeight: '80vh' }}>
 
         {/* HERO — full horeca image as background */}
         <section
-          style={{
-            position: 'relative',
-            minHeight: '480px',
-            display: 'flex',
-            alignItems: 'center',
-            overflow: 'hidden',
-          }}
+          className="cat-hero"
         >
           <img
             src="/calegory images/horeca.png"
@@ -54,7 +92,7 @@ export default function ProductsCategoriesPage() {
             zIndex: 1,
           }} />
           <SnowParticles />
-          <div style={{
+          <div className="cat-hero-inner" style={{
             position: 'relative',
             zIndex: 2,
             width: '100%',
@@ -62,6 +100,7 @@ export default function ProductsCategoriesPage() {
             margin: '0 auto',
             padding: '120px 40px 80px',
             textAlign: 'center',
+            boxSizing: 'border-box',
           }}>
             <div style={{
               display: 'inline-block',
@@ -86,6 +125,9 @@ export default function ProductsCategoriesPage() {
               marginBottom: '20px',
               letterSpacing: '-1.5px',
               textShadow: '0 4px 30px rgba(0,0,0,0.4)',
+              wordBreak: 'break-word',
+              overflowWrap: 'break-word',
+              width: '100%',
             }}>
               OUR <span style={{
                 background: 'linear-gradient(90deg, #bae6fd, #38bdf8)',
@@ -100,6 +142,7 @@ export default function ProductsCategoriesPage() {
               lineHeight: 1.7,
               maxWidth: '600px',
               margin: '0 auto',
+              overflowWrap: 'break-word',
             }}>
               Select an industry sector to explore our specialized commercial cooling solutions.
             </p>
@@ -107,12 +150,8 @@ export default function ProductsCategoriesPage() {
         </section>
 
         {/* CATEGORY CARDS */}
-        <section style={{ maxWidth: '1400px', margin: '80px auto 120px', padding: '0 40px' }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))',
-            gap: '36px',
-          }}>
+        <section className="cat-grid-section">
+          <div className="cat-grid">
             {catalog.map((category) => {
               const imgSrc = categoryImages[category.slug];
               return (
