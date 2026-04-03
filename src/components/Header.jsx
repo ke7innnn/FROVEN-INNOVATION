@@ -6,14 +6,35 @@ import { catalog } from '../data/catalog';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const lastScrollY = React.useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentY = window.scrollY;
+      const isMobile = window.innerWidth <= 768;
+
+      setIsScrolled(currentY > 50);
+
+      // Smart hide/show only for desktop
+      if (!isMobile) {
+        if (currentY <= 60) {
+          // Always show at top
+          setIsHidden(false);
+        } else if (currentY > lastScrollY.current + 6) {
+          // Scrolling down — hide
+          setIsHidden(true);
+        } else if (currentY < lastScrollY.current - 6) {
+          // Scrolling up — show
+          setIsHidden(false);
+        }
+      }
+
+      lastScrollY.current = currentY;
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
@@ -200,6 +221,14 @@ const Header = () => {
           border: 1px solid rgba(255,255,255,0.3);
         }
 
+        /* Smart hide on desktop */
+        @media (min-width: 769px) {
+          .top-header.nav-hidden {
+            transform: translateY(-110%);
+            pointer-events: none;
+          }
+        }
+
         @media (max-width: 768px) {
           .header-nav { display: none !important; }
           .hamburger-btn { display: flex !important; }
@@ -209,7 +238,7 @@ const Header = () => {
         }
       `}</style>
 
-      <header className={`top-header ${isScrolled ? 'scrolled' : ''}`}
+      <header className={`top-header ${isScrolled ? 'scrolled' : ''} ${isHidden ? 'nav-hidden' : ''}`}
         style={{ color: isScrolled ? 'var(--froven-dark)' : 'white' }}
       >
         <div className="header-logo">
