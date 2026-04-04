@@ -37,6 +37,10 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           as="style"
         />
+      </head>
+      <body>
+        {children}
+        <WhatsAppFloat />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -44,10 +48,6 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-      </head>
-      <body>
-        {children}
-        <WhatsAppFloat />
       </body>
     </html>
   );

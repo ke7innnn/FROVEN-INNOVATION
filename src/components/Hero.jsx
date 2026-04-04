@@ -77,9 +77,10 @@ const Hero = () => {
               fill
               priority={idx === 0}
               fetchPriority={idx === 0 ? "high" : "auto"}
+              quality={idx === 0 ? 60 : 75}
               className="hero-slide-img animate-float"
               style={{ objectFit: 'cover', objectPosition: 'center' }}
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 100vw"
             />
           </div>
         ))}
