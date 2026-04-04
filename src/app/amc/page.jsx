@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { motion } from 'framer-motion';
 import SnowParticles from '../../components/SnowParticles';
+import Image from 'next/image';
 
 export default function AmcPage() {
   const [hoveredPlan, setHoveredPlan] = useState(null);
@@ -32,7 +33,7 @@ export default function AmcPage() {
           Welcome to Froven Innovations Customer Service. We are committed to providing top-tier maintenance, retrofit, and management solutions for your commercial refrigeration and HVAC systems. Select a service from the menu to learn more about our comprehensive offerings designed to ensure peak performance and longevity of your vital equipment.
         </p>
         <div style={{ marginTop: '30px', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(5,64,120,0.1)' }}>
-           <img src="/services/customer-service-overview.png" alt="Customer Service Professional" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
+           <Image src="/services/customer-service-overview.png" alt="Customer Service Professional" width={1200} height={600} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
         </div>
       </div>
     ),

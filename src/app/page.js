@@ -1,13 +1,14 @@
-'use client';
-
+import dynamic from 'next/dynamic';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Stats from '../components/Stats';
-import MeetThePro from '../components/MeetThePro';
-import CoolingSolutions from '../components/CoolingSolutions';
-import CoolCollections from '../components/CoolCollections';
-import ContactForm from '../components/ContactForm';
-import Footer from '../components/Footer';
+
+// Dynamically import everything below the fold to drastically reduce initial JS bundle size
+const Stats = dynamic(() => import('../components/Stats'));
+const MeetThePro = dynamic(() => import('../components/MeetThePro'));
+const CoolCollections = dynamic(() => import('../components/CoolCollections'));
+const CoolingSolutions = dynamic(() => import('../components/CoolingSolutions'));
+const ContactForm = dynamic(() => import('../components/ContactForm'));
+const Footer = dynamic(() => import('../components/Footer'));
 
 export default function Home() {
   return (
