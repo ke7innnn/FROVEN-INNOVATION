@@ -31,6 +31,9 @@ export default function AmcPage() {
         <p style={{ fontSize: '18px', color: '#64748b', lineHeight: '1.8' }}>
           Welcome to Froven Innovations Customer Service. We are committed to providing top-tier maintenance, retrofit, and management solutions for your commercial refrigeration and HVAC systems. Select a service from the menu to learn more about our comprehensive offerings designed to ensure peak performance and longevity of your vital equipment.
         </p>
+        <div style={{ marginTop: '30px', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(5,64,120,0.1)' }}>
+           <img src="/services/customer-service-overview.png" alt="Customer Service Professional" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
+        </div>
       </div>
     ),
     range: (
@@ -318,7 +321,7 @@ export default function AmcPage() {
           .service-content-block li::before { left: 16px; top: 18px; font-size: 15px; }
           .amc-service-section { padding: 40px 16px !important; }
           .amc-sidebar { position: static !important; min-width: unset !important; max-width: 100% !important; border-radius: 20px !important; padding: 20px 16px !important; }
-          .amc-sidebar ul { flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; gap: 8px !important; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+          .amc-sidebar ul { flex-direction: row !important; flex-wrap: wrap !important; overflow: visible !important; justify-content: center !important; gap: 8px !important; padding-bottom: 4px; }
           .amc-sidebar ul::-webkit-scrollbar { display: none; }
           .amc-sidebar li button { padding: 10px 16px !important; font-size: 13px !important; border-radius: 40px !important; white-space: nowrap; transform: none !important; }
           .amc-sidebar-header { display: none; }
