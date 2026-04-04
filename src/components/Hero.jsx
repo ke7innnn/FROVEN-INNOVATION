@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const slideImages = [
   '/3 slides/slide 2new.png',
@@ -44,23 +44,28 @@ const slidesContent = [
   }
 ];
 
-import Image from 'next/image';
-
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slidesContent.length);
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % slidesContent.length);
+        setIsVisible(true);
+      }, 400);
     }, 3000);
     return () => clearInterval(timer);
   }, []);
+
+  const slide = slidesContent[currentSlide];
 
   return (
     <section className="hero-section">
       <div className="hero-bg-container">
         {slideImages.map((src, idx) => (
-          <div 
+          <div
             key={idx}
             className="hero-slide-wrapper"
             style={{
@@ -73,11 +78,12 @@ const Hero = () => {
           >
             <Image
               src={src}
-              alt={`Slide ${idx}`}
+              alt={`Slide ${idx + 1}`}
               fill
               priority={idx === 0}
               fetchPriority={idx === 0 ? "high" : "auto"}
-              quality={idx === 0 ? 60 : 75}
+              loading={idx === 0 ? "eager" : "lazy"}
+              quality={idx === 0 ? 60 : 70}
               className="hero-slide-img animate-float"
               style={{ objectFit: 'cover', objectPosition: 'center' }}
               sizes="(max-width: 768px) 100vw, 100vw"
@@ -89,33 +95,31 @@ const Hero = () => {
           transition: 'background-color 0.8s ease'
         }}></div>
       </div>
-      
+
       <div className="hero-content">
-        <AnimatePresence mode="wait">
-          <motion.div 
-            key={currentSlide}
-            className={`hero-text-wrapper align-${slidesContent[currentSlide].align}`}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.8 }}
-          >
-            <p className="hero-small-text">{slidesContent[currentSlide].small}</p>
-            <div className="hero-text-row">
-              {slidesContent[currentSlide].main}
-            </div>
-            <p className="hero-desc">{slidesContent[currentSlide].desc}</p>
-            <div className="hero-buttons">
-              {slidesContent[currentSlide].buttons.map((btn, idx) => (
-                <Link href={btn.link} key={idx} style={{ textDecoration: 'none' }}>
-                  <button className={btn.primary ? "btn-primary" : "btn-secondary"}>
-                    {btn.text}
-                  </button>
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        <div
+          className={`hero-text-wrapper align-${slide.align}`}
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+            transition: 'opacity 0.4s ease, transform 0.4s ease',
+          }}
+        >
+          <p className="hero-small-text">{slide.small}</p>
+          <div className="hero-text-row">
+            {slide.main}
+          </div>
+          <p className="hero-desc">{slide.desc}</p>
+          <div className="hero-buttons">
+            {slide.buttons.map((btn, i) => (
+              <Link href={btn.link} key={i} style={{ textDecoration: 'none' }}>
+                <button className={btn.primary ? "btn-primary" : "btn-secondary"}>
+                  {btn.text}
+                </button>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
