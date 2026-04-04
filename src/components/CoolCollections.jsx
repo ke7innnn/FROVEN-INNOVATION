@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 
 import Link from 'next/link';
 
+import Image from 'next/image';
+
 const CoolCollections = () => {
   const services = [
     { title: 'SALES', category: 'Premium Equipment', img: '/services/sales.png', link: '/sales' },
@@ -41,11 +43,17 @@ const CoolCollections = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
           >
-            <Link href={item.link} style={{ display: 'block', height: '100%', textDecoration: 'none', color: 'inherit' }}>
-              <div 
-                className="service-card-image" 
-                style={{ backgroundImage: `url(${item.img})` }}
-              ></div>
+            <Link href={item.link} style={{ display: 'block', height: '100%', textDecoration: 'none', color: 'inherit', position: 'relative' }}>
+              <div className="service-card-image">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                />
+              </div>
               <div className="service-card-content">
                 <h2>{item.title}</h2>
                 <p>{item.category}</p>

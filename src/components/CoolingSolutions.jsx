@@ -11,6 +11,8 @@ const solutions = [
   { name: 'MINI BAR', img: '/product range /minibars.png' },
 ];
 
+import Image from 'next/image';
+
 const CoolingSolutions = () => {
   return (
     <section id="sustainable-cooling" className="cooling-solutions-section">
@@ -29,10 +31,16 @@ const CoolingSolutions = () => {
         <div className="cs-marquee-track">
           {[...solutions, ...solutions, ...solutions].map((solution, idx) => (
             <div key={idx} className={`cs-card-item ${solution.name === 'WATER DISPENSER' ? 'cs-card-water-dispenser' : ''}`}>
-              <div 
-                className="cs-card-image" 
-                style={{ backgroundImage: `url("${solution.img}")` }}
-              ></div>
+              <div className="cs-card-image">
+                <Image
+                  src={solution.img}
+                  alt={solution.name}
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  loading="lazy"
+                />
+              </div>
               <div className="cs-card-content">
                 <h3>{solution.name}</h3>
               </div>

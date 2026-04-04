@@ -3,11 +3,21 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
+import Image from 'next/image';
+
 const MeetThePro = () => {
   return (
-    <section id="meet-the-pro" className="meet-the-pro" style={{ backgroundImage: 'url("/3 slides/slide 2new.png")' }}>
-      <div className="meet-overlay"></div>
-      <div className="meet-container">
+    <section id="meet-the-pro" className="meet-the-pro" style={{ position: 'relative', overflow: 'hidden' }}>
+      <Image
+        src="/3 slides/slide 2new.png"
+        alt="Meet The Pro Background"
+        fill
+        style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
+        sizes="100vw"
+        loading="lazy"
+      />
+      <div className="meet-overlay" style={{ zIndex: 1 }}></div>
+      <div className="meet-container" style={{ position: 'relative', zIndex: 2 }}>
         <motion.div 
           className="meet-content-wrapper"
           initial={{ opacity: 0, y: 50 }}

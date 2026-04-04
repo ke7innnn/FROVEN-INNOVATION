@@ -44,6 +44,8 @@ const slidesContent = [
   }
 ];
 
+import Image from 'next/image';
+
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -57,20 +59,29 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-bg-container">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentSlide}
-            src={slideImages[currentSlide]}
-            alt={`Slide ${currentSlide}`}
-            className="hero-slide-img animate-float"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            fetchPriority="high"
-            loading="eager"
-          />
-        </AnimatePresence>
+        {slideImages.map((src, idx) => (
+          <div 
+            key={idx}
+            className="hero-slide-wrapper"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              opacity: currentSlide === idx ? 1 : 0,
+              transition: 'opacity 0.8s ease-in-out',
+              zIndex: currentSlide === idx ? 1 : 0
+            }}
+          >
+            <Image
+              src={src}
+              alt={`Slide ${idx}`}
+              fill
+              priority={idx === 0}
+              className="hero-slide-img animate-float"
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              sizes="100vw"
+            />
+          </div>
+        ))}
         <div className="hero-overlay" style={{
           backgroundColor: currentSlide === 3 ? 'rgba(5, 64, 120, 0.25)' : 'transparent',
           transition: 'background-color 0.8s ease'
