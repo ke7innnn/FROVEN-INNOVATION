@@ -76,6 +76,7 @@ const Hero = () => {
               alt={`Slide ${idx}`}
               fill
               priority={idx === 0}
+              fetchPriority={idx === 0 ? "high" : "auto"}
               className="hero-slide-img animate-float"
               style={{ objectFit: 'cover', objectPosition: 'center' }}
               sizes="100vw"

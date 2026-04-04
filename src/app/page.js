@@ -10,6 +10,8 @@ const CoolingSolutions = dynamic(() => import('../components/CoolingSolutions'))
 const ContactForm = dynamic(() => import('../components/ContactForm'));
 const Footer = dynamic(() => import('../components/Footer'));
 
+export const dynamic = 'force-static';
+
 export default function Home() {
   return (
     <div className="app-container">
