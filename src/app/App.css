@@ -1338,48 +1338,72 @@
 
   .hero-content {
     padding: 0 20px;
-    align-items: flex-end;
+    align-items: center; /* Force center alignment on mobile */
     padding-bottom: 80px;
   }
 
-  .hero-text-wrapper { max-width: 100%; }
+  .hero-text-wrapper { 
+    max-width: 100%; 
+    text-align: center !important; /* Ensure centered text inside the wrapper */
+  }
 
   .hero-text-row {
     font-size: 36px !important;
     line-height: 1.15;
     margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center each row of text */
   }
 
   .hero-small-text {
     font-size: 12px;
     letter-spacing: 2px;
     margin-bottom: 14px;
+    text-align: center;
   }
 
   .hero-desc {
     font-size: 16px !important;
     margin-bottom: 28px;
     line-height: 1.6;
+    text-align: center;
   }
 
   .hero-buttons {
     flex-direction: column;
-    gap: 12px;
-    align-items: stretch;
+    gap: 15px;
+    align-items: center;
     width: 100%;
+    margin: 0 auto;
   }
 
   .hero-buttons a {
     display: flex;
     width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .align-left, .align-right {
+    margin: 0 auto !important;
+    text-align: center !important;
   }
 
   .btn-primary, .btn-secondary {
-    padding: 14px 28px;
+    padding: 16px 28px;
     font-size: 14px;
-    width: 100%;
+    width: 100% !important;
+    max-width: 320px; /* Limit width for extreme mobile sizes to keep them looking like pills */
     justify-content: center;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    border: 2px solid transparent; /* Give primary a transparent border to match secondary's 2px */
+  }
+
+  .btn-secondary {
+    border: 2px solid rgba(255, 255, 255, 0.6) !important;
   }
 
   /* ---- STATS ---- */
