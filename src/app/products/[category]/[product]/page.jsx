@@ -47,8 +47,38 @@ export default function ProductModelsPage({ params }) {
     setActiveImageIdx(prev => (prev === productContext.images.length - 1 ? 0 : prev + 1));
   };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": productContext.name,
+    "image": currentImage ? `https://froveninnovations.com${currentImage}` : "",
+    "description": productContext.pageData ? productContext.pageData.description : "Commercial refrigeration cooling solution.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Froven Innovations"
+    },
+    "category": categoryContext.name,
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "offerCount": productContext.models && productContext.models.length > 0 ? productContext.models.length : 1,
+      "seller": {
+        "@type": "Organization",
+        "name": "Froven Innovations",
+        "areaServed": ["Vasai", "Virar", "Mumbai"]
+      }
+    }
+  };
+
   return (
     <div className="pd-page">
+      <title>{`${productContext.name} - Commercial Refrigeration Sales & Rentals in Vasai Virar | Froven`}</title>
+      <meta name="description" content={productContext.pageData ? productContext.pageData.description.substring(0, 150) + "..." : `Buy or rent ${productContext.name} from Froven Innovations in Vasai Virar.`} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       
       <div className="pd-breadcrumb">

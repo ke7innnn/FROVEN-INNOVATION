@@ -26,6 +26,8 @@ export default function CategoryProductsPage({ params }) {
 
   return (
     <div className="app-container">
+      <title>{`${categoryContext.name} - Commercial Refrigeration in Vasai Virar | FROVEN`}</title>
+      <meta name="description" content={`${categoryContext.description} View all models of ${categoryContext.name} available for sale and rent in Vasai, Virar, and Mumbai.`} />
       <Header />
       
       <main className="products-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh' }}>

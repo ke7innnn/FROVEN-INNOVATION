@@ -19,10 +19,32 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: 'FROVEN INNOVATIONS',
-  description: 'End-to-end refrigeration solutions for hospitality, retail, healthcare, and food & beverage industries.',
+  metadataBase: new URL('https://froveninnovations.com'),
+  title: {
+    template: '%s | Froven Innovations',
+    default: 'Froven Innovations - Commercial Refrigeration Sales, Rentals & AMC Services',
+  },
+  description: 'Froven Innovations provides end-to-end commercial refrigeration solutions, equipment rentals, and reliable AMC services across Vasai, Virar, Mumbai, and beyond.',
+  keywords: ['Froven', 'Froven Innovations', 'Commercial Refrigeration in Vasai Virar', 'Refrigeration Rentals', 'HORECA Equipment Sales', 'AMC Services', 'Cold Room Sales'],
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/logo design/Gemini_Generated_Image_gqcanogqcanogqca-Photoroom.png',
+    apple: '/logo design/Gemini_Generated_Image_gqcanogqcanogqca-Photoroom.png',
+  },
+  openGraph: {
+    title: 'Froven Innovations - Commercial Refrigeration Solutions',
+    description: 'Specialists in commercial cooling, offering rentals, sales, and AMC services in Vasai Virar.',
+    url: 'https://froveninnovations.com',
+    siteName: 'Froven Innovations',
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Froven Innovations',
+    description: 'Commercial Refrigeration, Rentals & AMC Services.',
   },
 };
 

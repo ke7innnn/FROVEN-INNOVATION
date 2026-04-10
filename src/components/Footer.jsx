@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer-col brand-col">
             <div className="footer-logo">
               <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <h1>FROVEN</h1>
+                <div style={{ fontSize: '2em', fontWeight: 'bold', margin: '0.67em 0', fontFamily: 'inherit' }}>FROVEN</div>
               </Link>
               <p>THE COMMERCIAL REFRIGERATION EXPERTS</p>
             </div>
