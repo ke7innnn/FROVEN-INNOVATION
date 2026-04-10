@@ -77,8 +77,6 @@ export default function RootLayout({ children }) {
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
-          media="print"
-          onLoad="this.media='all'"
         />
       </body>
     </html>
