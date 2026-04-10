@@ -97,6 +97,14 @@ export default function CategoryProductsPage({ params }) {
         @media (max-width: 390px) {
           .cat-page-title { font-size: 28px; }
         }
+        .responsive-bg {
+          background-size: var(--bg-size);
+        }
+        @media (max-width: 768px) {
+          .responsive-bg {
+            background-size: contain !important;
+          }
+        }
       `}</style>
 
         {/* HERO with category image */}
@@ -142,7 +150,7 @@ export default function CategoryProductsPage({ params }) {
               <Link key={product.slug} href={`/products/${categorySlug}/${product.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="ref-card center-image" style={{ cursor: 'pointer' }}>
                   <div
-                    className="ref-card-image"
+                    className="ref-card-image responsive-bg"
                     style={{ 
                       backgroundColor: '#f8fafc', 
                       display: 'flex', 
@@ -152,7 +160,7 @@ export default function CategoryProductsPage({ params }) {
                       backgroundImage: product.image ? `url('${product.image}')` : 'none',
                       backgroundPosition: 'center',
                       backgroundRepeat: 'no-repeat',
-                      backgroundSize: product.image ? (
+                      '--bg-size': product.image ? (
                         product.slug === 'visi-cooler' ? 'contain' :
                         categorySlug === 'horeca' ? '160%' :
                         categorySlug === 'confectionery-showcase' ? 'contain' : '130%'
