@@ -44,13 +44,13 @@ const ContactForm = () => {
                 </div>
               </a>
 
-              <a href="mailto:froveninnovations@outlook.com" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div onClick={() => { window.location.href = ['mailto:', 'froveninnovations', '@', 'outlook.com'].join(''); }} className="info-item" style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
                 <i className="fas fa-envelope"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>froveninnovations@outlook.com</p>
+                  <p>{['froveninnovations', '@', 'outlook.com'].join('')}</p>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
           
@@ -62,7 +62,7 @@ const ContactForm = () => {
               const subject = e.target.elements[2].value;
               const msg = e.target.elements[3].value;
               const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`;
-              window.location.href = `mailto:froveninnovations@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              window.location.href = `${['mailto:', 'froveninnovations', '@', 'outlook.com'].join('')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             }}>
               <div className="form-group">
                 <input type="text" placeholder="Your Name" required />
