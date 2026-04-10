@@ -9,17 +9,17 @@ export default function manifest() {
     theme_color: '#0f2a47',
     icons: [
       {
-        src: '/logo design/Gemini_Generated_Image_gqcanogqcanogqca-Photoroom.png',
+        src: '/icon.png',
         sizes: 'any',
         type: 'image/png',
       },
       {
-        src: '/logo design/Gemini_Generated_Image_gqcanogqcanogqca-Photoroom.png',
+        src: '/icon.png',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: '/logo design/Gemini_Generated_Image_gqcanogqcanogqca-Photoroom.png',
+        src: '/icon.png',
         sizes: '512x512',
         type: 'image/png',
       }

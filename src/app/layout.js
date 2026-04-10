@@ -30,10 +30,6 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
-  icons: {
-    icon: '/logo design/Gemini_Generated_Image_gqcanogqcanogqca-Photoroom.png',
-    apple: '/logo design/Gemini_Generated_Image_gqcanogqcanogqca-Photoroom.png',
-  },
   openGraph: {
     title: 'Froven Innovations - Commercial Refrigeration Solutions',
     description: 'Specialists in commercial cooling, offering rentals, sales, and AMC services in Vasai Virar.',
