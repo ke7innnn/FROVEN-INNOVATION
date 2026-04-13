@@ -231,14 +231,10 @@ const Header = () => {
         }
 
         .header-logo img {
-          transform: scale(2.5);
-          transform-origin: left center;
-          margin-left: -30px;
-        }
-
-        .mobile-menu-header img {
-          transform: scale(1.3);
-          transform-origin: left center;
+          height: 55px;
+          width: auto;
+          object-fit: contain;
+          display: block;
         }
 
         @media (max-width: 768px) {
@@ -247,9 +243,7 @@ const Header = () => {
           .top-header { padding: 8px 20px !important; }
           .top-header.scrolled { padding: 6px 20px !important; }
           .header-logo img { 
-            height: 44px !important; 
-            transform: scale(1) !important;
-            margin-left: 0 !important;
+            height: 48px; 
           }
         }
       `}</style>
@@ -259,7 +253,7 @@ const Header = () => {
       >
         <div className="header-logo">
           <a href="/">
-            <img src="/logo/new logo.svg" alt="Froven Innovations Logo" style={{ height: '58px', width: 'auto', objectFit: 'contain', display: 'block' }} />
+            <img src="/logo/nobgLogo (1).png" alt="Froven Innovations Logo" />
           </a>
         </div>
         <nav className="header-nav">
@@ -312,7 +306,7 @@ const Header = () => {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="mobile-menu-header">
-                <img src="/logo/new logo.svg" alt="Froven" style={{ height: '44px', width: 'auto', objectFit: 'contain', display: 'block' }} />
+                <img src="/logo/nobgLogo (1).png" alt="Froven" style={{ height: '48px', width: 'auto', objectFit: 'contain', display: 'block' }} />
                 <button className="mobile-menu-close" onClick={() => setIsMobileMenuOpen(false)}>×</button>
               </div>
 
