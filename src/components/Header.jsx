@@ -248,8 +248,8 @@ const Header = () => {
           .top-header.scrolled { padding: 6px 20px !important; }
           .header-logo img { 
             height: 44px !important; 
-            transform: scale(1.4) !important;
-            margin-left: -5px !important;
+            transform: scale(1) !important;
+            margin-left: 0 !important;
           }
         }
       `}</style>
