@@ -244,7 +244,7 @@ const Header = () => {
       >
         <div className="header-logo">
           <a href="/">
-            <img src="/logo/new logo.svg" alt="Froven Innovations Logo" height={60} style={{ objectFit: 'contain', display: 'block' }} />
+            <img src="/logo/new logo.svg" alt="Froven Innovations Logo" style={{ height: '58px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'scale(2.5)', transformOrigin: 'left center', marginLeft: '-30px' }} />
           </a>
         </div>
         <nav className="header-nav">
@@ -297,7 +297,7 @@ const Header = () => {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="mobile-menu-header">
-                <img src="/logo/new logo.svg" alt="Froven" height={48} style={{ objectFit: 'contain', display: 'block' }} />
+                <img src="/logo/new logo.svg" alt="Froven" style={{ height: '44px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'scale(1.8)', transformOrigin: 'left center', marginLeft: '-15px' }} />
                 <button className="mobile-menu-close" onClick={() => setIsMobileMenuOpen(false)}>×</button>
               </div>
 
