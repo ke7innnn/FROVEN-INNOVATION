@@ -253,7 +253,7 @@ const Header = () => {
       >
         <div className="header-logo">
           <a href="/">
-            <img src="/logo/nobgLogo (1).png" alt="Froven Innovations Logo" />
+            <img src="/logo/logo-clean.png" alt="Froven Innovations Logo" />
           </a>
         </div>
         <nav className="header-nav">
@@ -306,7 +306,7 @@ const Header = () => {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="mobile-menu-header">
-                <img src="/logo/nobgLogo (1).png" alt="Froven" style={{ height: '48px', width: 'auto', objectFit: 'contain', display: 'block' }} />
+                <img src="/logo/logo-clean.png" alt="Froven" style={{ height: '48px', width: 'auto', objectFit: 'contain', display: 'block' }} />
                 <button className="mobile-menu-close" onClick={() => setIsMobileMenuOpen(false)}>×</button>
               </div>
 
