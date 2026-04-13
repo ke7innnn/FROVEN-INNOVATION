@@ -85,15 +85,7 @@ ${form.message.value}`;
                   </div>
                 </div>
 
-                <div className="contact-detail-item">
-                  <div className="detail-icon">
-                    <i className="fas fa-building"></i>
-                  </div>
-                  <div>
-                    <h4>Corporate Office</h4>
-                    <p>219, Golden Park Commercial Complex, Behind Parvati Cinema, Navghar Manickpur, SAI Nagar, Vasai West, Palghar-401201, Maharashtra</p>
-                  </div>
-                </div>
+
               </div>
             </div>
 
