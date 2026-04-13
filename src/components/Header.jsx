@@ -235,6 +235,9 @@ const Header = () => {
           width: auto;
           object-fit: contain;
           display: block;
+          transform: scale(2.5);
+          transform-origin: left center;
+          margin-left: -30px;
         }
 
         @media (max-width: 768px) {
@@ -244,6 +247,8 @@ const Header = () => {
           .top-header.scrolled { padding: 6px 20px !important; }
           .header-logo img { 
             height: 48px; 
+            transform: scale(1) !important;
+            margin-left: 0 !important;
           }
         }
       `}</style>
