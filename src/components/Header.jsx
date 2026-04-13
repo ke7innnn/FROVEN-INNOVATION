@@ -312,7 +312,7 @@ const Header = () => {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="mobile-menu-header">
-                <img src="/logo/logo-clean.png" alt="Froven" style={{ height: '48px', width: 'auto', objectFit: 'contain', display: 'block' }} />
+                <img src="/logo/logo-clean.png" alt="Froven" style={{ height: '48px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'scale(2.5)', transformOrigin: 'left center' }} />
                 <button className="mobile-menu-close" onClick={() => setIsMobileMenuOpen(false)}>×</button>
               </div>
 
