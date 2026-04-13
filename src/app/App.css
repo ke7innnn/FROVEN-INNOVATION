@@ -48,7 +48,9 @@
 
  /* Header */
  .top-header {
-  background-color: transparent;
+  background-color: rgba(2, 26, 48, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   color: white;
   display: flex;
   align-items: center;
@@ -106,7 +108,9 @@
    z-index: 1000;
    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
    box-sizing: border-box;
-   background: transparent;
+   background: rgba(2, 26, 48, 0.8);
+   backdrop-filter: blur(15px);
+   -webkit-backdrop-filter: blur(15px);
  }
  
  .top-header.scrolled {
@@ -159,12 +163,11 @@
  }
 
  .header-logo img {
-   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   transition: filter 0.3s ease;
  }
 
  .header-logo img:hover {
-   transform: scale(1.1) rotate(3deg);
-   filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.6));
+   filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.8));
  }
 
  .header-actions {
