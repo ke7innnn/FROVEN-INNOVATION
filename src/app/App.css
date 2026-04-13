@@ -47,41 +47,7 @@
  }
 
  /* Header */
- .top-header {
-  background-color: rgba(2, 26, 48, 0.8);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4px 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 1000;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.top-header.scrolled {
-  background-color: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  color: var(--froven-dark);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-  border-bottom: var(--glass-border);
-  padding: 4px 40px;
-}
-
- .header-logo {
-   flex: 0 0 auto;
- }
-
-  .header-logo img {
-    height: 85px; /* Adjusted height */
-  }
+  /* Top Header rules unified below */
 
  .header-logo h1 {
    margin: 0;
@@ -97,7 +63,7 @@
    letter-spacing: 0.5px;
  }
  .top-header {
-   padding: 12px 45px;
+   padding: 10px 45px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -108,9 +74,10 @@
    z-index: 1000;
    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
    box-sizing: border-box;
-   background: rgba(2, 26, 48, 0.8);
-   backdrop-filter: blur(15px);
-   -webkit-backdrop-filter: blur(15px);
+   background: rgba(255, 255, 255, 0.85);
+   backdrop-filter: blur(25px);
+   -webkit-backdrop-filter: blur(25px);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
  }
  
  .top-header.scrolled {

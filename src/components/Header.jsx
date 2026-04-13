@@ -255,7 +255,7 @@ const Header = () => {
       `}</style>
 
       <header className={`top-header ${isScrolled ? 'scrolled' : ''} ${isHidden ? 'nav-hidden' : ''}`}
-        style={{ color: isScrolled ? 'var(--froven-dark)' : 'white' }}
+        style={{ color: 'var(--froven-dark)' }}
       >
         <div className="header-logo">
           <a href="/">
@@ -283,7 +283,7 @@ const Header = () => {
             className={`hamburger-btn ${isMobileMenuOpen ? 'open' : ''}`}
             aria-label="Toggle Menu"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            style={{ color: isScrolled ? 'var(--froven-dark)' : 'white' }}
+            style={{ color: 'var(--froven-dark)' }}
           >
             <span></span>
             <span></span>
