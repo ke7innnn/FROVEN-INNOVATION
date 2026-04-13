@@ -230,12 +230,27 @@ const Header = () => {
           }
         }
 
+        .header-logo img {
+          transform: scale(2.5);
+          transform-origin: left center;
+          margin-left: -30px;
+        }
+
+        .mobile-menu-header img {
+          transform: scale(1.3);
+          transform-origin: left center;
+        }
+
         @media (max-width: 768px) {
           .header-nav { display: none !important; }
           .hamburger-btn { display: flex !important; }
           .top-header { padding: 8px 20px !important; }
           .top-header.scrolled { padding: 6px 20px !important; }
-          .header-logo img { height: 52px !important; }
+          .header-logo img { 
+            height: 44px !important; 
+            transform: scale(1.4) !important;
+            margin-left: -5px !important;
+          }
         }
       `}</style>
 
@@ -244,7 +259,7 @@ const Header = () => {
       >
         <div className="header-logo">
           <a href="/">
-            <img src="/logo/new logo.svg" alt="Froven Innovations Logo" style={{ height: '58px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'scale(2.5)', transformOrigin: 'left center', marginLeft: '-30px' }} />
+            <img src="/logo/new logo.svg" alt="Froven Innovations Logo" style={{ height: '58px', width: 'auto', objectFit: 'contain', display: 'block' }} />
           </a>
         </div>
         <nav className="header-nav">
@@ -297,7 +312,7 @@ const Header = () => {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="mobile-menu-header">
-                <img src="/logo/new logo.svg" alt="Froven" style={{ height: '44px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'scale(1.8)', transformOrigin: 'left center', marginLeft: '-15px' }} />
+                <img src="/logo/new logo.svg" alt="Froven" style={{ height: '44px', width: 'auto', objectFit: 'contain', display: 'block' }} />
                 <button className="mobile-menu-close" onClick={() => setIsMobileMenuOpen(false)}>×</button>
               </div>
 
