@@ -165,7 +165,8 @@ export default function CategoryProductsPage({ params }) {
                       '--bg-size': product.image ? (
                         product.slug === 'visi-cooler' ? 'contain' :
                         categorySlug === 'horeca' ? '160%' :
-                        categorySlug === 'confectionery-showcase' ? 'contain' : '130%'
+                        categorySlug === 'confectionery-showcase' ? 'contain' :
+                        categorySlug === 'lab' ? 'contain' : '130%'
                       ) : 'contain',
                     }}
                   >

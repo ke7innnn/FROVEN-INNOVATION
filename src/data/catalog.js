@@ -419,7 +419,7 @@ export const catalog = [
       {
         name: 'ULT Deep Freezer -86 °C Vertical',
         slug: 'ult-deep-freezer-86c-vertical',
-        image: '/new product images/LAB/ult-deep-freezer-86c-vertical.jpg',
+        image: '/new product images/LAB/ult-deep-freezer-86c-vertical.png',
         pageData: {
           description: "Ultra Low Temperature (-86°C) Deep Freezer is engineered for the critical preservation of high-value biological specimens, including vaccines, plasma, and cell cultures. Its precision-controlled refrigeration, robust insulation, and advanced safety systems ensure ultra-stable temperatures—even under extreme ambient conditions making it a trusted solution in biomedical research, pharmaceutical, and clinical applications.",
           features: [
@@ -467,7 +467,7 @@ export const catalog = [
       {
         name: 'Deep Freezer -40 °C Horizontal',
         slug: 'deep-freezer-40c-horizontal',
-        image: '/new product images/LAB/deep-freezer-40c-horizontal.jpg',
+        image: '/new product images/LAB/deep-freezer-40c-horizontal.png',
         pageData: {
           description: "-40°C Deep Freezer is purpose-built for secure storage of temperature-sensitive biological materials, including stem cells, plasma, and viruses. Designed for reliability, efficiency, and compliance, it delivers stable sub-zero performance with a robust, corrosion-resistant build and advanced temperature recovery technology, ideal for healthcare, diagnostics, and biotech environments.",
           features: [
@@ -516,7 +516,7 @@ export const catalog = [
       {
         name: 'Deep Freezer -25 °C Vertical',
         slug: 'deep-freezer-25c-vertical',
-        image: '/new product images/LAB/deep-freezer-25c-vertical.jpg',
+        image: '/new product images/LAB/deep-freezer-25c-vertical.png',
         pageData: {
           description: "Deep Freezer -25°C is a high-precision cold storage unit crafted for the secure preservation of sensitive biologicals, including plasma, vaccines, and lab reagents. Its robust vertical design, user-centric interface, and intelligent temperature management system make it a trusted choice for laboratories, hospitals, and biotech facilities. Built to excel in demanding conditions, it seamlessly combines technical performance, energy efficiency, and global safety compliance.",
           features: [
@@ -564,7 +564,7 @@ export const catalog = [
       {
         name: 'Ice Lined Refrigerator (Horizontal)',
         slug: 'ice-lined-refrigerator-horizontal',
-        image: '/new product images/LAB/ice-lined-refrigerator-horizontal.jpg',
+        image: '/new product images/LAB/ice-lined-refrigerator-horizontal.png',
         pageData: {
           description: "Ice Lined Refrigerator (Horizantal) is designed to ensure precise temperature control, eliminating the risk of freezing vaccines. With energy-efficient technology, it maintains a temperature holdover of 24 hours and requires just 8 hours of daily power to operate. The high-tech energy management system and optimized refrigeration design ensure superior temperature stability, even in challenging conditions.",
           features: [
@@ -612,7 +612,7 @@ export const catalog = [
       {
         name: 'Ice Lined Refrigerator (Vertical)',
         slug: 'ice-lined-refrigerator-vertical',
-        image: '/new product images/LAB/ice-lined-refrigerator-vertical.jpg',
+        image: '/new product images/LAB/ice-lined-refrigerator-vertical.png',
         pageData: {
           description: "Ice Lined Refrigerator (Vertical) is designed to ensure precise temperature control, eliminating the risk of freezing vaccines. With energy-efficient technology, it maintains a temperature holdover of 24 hours and requires just 8 hours of daily power to operate. The high-tech energy management system and optimized refrigeration design ensure superior temperature stability, even in challenging conditions.",
           features: [
@@ -668,7 +668,7 @@ export const catalog = [
       {
         name: 'Laboratory Refrigerator (Vertical)',
         slug: 'laboratory-refrigerator-vertical',
-        image: '/new product images/LAB/laboratory-refrigerator-vertical.jpg',
+        image: '/new product images/LAB/laboratory-refrigerator-vertical.png',
         pageData: {
           description: "Laboratory Refrigerators provide reliable, uniform temperature control for safe storage of pharmaceuticals, vaccines, medicines, and other sensitive products — trusted by research labs, hospitals, and pharmaceutical industries.",
           features: [
