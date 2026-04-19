@@ -21,7 +21,13 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              
+              <div className="info-item">
+                <i className="fas fa-building"></i>
+                <div>
+                  <h3>Corporate Office</h3>
+                  <p>303, Golden Park Commercial Complex, Behind Parvati Cinema Navghar Manickpur, SAI Nagar, Vasai West, Palghar-401201, Maharashtra 401202</p>
+                </div>
+              </div>              
               <a href="tel:+919702273180" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <i className="fas fa-phone-alt"></i>
                 <div>

@@ -36,8 +36,7 @@ ${data.message}
 
 Note: Resume "${fileName}" is selected for upload. (Please attach the file to this email manually).
     `.trim();
-
-    window.location.href = `mailto:froveninnovations@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:hrfroveinnovations@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
