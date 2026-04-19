@@ -9,7 +9,7 @@ import Image from 'next/image';
 const CoolCollections = () => {
   const services = [
     { title: 'SALES', category: 'Premium Equipment', img: '/commercial refrigeration.png', link: '/sales' },
-    { title: 'RENTALS', category: 'Flexible Plans', img: '/horeca.png', link: '/rental' }
+    { title: 'RENTALS', category: 'Flexible Plans', img: '/horeca png/horeca.png', link: '/rental' }
   ];
 
   return (
