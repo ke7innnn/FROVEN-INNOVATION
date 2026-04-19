@@ -14,15 +14,7 @@ export default function AmcPage() {
   const [activeTab, setActiveTab] = useState('overview');
 
   const serviceOptions = [
-    { id: 'overview', title: 'Overview', icon: 'fa-house-chimney-window' },
-    { id: 'range', title: 'Range of Services', icon: 'fa-list-check' },
-    { id: 'revamp', title: 'Revamp & Retrofit', icon: 'fa-screwdriver-wrench' },
-    { id: 'air', title: 'Air Management', icon: 'fa-fan' },
-    { id: 'water', title: 'Water Management', icon: 'fa-faucet-drip' },
-    { id: 'energy', title: 'Energy Management', icon: 'fa-plug-circle-bolt' },
-    { id: 'green', title: 'Green Building / WELL', icon: 'fa-leaf' },
-    { id: 'engineering', title: 'Facility Management', icon: 'fa-building-shield' },
-    { id: 'tab', title: 'TAB Services', icon: 'fa-sliders' }
+    { id: 'overview', title: 'Overview', icon: 'fa-house-chimney-window' }
   ];
 
   const serviceContent = {

@@ -134,36 +134,34 @@ export const catalog = [
       {
         name: 'Vertical Freezer',
         slug: 'vertical-freezer',
-        image: '/new product images/commercial-refrigeration/vertical-freezer.jpg',
+        image: '/vertical-freezer-new-images/FVF460SD.png?v=2',
+        images: [
+          '/vertical-freezer-new-images/FVF460SD.png?v=2',
+          '/vertical-freezer-new-images/FVF342SD.png?v=2'
+        ],
         pageData: {
-          description: "The Froven Innovations Vertical Freezer is a high-performance upright storage solution designed for commercial environments that demand absolute reliability and space efficiency. With a substantial 516-liter capacity and a powerful 641-watt cooling system, it provides consistent deep-freezing for ice creams, biologicals, and frozen foods. Its sleek vertical footprint makes it an ideal choice for busy kitchens, biotech labs, and retail spaces where floor space is at a premium.",
+          description: "The Froven Innovations Vertical Freezer is a high-performance upright storage solution designed for commercial environments that demand absolute reliability and space efficiency. With a substantial capacity and a powerful cooling system, it provides consistent deep-freezing for ice creams, biologicals, and frozen foods. Its sleek vertical footprint makes it an ideal choice for busy kitchens, biotech labs, and retail spaces where floor space is at a premium.",
           features: [
-            { icon: 'fas fa-thermometer-low', text: 'Steady Temp Range: Maintains consistent -18°C to -15°C for reliable food safety.' },
-            { icon: 'fas fa-bolt', text: 'Powerful 641W System: High-performance cooling for rapid pull-down and recovery.' },
-            { icon: 'fas fa-box', text: 'Massive 516L Capacity: Optimized internal volume for bulk professional storage.' },
-            { icon: 'fas fa-ruler-combined', text: 'Space-Saving Verticality: Slim 680x760mm footprint with 1995mm height.' },
+            { icon: 'fas fa-thermometer-low', text: 'Steady Temp Range: Maintains consistent <-18°C for reliable food safety.' },
+            { icon: 'fas fa-bolt', text: 'Powerful System: High-performance cooling for rapid pull-down and recovery.' },
+            { icon: 'fas fa-box', text: 'Massive Capacity: Optimized internal volume for bulk professional storage up to 460 Litres.' },
             { icon: 'fas fa-layer-group', text: 'Adjustable Heavy-Duty Shelves: Versatile storage configurations built for high loads.' },
             { icon: 'fas fa-shield-alt', text: 'Tough Commercial Build: Durable exterior and high-density insulation for maximum efficiency.' }
           ],
           table: {
-            headers: ['Specifications', 'FVF342SD', 'FVF460SD', 'FVF516SD'],
+            headers: ['Specifications', 'FVF342SD', 'FVF460SD'],
             rows: [
-              ['External Dimensions (WxDxH)', '680 x 760 x 1995 mm', '680 x 760 x 1995 mm', '680 x 760 x 1995 mm'],
-              ['Gross Capacity', '342 Litres', '460 Litres', '516 Litres'],
-              ['Rated Power input', '641 Watts', '641 Watts', '641 Watts'],
-              ['Temperature Range', '-18°C to -15°C', '-18°C to -15°C', '-18°C to -15°C'],
-              ['Cabinet Type', 'Vertical / Upright', 'Vertical / Upright', 'Vertical / Upright'],
-              ['No. of Shelves', '04 Nos', '04 Nos', '04 Nos'],
-              ['Cooling Type', 'Ventilated', 'Ventilated', 'Ventilated'],
-              ['Refrigerant', 'CFC-Free', 'CFC-Free', 'CFC-Free'],
-              ['Lock & Key', 'Yes', 'Yes', 'Yes']
+              ['Type', 'With Canopy', 'Without Canopy'],
+              ['External Dimensions (WxDxH)', '623 x 680 x 1790 mm', '623 x 715 x 2099 mm / 2116 mm (With Castors)'],
+              ['Gross Capacity', '342 Litres', '460 Litres'],
+              ['Temperature Range', '<-18°C', '<-18°C'],
+              ['No. of Shelves', '04 Nos', '06 Nos']
             ]
           }
         },
         models: [
-          { name: 'Vertical Freezer - 516 ltrs Single Door', id: 'FVF516SD' },
-          { name: 'Vertical Freezer - 342 ltrs Single Door', id: 'FVF342SD' },
-          { name: 'Vertical Freezer - 460 ltrs Single Door', id: 'FVF460SD' }
+          { name: 'Vertical Freezer with Canopy - 342 ltrs Single Door', id: 'FVF342SD' },
+          { name: 'Vertical Freezer without Canopy - 460 ltrs Single Door', id: 'FVF460SD' }
         ]
       }
 

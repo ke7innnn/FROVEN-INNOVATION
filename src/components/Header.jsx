@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { catalog } from '../data/catalog';
 import Image from 'next/image';
@@ -13,6 +14,8 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const lastScrollY = React.useRef(0);
+  const pathname = usePathname();
+  const isAmcPage = pathname === '/amc';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -257,9 +260,28 @@ const Header = () => {
             transform-origin: left center;
           }
         }
+
+        .top-header.transparent-header {
+          background: transparent !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+          box-shadow: none !important;
+        }
+        
+        .top-header.transparent-header .header-nav a {
+          color: white;
+          text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .top-header.transparent-header .icon-btn,
+        .top-header.transparent-header .hamburger-btn {
+          color: white !important;
+          text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
       `}</style>
 
-      <header className={`top-header ${isScrolled ? 'scrolled' : ''} ${isHidden ? 'nav-hidden' : ''}`}
+      <header className={`top-header ${isScrolled ? 'scrolled' : ''} ${isHidden ? 'nav-hidden' : ''} ${isAmcPage && !isScrolled ? 'transparent-header' : ''}`}
         style={{ color: 'var(--froven-dark)' }}
       >
         <div className="header-logo">

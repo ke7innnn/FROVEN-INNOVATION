@@ -10,7 +10,7 @@ import SnowParticles from '../../components/SnowParticles';
 const categoryImages = {
   'commercial-refrigeration': '/calegory images/commercial refrigeration.png',
   'horeca': '/calegory images/horeca.png',
-  'lab': '/labnewimage.png',
+  'lab': '/lab.png?v=2',
   'confectionery-showcase': '/calegory images/confectionary.png',
   'super-market-refrigeration': '/calegory images/supermarket refrigeration.png',
   'cold-room': '/calegory images/coldroom.png',
