@@ -230,14 +230,19 @@ const Header = () => {
           }
         }
 
+        .header-logo {
+          flex: 0 0 auto;
+          width: 310px;
+        }
+
         .header-logo img {
-          height: 55px;
+          height: 62px;
           width: auto;
           object-fit: contain;
           display: block;
-          transform: scale(2.5);
+          transform: scale(3.7);
           transform-origin: left center;
-          margin-left: -30px;
+          margin-left: -5px;
         }
 
         @media (max-width: 768px) {

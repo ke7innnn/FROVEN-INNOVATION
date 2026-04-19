@@ -93,10 +93,7 @@ export default function ProductModelsPage({ params }) {
           <div className="pd-gallery">
             <div 
               className="pd-main-image"
-              onMouseEnter={() => setIsZooming(true)}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={() => setIsZooming(false)}
-              style={{ cursor: isZooming ? 'crosshair' : 'zoom-in', position: 'relative' }}
+              style={{ position: 'relative' }}
             >
               {currentImage ? (
                 <>
@@ -104,11 +101,9 @@ export default function ProductModelsPage({ params }) {
                     src={currentImage} 
                     alt={productContext.name} 
                     style={{ 
-                      transformOrigin: isZooming ? `${zoomPos.x}% ${zoomPos.y}%` : 'center center',
-                      transform: isZooming 
-                        ? (categorySlug === 'confectionery-showcase' ? 'scale(2.2)' : productSlug === 'visi-cooler' ? 'scale(2.0)' : 'scale(2.8)') 
-                        : (categorySlug === 'confectionery-showcase' ? 'scale(1.1)' : productSlug === 'visi-cooler' ? 'scale(0.95)' : 'scale(1.5)'),
-                      transition: isZooming ? 'transform 0.1s ease-out' : 'transform 0.5s ease, transform-origin 0.5s ease',
+                      transformOrigin: 'center center',
+                      transform: (categorySlug === 'confectionery-showcase' ? 'scale(1.1)' : productSlug === 'visi-cooler' ? 'scale(0.95)' : 'scale(1.5)'),
+                      transition: 'transform 0.5s ease',
                       width: '100%',
                       height: '100%',
                       objectFit: 'contain'

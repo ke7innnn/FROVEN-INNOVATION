@@ -22,20 +22,22 @@ const Footer = () => {
           <div className="footer-col">
             <h3>Products</h3>
             <ul>
-              <li><Link href="/products">All Products</Link></li>
-              <li><Link href="/products/commercial-refrigeration/visi-cooler">Visi Cooler</Link></li>
-              <li><Link href="/products/commercial-refrigeration/hard-top-chest-freezer">Chest Freezers</Link></li>
-              <li><Link href="/products/horeca/blast-chillers-freezers">Blast Freezer</Link></li>
-              <li><Link href="/products/horeca/water-dispenser">Water Dispenser</Link></li>
+              <li><Link href="/products/commercial-refrigeration">Commercial Refrigeration</Link></li>
+              <li><Link href="/products/horeca">HoReCa</Link></li>
+              <li><Link href="/products/lab">LAB</Link></li>
+              <li><Link href="/products/super-market-refrigeration">Super Market Refrigeration</Link></li>
+              <li><Link href="/products/cold-room">Cold Room</Link></li>
+              <li><Link href="/products/confectionery-showcase">Confectionery Showcase</Link></li>
             </ul>
           </div>
           
           <div className="footer-col">
             <h3>Services</h3>
             <ul>
+              <li><Link href="/sales">Sales</Link></li>
               <li><Link href="/rental">Rental Solutions</Link></li>
+              <li><Link href="/spares">Spares & Parts</Link></li>
               <li><Link href="/amc">AMC Services</Link></li>
-              <li><Link href="/sales">Sales & Equipment</Link></li>
               <li><Link href="/warranty-activation">Warranty Activation</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
             </ul>
@@ -45,10 +47,10 @@ const Footer = () => {
             <h3>Explore</h3>
             <ul>
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/products">Catalog</Link></li>
-              <li><Link href="/careers">Careers</Link></li>
               <li><Link href="/contact">Get a Quote</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
+              <li><Link href="/gallery">Gallery</Link></li>
             </ul>
           </div>
         </div>

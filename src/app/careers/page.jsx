@@ -76,12 +76,12 @@ Note: Resume "${fileName}" is selected for upload. (Please attach the file to th
                 </div>
                 
                 <div className="contact-detail-item">
-                  <div className="detail-icon" style={{ backgroundColor: '#25D366', color: 'white' }}>
-                    <i className="fa-brands fa-whatsapp"></i>
+                  <div className="detail-icon" style={{ backgroundColor: '#0ea5e9', color: 'white' }}>
+                    <i className="fas fa-envelope"></i>
                   </div>
                   <div>
-                    <h4>WhatsApp HR</h4>
-                    <p>Connect with our recruitment team via WhatsApp for quick queries.</p>
+                    <h4>HR Email</h4>
+                    <p>Contact us at: <a href="mailto:hrfroveinnovations@outlook.com" style={{color: 'var(--froven-blue)', textDecoration: 'none'}}>hrfroveinnovations@outlook.com</a></p>
                   </div>
                 </div>
               </div>
