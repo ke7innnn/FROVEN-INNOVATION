@@ -178,8 +178,8 @@ export default function ProductsCategoriesPage() {
                       if (img) img.style.transform = 'scale(1)';
                     }}
                   >
-                    {/* Full landscape image — fixed height for consistency */}
-                    <div style={{ overflow: 'hidden', lineHeight: 0, height: '280px' }}>
+                    {/* Full landscape image — natural height */}
+                    <div style={{ overflow: 'hidden', lineHeight: 0 }}>
                       {imgSrc && (
                         <img
                           className="cat-img"
@@ -187,9 +187,7 @@ export default function ProductsCategoriesPage() {
                           alt={category.name}
                           style={{
                             width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            objectPosition: 'center',
+                            height: 'auto',
                             display: 'block',
                             transition: 'transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1)',
                           }}

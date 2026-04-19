@@ -8,8 +8,8 @@ import Image from 'next/image';
 
 const CoolCollections = () => {
   const services = [
-    { title: 'SALES', category: 'Premium Equipment', img: '/services/sales.png', link: '/sales' },
-    { title: 'RENTALS', category: 'Flexible Plans', img: '/services/rental.png', link: '/rental' }
+    { title: 'SALES', category: 'Premium Equipment', img: '/commercial refrigeration.png', link: '/sales' },
+    { title: 'RENTALS', category: 'Flexible Plans', img: '/horeca.png', link: '/rental' }
   ];
 
   return (
