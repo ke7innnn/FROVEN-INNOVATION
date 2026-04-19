@@ -80,7 +80,7 @@ Note: Resume "${fileName}" is selected for upload. (Please attach the file to th
                   </div>
                   <div>
                     <h4>HR Email</h4>
-                    <p>Contact us at: <a href="mailto:hrfroveinnovations@outlook.com" style={{color: 'var(--froven-blue)', textDecoration: 'none'}}>hrfroveinnovations@outlook.com</a></p>
+                    <p>Contact us at:<br /><a href="mailto:hrfroveinnovations@outlook.com" style={{color: '#38bdf8', textDecoration: 'none', fontWeight: '500'}}>hrfroveinnovations@outlook.com</a></p>
                   </div>
                 </div>
               </div>
