@@ -251,13 +251,16 @@ const Header = () => {
         @media (max-width: 768px) {
           .header-nav { display: none !important; }
           .hamburger-btn { display: flex !important; }
-          .top-header { padding: 8px 20px !important; }
-          .top-header.scrolled { padding: 6px 20px !important; }
+          .top-header { padding: 8px 15px !important; }
+          .top-header.scrolled { padding: 6px 15px !important; }
+          .header-logo { width: auto; flex: 1; overflow: hidden; }
+          .header-actions { gap: 14px; flex-shrink: 0; }
           .header-logo img { 
-            height: 48px; 
-            transform: scale(3) !important;
-            margin-left: 0 !important;
+            height: 38px; 
+            transform: scale(2.8) !important;
+            margin-left: 20px !important;
             transform-origin: left center;
+            max-width: 100%;
           }
         }
 
