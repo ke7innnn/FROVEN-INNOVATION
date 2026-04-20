@@ -228,13 +228,26 @@ export default function ProductModelsPage({ params }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {productContext.pageData.table.rows.map((row, rowIdx) => (
+                  {productContext.pageData.table.rows.map((row, rowIdx) => {
+                    const isSecondaryHeader = row[0] === 'Model (With Canopy)';
+                    return (
                     <tr key={rowIdx}>
                       {row.map((cell, cellIdx) => (
-                        <td key={cellIdx}>{cell}</td>
+                        <td 
+                          key={cellIdx}
+                          style={isSecondaryHeader ? { 
+                            backgroundColor: '#0f2a47', 
+                            color: 'white', 
+                            fontWeight: 700,
+                            letterSpacing: '1px',
+                            borderBottom: 'none'
+                          } : {}}
+                        >
+                          {cell}
+                        </td>
                       ))}
                     </tr>
-                  ))}
+                  )})}
                 </tbody>
               </table>
             </div>
