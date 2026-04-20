@@ -22,8 +22,7 @@ export default function GalleryPage() {
       <Header />
       <main style={{ flex: 1, padding: '120px 20px 80px', maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <h1 style={{ color: '#0f172a', fontSize: '3rem', fontWeight: '800', marginBottom: '16px' }}>Project Gallery</h1>
-          <p style={{ color: '#64748b', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto', lineHeight: '1.6' }}>Explore the scope and excellence of our premium commercial refrigeration installations across diverse industry sectors.</p>
+          <h1 style={{ color: '#0f172a', fontSize: '3rem', fontWeight: '800', marginBottom: '16px' }}>Gallery</h1>
         </div>
         
         {/* Uncropped Masonry Grid Layout */}
