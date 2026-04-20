@@ -84,9 +84,9 @@ export const catalog = [
       {
         name: 'Visi Cooler',
         slug: 'visi-cooler',
-        image: '/new visicooler images/Gemini_Generated_Image_1eqfbw1eqfbw1eqf.png',
+        image: '/new visicooler images/Whisk_474b3b4e5a08e008f394e4c8067b374fdr.png',
         images: [
-          '/new visicooler images/Gemini_Generated_Image_1eqfbw1eqfbw1eqf.png',
+          '/new visicooler images/Whisk_474b3b4e5a08e008f394e4c8067b374fdr.png',
           '/new visicooler images/Gemini_Generated_Image_4qsv8q4qsv8q4qsv.png',
           '/new visicooler images/Whisk_11eafbc606cd41e87464333b3f623bd6dr.png',
           '/new visicooler images/Whisk_aa2046b18cdd7de9ad142bb5fde688ffdr.png'
