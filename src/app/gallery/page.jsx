@@ -8,12 +8,12 @@ import Image from 'next/image';
 const galleryImages = [
   '/gallery/Screenshot 2026-04-20 at 7.00.41 PM.png',
   '/gallery/Screenshot 2026-04-20 at 7.00.50 PM.png',
-  '/gallery/Screenshot 2026-04-20 at 7.00.58 PM.png',
   '/gallery/Screenshot 2026-04-20 at 7.02.06 PM.png',
   '/gallery/Screenshot 2026-04-20 at 7.02.16 PM.png',
   '/gallery/Screenshot 2026-04-20 at 7.02.40 PM.png',
   '/gallery/Screenshot 2026-04-20 at 7.02.54 PM.png',
-  '/gallery/Screenshot 2026-04-20 at 7.06.22 PM.png'
+  '/gallery/Screenshot 2026-04-20 at 7.06.22 PM.png',
+  '/gallery/Screenshot 2026-04-20 at 7.13.48 PM.png'
 ];
 
 export default function GalleryPage() {
