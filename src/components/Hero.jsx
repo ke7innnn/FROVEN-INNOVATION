@@ -7,7 +7,7 @@ const slideImages = [
   '/3 slides/slide 2new.png',
   '/3 slides/slide 3comp.png',
   '/3rd slide replacement.jpeg',
-  '/4th slide addon.jpeg'
+  '/4th slide new.png'
 ];
 
 const slidesContent = [
