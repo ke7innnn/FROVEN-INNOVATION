@@ -33,7 +33,7 @@ export default function CategoryProductsPage({ params }) {
       <main className="products-main" style={{ backgroundColor: '#ffffff', minHeight: '80vh' }}>
 
       <style>{`
-        .cat-page-hero { position: relative; min-height: 480px; display: flex; align-items: center; overflow: hidden; }
+        .cat-page-hero { position: relative; min-height: 480px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .cat-page-hero-inner {
           position: relative;
           zIndex: 2;
@@ -78,8 +78,8 @@ export default function CategoryProductsPage({ params }) {
           margin: 0 auto;
         }
         @media (max-width: 768px) {
-          .cat-page-hero { min-height: 360px; }
-          .cat-page-hero-inner { padding: 100px 20px 60px; }
+          .cat-page-hero { min-height: auto; align-items: flex-start; }
+          .cat-page-hero-inner { padding: 120px 20px 70px; }
           .cat-page-breadcrumb {
             font-size: 10px;
             letter-spacing: 1px;
