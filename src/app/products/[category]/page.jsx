@@ -135,6 +135,32 @@ export default function CategoryProductsPage({ params }) {
             <p className="cat-page-desc">
               {categoryContext.description} Select a product type below to view available models and specifications.
             </p>
+            <div style={{ marginTop: '32px', display: 'flex', justifyContent: 'center' }}>
+              <a 
+                href={`/catalogue downloadable pdfs/${categoryContext.name}.pdf`}
+                download={`${categoryContext.name} - Froven Catalogue.pdf`}
+                className="download-catalogue-btn"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  background: 'linear-gradient(135deg, #38bdf8, #0ea5e9)',
+                  color: '#ffffff',
+                  padding: '14px 28px',
+                  borderRadius: '30px',
+                  fontWeight: '700',
+                  letterSpacing: '0.5px',
+                  textDecoration: 'none',
+                  fontSize: '15px',
+                  boxShadow: '0 10px 25px rgba(14, 165, 233, 0.4)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 15px 35px rgba(14, 165, 233, 0.5)'; }}
+                onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(14, 165, 233, 0.4)'; }}
+              >
+                <i className="fas fa-download"></i> Download Catalogue
+              </a>
+            </div>
           </div>
         </section>
 
