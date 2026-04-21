@@ -13,7 +13,7 @@ const categoryImages = {
   'lab': '/lab.png?v=2',
   'confectionery-showcase': '/calegory images/confectionary.png',
   'super-market-refrigeration': '/calegory images/supermarket refrigeration.png',
-  'cold-room': '/calegory images/coldroom.png',
+  'cold-room': '/coldroom new.png',
 };
 
 export default function ProductsCategoriesPage() {
