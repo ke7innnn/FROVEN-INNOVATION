@@ -20,7 +20,7 @@ export default function GalleryPage() {
   return (
     <div className="app-container" style={{ backgroundColor: '#f8fafc', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Header />
-      <main style={{ flex: 1, padding: '120px 20px 80px', maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
+      <main style={{ flex: 1, padding: '120px 20px 80px', maxWidth: '1400px', margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <h1 style={{ color: '#0f172a', fontSize: '3rem', fontWeight: '800', marginBottom: '16px' }}>Gallery</h1>
         </div>
