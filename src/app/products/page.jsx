@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
@@ -71,14 +72,13 @@ export default function ProductsCategoriesPage() {
         <section
           className="cat-hero"
         >
-          <img
+          <Image
             src="/calegory images/horeca.png"
             alt="Hero Background"
+            fill
+            priority
+            fetchPriority="high"
             style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
               objectFit: 'cover',
               objectPosition: 'center',
               zIndex: 0,
@@ -181,10 +181,15 @@ export default function ProductsCategoriesPage() {
                     {/* Full landscape image — natural height */}
                     <div style={{ overflow: 'hidden', lineHeight: 0 }}>
                       {imgSrc && (
-                        <img
+                        <Image
                           className="cat-img"
                           src={imgSrc}
                           alt={category.name}
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          priority
+                          fetchPriority="high"
                           style={{
                             width: '100%',
                             height: 'auto',

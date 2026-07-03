@@ -13,7 +13,7 @@ const slideImages = [
 const slidesContent = [
   {
     small: "HORECA Solutions",
-    main: <>BUILT FOR<br/>THE KITCHEN.<br/><span className="highlight-blue">PROVEN.</span></>,
+    main: <>BUILT FOR<br/>THE KITCHEN.<br/><span className="highlight-blue">FROVEN.</span></>,
     desc: "From ice cubers to walk-in cold rooms — professional-grade refrigeration for hotels, restaurants, and catering operations.",
     buttons: [
       { text: "HORECA Range", primary: true, link: "/products" },
